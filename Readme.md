@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей](https://up.htmlacademy.ru/adaptive/19/user/1316157).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий](https://up.htmlacademy.ru/adaptive/19/user/983299).
 
 ---
 
