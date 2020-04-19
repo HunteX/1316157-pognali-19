@@ -33,6 +33,168 @@
   </nav>
 </header>
 
+<main class="page-main">
+  <h1 class="visually-hidden">Направления</h1>
+
+  <section class="profile">
+    <div class="profile__wrapper">
+      <div class="profile__person">
+        <div class="profile__level"></div>
+        <div class="profile__avatar"></div>
+      </div>
+      <button type="button" class="button button-change">Сменить фото</button>
+      <div class="profile__area">
+        <header>Тэги</header>
+        <p class="profile__tags">#бургер #бар #футбол #концерт #крафт</p>
+      </div>
+      <div class="profile__area directions">
+        <header>Транспорт</header>
+        <ul class="directions__list">
+          <li class="directions__direction directions__direction--avia directions__direction--active"></li>
+          <li class="directions__direction directions__direction--bus directions__direction--active"></li>
+          <li class="directions__direction directions__direction--velo"></li>
+          <li class="directions__direction directions__direction--run directions__direction--active"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans">
+    <div class="plans__wrapper">
+      <header class="plans__header">
+        <div class="plans__caption">Мои планы:</div>
+      </header>
+    </div>
+    <ul class="plans__list myplans">
+      <li class="myplans__item">
+        <header class="myplans__header">1. Франция, Италия</header>
+        <p class="myplans__companions">3 попутчика</p>
+        <p class="myplans__period">26 мар - 29 мар</p>
+        <button type="button" class="button myplans__change">Изменить</button>
+      </li>
+      <li class="myplans__item">
+        <header class="myplans__header">1. Тайланд, Индонезия</header>
+        <p class="myplans__companions">1 попутчик</p>
+        <p class="myplans__period">1 июл - 15 июл</p>
+        <button type="button" class="button myplans__change">Изменить</button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="new">
+    <div class="new__wrapper">
+      <header class="new__header">
+        <div class="new__caption">Добавить план:</div>
+        <ul class="new__dots">
+          <li class="new__dot new__dot--active"></li>
+          <li class="new__dot"></li>
+          <li class="new__dot"></li>
+        </ul>
+      </header>
+
+      <section class="new__step step1">
+        <header class="step1__header">Шаг 1. Даты пребывания</header>
+        <p class="step1__description">
+          Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
+          длительность.
+        </p>
+        <div class="step1__companions companions">
+          <label for="counter1" class="companions__label"></label>
+          <input id="counter1" type="text" value="2">
+          <label for="counter2" class="companions__label"></label>
+          <input id="counter2" type="text" value="2">
+          <label>
+            <input type="checkbox" name="checkbox1" class="companions__children" checked>
+            Можно с детьми
+          </label>
+          <div class="step1__calendar calendar">
+            <header class="calendar__header">Март 2019</header>
+            <!-- TODO: сделать календарь -->
+            <table class="calendar__month"></table>
+          </div>
+        </div>
+        <button type="button" class="button button-next">Следующий шаг</button>
+      </section>
+
+      <section class="new__step step2">
+        <div class="step2__wrapper">
+          <header class="step2__header">Шаг 2. Маршрут</header>
+          <p class="step2__description">
+            Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+          </p>
+          <ul class="step2__list">
+            <li class="step2__item">
+              <label>
+                <select>
+                  <option disabled>Выберите страну</option>
+                  <option value="country-bag" selected>Босния и Герцеговина</option>
+                  <option value="country-cz">Чехословакия</option>
+                </select>
+              </label>
+              <div class="step2__flag step2__flag--bag"></div>
+            </li>
+            <li class="step2__item">
+              <label>
+                <select>
+                  <option disabled>Выберите страну</option>
+                  <option value="country-bag">Босния и Герцеговина</option>
+                  <option value="country-cz" selected>Чехословакия</option>
+                </select>
+              </label>
+              <div class="step2__flag step2__flag--cz"></div>
+            </li>
+            <li class="step2__item">
+              <label>
+                <select>
+                  <option disabled selected>Выберите страну</option>
+                  <option value="country-bag">Босния и Герцеговина</option>
+                  <option value="country-cz">Чехословакия</option>
+                </select>
+              </label>
+              <div class="step2__flag step2__flag--empty"></div>
+            </li>
+          </ul>
+          <button type="button" class="button button-next">Следующий шаг</button>
+          <button type="button" class="button button-prev">На шаг назад</button>
+        </div>
+      </section>
+
+      <section class="new__step step3">
+        <div class="step3__wrapper">
+          <header class="step3__header">Шаг 3. Развлечения</header>
+          <p class="step3__description">
+            Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+          </p>
+          <ul class="step3__list hobbies">
+            <li class="hobbies__item">
+              <div class="hobbies__header">
+                <div class="hobbies__country">Босния и Герцеговина</div>
+                <div class="hobbies__flag hobbies__flag--bag"></div>
+              </div>
+              <label>
+                <textarea placeholder="План действий" class="hobbies__text"></textarea>
+              </label>
+            </li>
+            <li class="hobbies__item">
+              <div class="hobbies__header">
+                <div class="hobbies__country">Чехословакия</div>
+                <div class="hobbies__flag hobbies__flag--cz"></div>
+              </div>
+              <label>
+                <textarea placeholder="План действий" class="hobbies__text">
+                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
+                </textarea>
+              </label>
+            </li>
+          </ul>
+          <button type="button" class="button button-next">Отправить</button>
+          <button type="button" class="button button-prev">На шаг назад</button>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <h2 class="page-footer__header">Погнали?</h2>
