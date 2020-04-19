@@ -36,6 +36,70 @@
 <main class="page-main">
   <h1 class="visually-hidden">Каталог</h1>
 
+  <section class="countries">
+    <header class="countries__header">
+      <div class="countries__caption">Фильтрация по странам</div>
+    </header>
+    <div class="countries__wrapper">
+      <div class="countries__container">
+        <div class="countries__caption">
+          Подберите идеального попутчика
+        </div>
+        <ul class="filters__list">
+          <li class="filters__item">
+            <div class="filters__caption">Хобби</div>
+          </li>
+          <li class="filters__item">
+            <div class="filters__caption">Музыка</div>
+            <div class="filters__content filters__content--opened">
+              <label>
+                <input type="checkbox" name="music" class="filters__checkbox">
+                Тяжелый рок
+              </label>
+              <label>
+                <input type="checkbox" name="music" class="filters__checkbox">
+                Русский рэп
+              </label>
+              <label>
+                <input type="checkbox" name="music" class="filters__checkbox">
+                Евроденс
+              </label>
+            </div>
+          </li>
+          <li class="filters__item">
+            <div class="filters__caption">Еда</div>
+          </li>
+          <li class="filters__item">
+            <div class="filters__caption">Транспорт</div>
+            <div class="filters__content filters__content--opened directions">
+              <ul class="directions__list">
+                <li class="directions__direction directions__direction--avia directions__direction--active"></li>
+                <li class="directions__direction directions__direction--bus directions__direction--active"></li>
+                <li class="directions__direction directions__direction--velo"></li>
+                <li class="directions__direction directions__direction--run directions__direction--active"></li>
+              </ul>
+            </div>
+          </li>
+          <li class="filters__item">
+            <div class="filters__caption">Левел</div>
+            <div class="filters__content filters__content--opened">
+              <div class="filters__levels">
+                <label>
+                  <input type="text" name="from" class="filters__from">
+                </label>
+                <label>
+                  <input type="text" name="to" class="filters__to">
+                </label>
+              </div>
+              <div class="filters__range"></div>
+            </div>
+          </li>
+        </ul>
+        <button type="button" class="button button-show">Показать</button>
+      </div>
+    </div>
+  </section>
+
   <section class="companions">
     <div class="companions__wrapper slider">
       <div class="companions__list slider__list">
@@ -43,7 +107,8 @@
           <div class="companions__person person">
             <div class="person__passport">
               <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова">
+                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
+                     alt="Таня Фирсова">
               </div>
               <div class="person__private">
                 <p class="person__name">Таня Фирсова</p>
@@ -74,12 +139,10 @@
               <div class="person__header">транспорт:</div>
               <div class="person__directions directions">
                 <ul class="directions__list">
-                  <li class="directions__item">
-                    <div class="directions__direction directions__direction--avia directions__direction--active"></div>
-                    <div class="directions__direction directions__direction--bus"></div>
-                    <div class="directions__direction directions__direction--velo"></div>
-                    <div class="directions__direction directions__direction--run"></div>
-                  </li>
+                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
+                  <li class="directions__direction directions__direction--bus"></li>
+                  <li class="directions__direction directions__direction--velo"></li>
+                  <li class="directions__direction directions__direction--run"></li>
                 </ul>
               </div>
               <div class="person__header">левел:</div>
@@ -93,7 +156,8 @@
           <div class="companions__person person">
             <div class="person__passport">
               <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин">
+                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
+                     alt="Петя Демин">
               </div>
               <div class="person__private">
                 <p class="person__name">Петя Демин</p>
@@ -120,12 +184,10 @@
               <div class="person__header">транспорт:</div>
               <div class="person__directions directions">
                 <ul class="directions__list">
-                  <li class="directions__item">
-                    <div class="directions__direction directions__direction--avia directions__direction--active"></div>
-                    <div class="directions__direction directions__direction--bus directions__direction--active"></div>
-                    <div class="directions__direction directions__direction--velo"></div>
-                    <div class="directions__direction directions__direction--run directions__direction--active"></div>
-                  </li>
+                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
+                  <li class="directions__direction directions__direction--bus directions__direction--active"></li>
+                  <li class="directions__direction directions__direction--velo"></li>
+                  <li class="directions__direction directions__direction--run directions__direction--active"></li>
                 </ul>
               </div>
               <div class="person__header">левел:</div>
@@ -139,7 +201,8 @@
           <div class="companions__person person">
             <div class="person__passport">
               <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов">
+                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
+                     alt="Марк Смолов">
               </div>
               <div class="person__private">
                 <p class="person__name">Марк Смолов</p>
@@ -170,12 +233,10 @@
               <div class="person__header">транспорт:</div>
               <div class="person__directions directions">
                 <ul class="directions__list">
-                  <li class="directions__item">
-                    <div class="directions__direction directions__direction--avia directions__direction--active"></div>
-                    <div class="directions__direction directions__direction--bus"></div>
-                    <div class="directions__direction directions__direction--velo directions__direction--active"></div>
-                    <div class="directions__direction directions__direction--run"></div>
-                  </li>
+                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
+                  <li class="directions__direction directions__direction--bus"></li>
+                  <li class="directions__direction directions__direction--velo directions__direction--active"></li>
+                  <li class="directions__direction directions__direction--run"></li>
                 </ul>
               </div>
               <div class="person__header">левел:</div>
@@ -189,7 +250,8 @@
           <div class="companions__person person">
             <div class="person__passport">
               <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая">
+                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
+                     alt="Лариса Роговая">
               </div>
               <div class="person__private">
                 <p class="person__name">Лариса Роговая</p>
@@ -220,12 +282,10 @@
               <div class="person__header">транспорт:</div>
               <div class="person__directions directions">
                 <ul class="directions__list">
-                  <li class="directions__item">
-                    <div class="directions__direction directions__direction--avia directions__direction--active"></div>
-                    <div class="directions__direction directions__direction--bus directions__direction--active"></div>
-                    <div class="directions__direction directions__direction--velo"></div>
-                    <div class="directions__direction directions__direction--run"></div>
-                  </li>
+                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
+                  <li class="directions__direction directions__direction--bus directions__direction--active"></li>
+                  <li class="directions__direction directions__direction--velo"></li>
+                  <li class="directions__direction directions__direction--run"></li>
                 </ul>
               </div>
               <div class="person__header">левел:</div>
