@@ -91,13 +91,14 @@
           <li class="new__dot"></li>
         </ul>
       </header>
-      <div class="new__step step">
-        <header class="step__header">Шаг 1. Даты пребывания</header>
-        <p class="step__description">
+
+      <section class="new__step step1">
+        <header class="step1__header">Шаг 1. Даты пребывания</header>
+        <p class="step1__description">
           Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
           длительность.
         </p>
-        <div class="new__companions companions">
+        <div class="step1__companions companions">
           <label for="counter1" class="companions__label"></label>
           <input id="counter1" type="text" value="2">
           <label for="counter2" class="companions__label"></label>
@@ -106,17 +107,60 @@
             <input type="checkbox" name="checkbox1" class="companions__children" checked>
             Можно с детьми
           </label>
-          <div class="new__calendar calendar">
+          <div class="step1__calendar calendar">
             <header class="calendar__header">Март 2019</header>
             <!-- TODO: сделать календарь -->
             <table class="calendar__month"></table>
           </div>
         </div>
-      </div>
-      <button type="button" class="button button-next">Следующий шаг</button>
+        <button type="button" class="button button-next">Следующий шаг</button>
+      </section>
+
+      <section class="new__step step2">
+        <div class="step2__wrapper">
+          <header class="step2__header">Шаг 2. Маршрут</header>
+          <p class="step2__description">
+            Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+          </p>
+          <ul class="step2__list">
+            <li class="step2__item">
+              <label>
+                <select>
+                  <option disabled>Выберите страну</option>
+                  <option value="country-bag" selected>Босния и Герцеговина</option>
+                  <option value="country-cz">Чехословакия</option>
+                </select>
+              </label>
+              <div class="step2__flag step2__flag--bag"></div>
+            </li>
+            <li class="step2__item">
+              <label>
+                <select>
+                  <option disabled>Выберите страну</option>
+                  <option value="country-bag">Босния и Герцеговина</option>
+                  <option value="country-cz" selected>Чехословакия</option>
+                </select>
+              </label>
+              <div class="step2__flag step2__flag--cz"></div>
+            </li>
+            <li class="step2__item">
+              <label>
+                <select>
+                  <option disabled selected>Выберите страну</option>
+                  <option value="country-bag">Босния и Герцеговина</option>
+                  <option value="country-cz">Чехословакия</option>
+                </select>
+              </label>
+              <div class="step2__flag step2__flag--empty"></div>
+            </li>
+          </ul>
+          <button type="button" class="button button-next">Следующий шаг</button>
+          <button type="button" class="button button-prev">На шаг назад</button>
+        </div>
+      </section>
+
     </div>
   </section>
-
 </main>
 
 <footer class="page-footer">
