@@ -61,7 +61,9 @@
 
   <section class="plans">
     <div class="plans__wrapper">
-      <header class="plans__header">Мои планы:</header>
+      <header class="plans__header">
+        <div class="plans__caption">Мои планы:</div>
+      </header>
     </div>
     <ul class="plans__list myplans">
       <li class="myplans__item">
@@ -77,6 +79,42 @@
         <button type="button" class="button myplans__change">Изменить</button>
       </li>
     </ul>
+  </section>
+
+  <section class="new">
+    <div class="new__wrapper">
+      <header class="new__header">
+        <div class="new__caption">Добавить план:</div>
+        <ul class="new__dots">
+          <li class="new__dot new__dot--active"></li>
+          <li class="new__dot"></li>
+          <li class="new__dot"></li>
+        </ul>
+      </header>
+      <div class="new__step step">
+        <header class="step__header">Шаг 1. Даты пребывания</header>
+        <p class="step__description">
+          Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
+          длительность.
+        </p>
+        <div class="new__companions companions">
+          <label for="counter1" class="companions__label"></label>
+          <input id="counter1" type="text" value="2">
+          <label for="counter2" class="companions__label"></label>
+          <input id="counter2" type="text" value="2">
+          <label>
+            <input type="checkbox" name="checkbox1" class="companions__children" checked>
+            Можно с детьми
+          </label>
+          <div class="new__calendar calendar">
+            <header class="calendar__header">Март 2019</header>
+            <!-- TODO: сделать календарь -->
+            <table class="calendar__month"></table>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="button button-next">Следующий шаг</button>
+    </div>
   </section>
 
 </main>
