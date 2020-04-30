@@ -7,11 +7,10 @@
 </head>
 <body class="main-container">
 
-<!-- TODO: надо ли делать, чтобы сайт был выровнен по середине страницы? -->
 <header class="page-header">
 
   <!-- TODO: может стоит везде использовать один класс? -->
-  <div class="page-header__wrapper">
+  <div class="global-wrapper page-header__wrapper">
     <div class="page-header__fixed">
       <a class="page-header__logo">
         <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19"
@@ -45,9 +44,9 @@
     <p class="page-header__description">В путешествие с крутыми попутчиками!</p>
 
     <div class="page-header__promo">
-      <button class="button button-call" type="button"></button>
-      <button class="button button-mail" type="button"></button>
-      <button class="button button-auth" type="button"></button>
+      <button class="button button-menu-small button-menu-small--call" type="button"></button>
+      <button class="button button-menu-small button-menu-small--mail" type="button"></button>
+      <button class="button button-menu-medium" type="button"></button>
     </div>
   </div>
 </header>
@@ -56,7 +55,7 @@
   <h1 class="visually-hidden">Погнали</h1>
 
   <section class="best-app">
-    <div class="best-app__wrapper">
+    <div class="global-wrapper best-app__wrapper">
       <h2 class="best-app__description">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</h2>
       <p class="best-app__extra">Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</p>
       <ul class="best-app__list">
@@ -81,7 +80,7 @@
   </section>
 
   <section class="about-service">
-    <div class="about-service__wrapper">
+    <div class="global-wrapper about-service__wrapper">
       <header class="about-service__header">
         <h2 class="about-service__caption">О сервисе</h2>
       </header>
@@ -96,7 +95,7 @@
   </section>
 
   <section class="directions">
-    <div class="directions__wrapper">
+    <div class="global-wrapper directions__wrapper">
       <header class="directions__header">
         <h2 class="directions__caption">Направления</h2>
       </header>
@@ -152,7 +151,7 @@
   </section>
 
   <section class="companions">
-    <div class="companions__wrapper">
+    <div class="global-wrapper companions__wrapper">
       <header class="companions__header">
         <h2 class="companions__caption">Попутчики</h2>
       </header>
@@ -213,7 +212,7 @@
   </section>
 
   <section class="profile-add">
-    <div class="profile-add__wrapper">
+    <div class="global-wrapper profile-add__wrapper">
       <header class="profile-add__header">
         <h2 class="profile-add__caption">Добавьте свой профиль</h2>
         <div class="profile-add__icon">&nbsp;</div>
@@ -247,7 +246,7 @@
   </section>
 
   <section class="register">
-    <div class="register__wrapper">
+    <div class="global-wrapper register__wrapper">
       <header class="register__header">
         <h2 class="register__caption">Заинтересовались?</h2>
       </header>
@@ -270,7 +269,7 @@
   </section>
 
   <section class="route">
-    <div class="route__wrapper">
+    <div class="global-wrapper route__wrapper">
       <header class="route__header">
         <h2 class="route__caption">Ул. Большая Конюшенная, 19/8</h2>
         <button class="button button-route" type="button">Проложить маршрут</button>
@@ -282,7 +281,7 @@
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__wrapper">
+  <div class="global-wrapper page-footer__wrapper">
     <h2 class="page-footer__header">Погнали?</h2>
 
     <div class="page-footer__socials social">

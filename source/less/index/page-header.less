@@ -1,18 +1,16 @@
-@import "../shared/variables";
+@import "../shared/index";
 
 .page-header {
+  position: relative;
   background-color: @bg-default;
-  background-image:
-    url("../../img/traveller-illustration-mobile@1x.png"),
-    url("../../img/globe-back-mobile@1x.jpg");
+  background-image: url("../../img/traveller-illustration-mobile@1x.png"),
+  url("../../img/globe-back-mobile@1x.jpg");
   background-position: 79px 223px, 0 0;
   background-repeat: no-repeat;
   min-height: 478px;
 
   &__wrapper {
     padding-top: 27px;
-    padding-left: 25px;
-    padding-right: 25px;
   }
 
   &__fixed {
@@ -24,11 +22,10 @@
   }
 
   &__logo-image {
-
   }
 
   &__description {
-    width: 234px;
+    width: 238px;
     height: 114px;
     font-size: 36px;
     font-weight: bold;
@@ -36,8 +33,10 @@
     font-style: normal;
     line-height: 1.11;
     letter-spacing: normal;
-    text-align: center;
     color: #ffffff;
+    margin-top: 41px;
+    margin-left: 16px;
+    text-align: center;
   }
 
   &__toggle {
@@ -51,6 +50,8 @@
   }
 
   &__promo {
-
+    display: flex;
+    position: absolute;
+    bottom: -20px;
   }
 }
