@@ -13,7 +13,7 @@
 
 .companions {
   position: relative;
-  min-height: 990px;
+  min-height: 1322px;
   border-radius: 0 0 30px 30px;
   background: @dark-blue-grey url("../../img/smolov-back-desktop@1x.png") 152px 39px no-repeat;
   z-index: 1;
@@ -63,9 +63,9 @@
 
   &__list {
     position: relative;
-    margin: 57px 0 0;
     list-style: none;
     padding: 0;
+    margin: 57px 0 20px;
   }
 
   &__item {
@@ -86,9 +86,75 @@
   }
 
   &__companion-details {
+    position: relative;
     width: 100%;
     min-height: 157px;
     background-color: @white;
     border-radius: 0 0 10px 10px;
+  }
+
+  &__flags {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 164px;
+    top: -11px;
+    left: 62px;
+  }
+
+  &__flag {
+    margin-right: 19px;
+  }
+
+  &__name:before {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: @salmon;
+    top: 9px;
+    left: -15px;
+  }
+
+  &__name {
+    position: absolute;
+    width: 139px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-slate-blue;
+    text-align: center;
+    top: 24px;
+    left: 65px;
+  }
+
+  &__hashtags {
+    width: 179px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.13;
+    text-align: center;
+    color: @four;
+    top: 61px;
+    position: absolute;
+    left: 46px;
+  }
+
+  &__directions {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 21px;
+    left: 68px;
+    justify-content: space-around;
+    width: 133px;
+  }
+
+  &__button {
+    width: 270px;
+    height: 62px;
+    background-color: @light-gold;
   }
 }
