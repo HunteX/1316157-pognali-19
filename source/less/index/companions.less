@@ -9,7 +9,6 @@
   border-radius: 0 20px 20px 0;
   background-color: @dark-blue-grey-four;
   top: 39px;
-  z-index: -1;
 }
 
 .companions {
@@ -17,9 +16,9 @@
   min-height: 1322px;
   border-radius: 0 0 30px 30px;
   background: @dark-blue-grey url("@{imgPath}/smolov-back-desktop@1x.png") 152px 39px no-repeat;
-  z-index: 1;
 
   &__caption {
+    position: relative;
     margin: 0;
     width: 143px;
     height: 23px;
@@ -32,6 +31,7 @@
   }
 
   &__description {
+    position: relative;
     width: 215px;
     font-size: 16px;
     font-weight: 300;
@@ -158,4 +158,14 @@
     height: 62px;
     background-color: @light-gold;
   }
+}
+
+.companions::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+  bottom: 0;
+  background-color: @pale-grey;
 }
