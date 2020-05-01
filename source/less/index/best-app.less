@@ -47,8 +47,7 @@
 
   &__list {
     position: absolute;
-    top: -80px;
-    min-height: 561px;
+    top: 80px;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -63,24 +62,26 @@
   }
 
   &__item:nth-child(1) {
+    position: absolute;
+    top: -160px;
     background-color: @mango;
   }
 
   &__item:nth-child(2) {
-    position: relative;
+    position: absolute;
     top: -80px;
     background-color: @mango-three;
   }
 
   &__item:nth-child(3) {
-    position: relative;
-    top: -160px;
+    position: absolute;
+    top: 0;
     background-color: @mango-two;
   }
 
   &__item:nth-child(4) {
-    position: relative;
-    top: -240px;
+    position: absolute;
+    top: 80px;
     height: 80px;
     background-color: @light-gold;
   }
