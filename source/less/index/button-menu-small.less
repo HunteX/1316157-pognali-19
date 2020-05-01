@@ -1,0 +1,50 @@
+@import "../shared/vars";
+@import "../shared/colors";
+
+.button-menu-small {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.button-menu-small::before {
+  position: absolute;
+  content: " ";
+}
+
+.button-menu-small:active::before {
+  opacity: 0.3;
+}
+
+.button-menu-small--call {
+  background: @mango;
+}
+
+.button-menu-small--call:hover {
+  background: @dusty-orange;
+}
+
+.button-menu-small--call::before {
+  top: 11px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  background-image: url("@{imgPath}/topmenu-phone.svg");
+}
+
+.button-menu-small--mail {
+  background: @mango-two;
+}
+
+.button-menu-small--mail:hover {
+  background: @mango;
+}
+
+.button-menu-small--mail::before {
+  top: 13px;
+  left: 11px;
+  width: 18px;
+  height: 14px;
+  background-image: url("@{imgPath}/topmenu-mail.svg");
+}

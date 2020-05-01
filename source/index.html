@@ -3,50 +3,64 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="main-container">
 
 <header class="page-header">
-  <a class="page-header__logo">
-    <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Погнали">
-  </a>
-  <nav class="main-nav">
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a>Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a href="catalog.html">Попутчики</a>
-        </li>
-        <li class="site-list__item">
-          <a href="form.html">Направления</a>
-        </li>
-      </ul>
-      <ul class="main-nav__list user-list">
-        <li class="user-list__item">
-          <a class="user-list__login" href="#">Авторизация</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-  <section class="page-header__promo">
-    <!-- TODO: не забыть фоновое изображения человека с сумкой -->
-    <button class="button button-call" type="button"></button>
-    <button class="button button-mail" type="button"></button>
-    <button class="button button-auth" type="button"></button>
-  </section>
+  <!-- TODO: может стоит везде использовать один класс? -->
+  <div class="global-wrapper page-header__wrapper">
+    <div class="page-header__fixed">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19"
+          alt="Погнали">
+      </a>
+      <button class="page-header__toggle" type="button" title="Открыть меню"></button>
+    </div>
+
+    <!-- TODO: вынести в модалку -->
+    <nav class="visually-hidden main-nav">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a>О сервисе</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Направления</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
+        <ul class="main-nav__list user-list">
+          <li class="user-list__item">
+            <a class="user-list__login" href="#">Авторизация</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <p class="page-header__description">В путешествие с крутыми попутчиками!</p>
+
+    <div class="page-header__promo">
+      <button class="button button-menu-small button-menu-small--call" type="button"></button>
+      <button class="button button-menu-small button-menu-small--mail" type="button"></button>
+      <button class="button button-menu-medium" type="button"></button>
+    </div>
+  </div>
 </header>
 
 <main class="page-main">
   <h1 class="visually-hidden">Погнали</h1>
 
   <section class="best-app">
-    <div class="best-app__wrapper">
+    <div class="global-wrapper best-app__wrapper1">
       <h2 class="best-app__description">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</h2>
       <p class="best-app__extra">Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</p>
+    </div>
+
+    <div class="global-wrapper best-app__wrapper2">
       <ul class="best-app__list">
         <li class="best-app__item">
           <div class="best-app__text">Выберите направление</div>
@@ -69,7 +83,7 @@
   </section>
 
   <section class="about-service">
-    <div class="about-service__wrapper">
+    <div class="global-wrapper about-service__wrapper">
       <header class="about-service__header">
         <h2 class="about-service__caption">О сервисе</h2>
       </header>
@@ -84,7 +98,7 @@
   </section>
 
   <section class="directions">
-    <div class="directions__wrapper">
+    <div class="global-wrapper directions__wrapper">
       <header class="directions__header">
         <h2 class="directions__caption">Направления</h2>
       </header>
@@ -95,10 +109,10 @@
       </p>
       <ul class="directions__list">
         <li class="directions__item">
-          <figure class="directions__country">
-            <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Тайланд">
+          <figure class="directions__direction">
+            <img class="directions__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Тайланд">
             <figcaption class="directions__details">
-              <div class="directions__flag flag flag__thailand"></div>
+              <div class="directions__flag flag flag--thailand"></div>
               <div class="directions__container">
                 <p class="directions__country">Тайланд</p>
                 <p class="directions__text">Джунгли зовут!</p>
@@ -108,10 +122,10 @@
           </figure>
         </li>
         <li class="directions__item">
-          <figure class="directions__country">
-            <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Франция">
+          <figure class="directions__direction">
+            <img class="directions__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
             <figcaption class="directions__details">
-              <div class="directions__flag flag flag__france"></div>
+              <div class="directions__flag flag flag--france"></div>
               <div class="directions__container">
                 <p class="directions__country">Франция</p>
                 <p class="directions__text">Трэ бьен, манифик!</p>
@@ -121,10 +135,10 @@
           </figure>
         </li>
         <li class="directions__item">
-          <figure class="directions__country">
-            <img src="https://via.placeholder.com/270x110" width="270" height="110" alt="Чехия">
+          <figure class="directions__direction">
+            <img class="directions__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
             <figcaption class="directions__details">
-              <div class="directions__flag flag flag__czech"></div>
+              <div class="directions__flag flag flag--czech"></div>
               <div class="directions__container">
                 <p class="directions__country">Чехия</p>
                 <p class="directions__text">Закоулки старой Европы</p>
@@ -135,12 +149,13 @@
         </li>
       </ul>
 
-      <a class="button" href="catalog.html">Показать все</a>
+      <!-- TODO: href="catalog.html" -->
+      <button type="button" class="button button-big-arrow directions__button">Показать все</button>
     </div>
   </section>
 
   <section class="companions">
-    <div class="companions__wrapper">
+    <div class="global-wrapper companions__wrapper">
       <header class="companions__header">
         <h2 class="companions__caption">Попутчики</h2>
       </header>
@@ -153,10 +168,10 @@
       <ul class="companions__list">
         <li class="companions__item">
           <figure class="companions__companion">
-            <img src="https://via.placeholder.com/270x270" width="270" height="270" alt="Попутчик Таня Фирсова">
+            <img class="companions__image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Попутчик Таня Фирсова">
             <figcaption class="companions__companion-details">
               <div class="companions__flags">
-                <div class="companions__flag flag flag--sri-lanka"></div>
+                <div class="companions__flag flag flag--srilanka"></div>
                 <div class="companions__flag flag flag--thailand"></div>
                 <div class="companions__flag flag flag--seychelles"></div>
               </div>
@@ -165,17 +180,17 @@
                 #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
               </div>
               <div class="companions__directions">
-                <div class="companions__direction companions__direction--avia companions__direction--active"></div>
-                <div class="companions__direction companions__direction--bus"></div>
-                <div class="companions__direction companions__direction--velo"></div>
-                <div class="companions__direction companions__direction--run"></div>
+                <div class="companions__direction direction direction--avia direction--active"></div>
+                <div class="companions__direction direction direction--bus"></div>
+                <div class="companions__direction direction direction--velo"></div>
+                <div class="companions__direction direction direction--run"></div>
               </div>
             </figcaption>
           </figure>
         </li>
         <li class="companions__item">
           <figure class="companions__companion">
-            <img src="https://via.placeholder.com/270x270" width="270" height="270" alt="Попутчик Петя Демин">
+            <img class="companions__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Попутчик Петя Демин">
             <figcaption class="companions__companion-details">
               <div class="companions__flags">
                 <div class="companions__flag flag flag--belgium"></div>
@@ -186,22 +201,23 @@
                 #бургер #бар #футбол #концерт #крафт
               </div>
               <div class="companions__directions">
-                <div class="companions__direction companions__direction--avia companions__direction--active"></div>
-                <div class="companions__direction companions__direction--bus companions__direction--active"></div>
-                <div class="companions__direction companions__direction--velo"></div>
-                <div class="companions__direction companions__direction--run companions__direction--active"></div>
+                <div class="companions__direction direction direction--avia direction--active"></div>
+                <div class="companions__direction direction direction--bus direction--active"></div>
+                <div class="companions__direction direction direction--velo"></div>
+                <div class="companions__direction direction direction--run direction--active"></div>
               </div>
             </figcaption>
           </figure>
         </li>
       </ul>
 
-      <a class="button" href="form.html">Показать всех</a>
+      <!-- TODO: href="form.html" -->
+      <button type="button" class="button button-big-arrow companions__button">Показать всех</button>
     </div>
   </section>
 
   <section class="profile-add">
-    <div class="profile-add__wrapper">
+    <div class="global-wrapper profile-add__wrapper">
       <header class="profile-add__header">
         <h2 class="profile-add__caption">Добавьте свой профиль</h2>
         <div class="profile-add__icon">&nbsp;</div>
@@ -235,7 +251,7 @@
   </section>
 
   <section class="register">
-    <div class="register__wrapper">
+    <div class="global-wrapper register__wrapper">
       <header class="register__header">
         <h2 class="register__caption">Заинтересовались?</h2>
       </header>
@@ -258,7 +274,7 @@
   </section>
 
   <section class="route">
-    <div class="route__wrapper">
+    <div class="global-wrapper route__wrapper">
       <header class="route__header">
         <h2 class="route__caption">Ул. Большая Конюшенная, 19/8</h2>
         <button class="button button-route" type="button">Проложить маршрут</button>
@@ -270,7 +286,7 @@
 </main>
 
 <footer class="page-footer">
-  <div class="page-footer__wrapper">
+  <div class="global-wrapper page-footer__wrapper">
     <h2 class="page-footer__header">Погнали?</h2>
 
     <div class="page-footer__socials social">

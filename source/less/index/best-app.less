@@ -1,0 +1,115 @@
+@import "../shared/colors";
+
+.best-app {
+  &__wrapper1 {
+    padding-top: 46px;
+    min-height: 285px;
+    background: @bg-default;
+  }
+
+  &__wrapper2 {
+    position: relative;
+    min-height: 279px;
+    background: @dark-blue-grey;
+  }
+
+  &__description {
+    width: 148px;
+    height: 37px;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    margin-top: 0;
+    margin-left: 25px;
+  }
+
+  &__extra {
+    margin-top: 25px;
+    margin-left: 25px;
+    width: 155px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  &__list {
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    height: 160px;
+    border-radius: 10px;
+    padding: 21px 22px 0 25px;
+  }
+
+  &__item:nth-child(1) {
+    position: absolute;
+    top: -160px;
+    background-color: @mango;
+  }
+
+  &__item:nth-child(2) {
+    position: absolute;
+    top: -80px;
+    background-color: @mango-three;
+  }
+
+  &__item:nth-child(3) {
+    position: absolute;
+    top: 0;
+    background-color: @mango-two;
+  }
+
+  &__item:nth-child(4) {
+    position: absolute;
+    top: 80px;
+    height: 80px;
+    background-color: @light-gold;
+  }
+
+  &__text {
+    width: 140px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: @dark-two;
+  }
+
+  &__index {
+    width: 9px;
+    height: 13px;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: center;
+    color: @white;
+  }
+}
