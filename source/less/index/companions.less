@@ -49,4 +49,46 @@
     margin-top: 21px;
     margin-left: 24px;
   }
+
+  &__list:before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/rogovaya-back-mobile@1x.png");
+    width: 71px;
+    height: 71px;
+    top: -35px;
+    left: -35px;
+    z-index: -1;
+  }
+
+  &__list {
+    position: relative;
+    margin: 57px 0 0;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__companion {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__image {
+    display: block;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__companion-details {
+    width: 100%;
+    min-height: 157px;
+    background-color: @white;
+    border-radius: 0 0 10px 10px;
+  }
 }
