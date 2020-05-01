@@ -1,0 +1,31 @@
+@import "../shared/colors";
+
+.button-big-arrow {
+  position: relative;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  color: @dark-slate-blue;
+  padding-left: 24px;
+  padding-bottom: 4px;
+}
+
+.button-big-arrow:hover {
+  background-color: @mango-two;
+}
+
+.button-big-arrow:active {
+  opacity: 0.3;
+}
+
+.button-big-arrow::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/triangle-arrow-right.svg");
+  width: 10px;
+  height: 14px;
+  top: 24px;
+  right: 24px;
+}
