@@ -1,3 +1,4 @@
+@import "../shared/vars";
 @import "../shared/colors";
 
 .direction {
@@ -10,21 +11,21 @@
 
   &--avia {
     width: 19px;
-    background-image: url(~"../img/directions/plane.svg");
+    background-image: url("@{imgPath}/directions/plane.svg");
   }
 
   &--bus {
     width: 17px;
-    background-image: url(~"../img/directions/bus.svg");
+    background-image: url("@{imgPath}/directions/bus.svg");
   }
 
   &--velo {
     width: 24px;
-    background-image: url(~"../img/directions/bike.svg");
+    background-image: url("@{imgPath}/directions/bike.svg");
   }
 
   &--run {
     width: 20px;
-    background-image: url(~"../img/directions/run.svg");
+    background-image: url("@{imgPath}/directions/run.svg");
   }
 }
