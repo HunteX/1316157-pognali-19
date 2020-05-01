@@ -1,3 +1,67 @@
-.profile-add {
+@import "../shared/colors";
+@import "../shared/vars";
 
+.profile-add {
+  position: relative;
+  background-color: @pale-grey;
+  min-height: 451px;
+
+  &__caption {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 101px;
+    height: 71px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: @mango;
+    top: 50px;
+    left: 26px;
+  }
+
+  &__caption::after {
+    position: absolute;
+    content: "";
+    width: 99px;
+    height: 99px;
+    background-image: url("@{imgPath}/rates@1x.png");
+    background-size: 99px;
+    top: -12px;
+    left: 144px;
+  }
+
+  &__list {
+    position: relative;
+    list-style: none;
+    top: 96px;
+    left: 24px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__text {
+    position: relative;
+    border-top: 1px solid @table-border;
+    padding-top: 12px;
+    padding-bottom: 15px;
+  }
+
+  &__service,
+  &__price {
+    margin: 0;
+  }
+
+  &__index {
+    position: absolute;
+    color: @white;
+    top: -6px;
+    right: -50px;
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 20px;
+  }
 }
