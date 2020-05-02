@@ -81,73 +81,78 @@
 
   <section class="country-filters">
     <div class="global-wrapper country-filters__wrapper">
-      <h2 class="country-filters__caption">Фильтрация по странам</h2>
-
-      <div class="country-filters__continents continent-list">
-        <input id="europe" class="continent-list__radio" type="radio" name="continent">
-        <label for="europe" class="continent-list__item">Европа</label>
-        <input id="asia" class="continent-list__radio" type="radio" name="continent">
-        <label for="asia" class="continent-list__item">Азия</label>
-        <input id="usa" class="continent-list__radio" type="radio" name="continent">
-        <label for="usa" class="continent-list__item">Америка</label>
-        <input id="islands" class="continent-list__radio" type="radio" name="continent">
-        <label for="islands" class="continent-list__item">Острова</label>
+      <div class="country-filters__controls">
+        <h2 class="country-filters__caption">Фильтрация по странам</h2>
+        <button type="button" class="button country-filters__open" onclick="toggleCountryFilters()"></button>
+        <button type="button" class="button country-filters__close" onclick="toggleCountryFilters()"></button>
       </div>
 
-      <div class="country-filters__alphabet alphabet">
-        <div class="alphabet__row">
-          <div class="alphabet__cell alphabet__cell--selected">А</div>
-          <div class="alphabet__cell">Б</div>
-          <div class="alphabet__cell">В</div>
-          <div class="alphabet__cell">Г</div>
-          <div class="alphabet__cell">Д</div>
+      <div class="country-filters__container">
+        <div class="country-filters__continents continent-list">
+          <input id="europe" class="continent-list__radio" type="radio" name="continent">
+          <label for="europe" class="continent-list__item">Европа</label>
+          <input id="asia" class="continent-list__radio" type="radio" name="continent">
+          <label for="asia" class="continent-list__item">Азия</label>
+          <input id="usa" class="continent-list__radio" type="radio" name="continent">
+          <label for="usa" class="continent-list__item">Америка</label>
+          <input id="islands" class="continent-list__radio" type="radio" name="continent">
+          <label for="islands" class="continent-list__item">Острова</label>
         </div>
-        <div class="alphabet__row">
-          <div class="alphabet__cell">Е</div>
-          <div class="alphabet__cell">З</div>
-          <div class="alphabet__cell">И</div>
-          <div class="alphabet__cell">К</div>
-          <div class="alphabet__cell">Л</div>
+
+        <div class="country-filters__alphabet alphabet">
+          <div class="alphabet__row">
+            <div class="alphabet__cell alphabet__cell--selected">А</div>
+            <div class="alphabet__cell">Б</div>
+            <div class="alphabet__cell">В</div>
+            <div class="alphabet__cell">Г</div>
+            <div class="alphabet__cell">Д</div>
+          </div>
+          <div class="alphabet__row">
+            <div class="alphabet__cell">Е</div>
+            <div class="alphabet__cell">З</div>
+            <div class="alphabet__cell">И</div>
+            <div class="alphabet__cell">К</div>
+            <div class="alphabet__cell">Л</div>
+          </div>
+          <div class="alphabet__row">
+            <div class="alphabet__cell">М</div>
+            <div class="alphabet__cell">Н</div>
+            <div class="alphabet__cell">О</div>
+            <div class="alphabet__cell">П</div>
+            <div class="alphabet__cell">Р</div>
+          </div>
+          <div class="alphabet__row">
+            <div class="alphabet__cell">С</div>
+            <div class="alphabet__cell">Т</div>
+            <div class="alphabet__cell">У</div>
+            <div class="alphabet__cell">Ф</div>
+            <div class="alphabet__cell">Х</div>
+          </div>
+          <div class="alphabet__row">
+            <div class="alphabet__cell">Ч</div>
+            <div class="alphabet__cell">Ш</div>
+            <div class="alphabet__cell">Э</div>
+            <div class="alphabet__cell">Ю</div>
+            <div class="alphabet__cell">Я</div>
+          </div>
         </div>
-        <div class="alphabet__row">
-          <div class="alphabet__cell">М</div>
-          <div class="alphabet__cell">Н</div>
-          <div class="alphabet__cell">О</div>
-          <div class="alphabet__cell">П</div>
-          <div class="alphabet__cell">Р</div>
-        </div>
-        <div class="alphabet__row">
-          <div class="alphabet__cell">С</div>
-          <div class="alphabet__cell">Т</div>
-          <div class="alphabet__cell">У</div>
-          <div class="alphabet__cell">Ф</div>
-          <div class="alphabet__cell">Х</div>
-        </div>
-        <div class="alphabet__row">
-          <div class="alphabet__cell">Ч</div>
-          <div class="alphabet__cell">Ш</div>
-          <div class="alphabet__cell">Э</div>
-          <div class="alphabet__cell">Ю</div>
-          <div class="alphabet__cell">Я</div>
-        </div>
+
+        <ul class="country-filters__countries">
+          <li class="country-filters__country">Австралия</li>
+          <li class="country-filters__country">Австрия</li>
+          <li class="country-filters__country">Азербайджан</li>
+          <li class="country-filters__country">Албания</li>
+          <li class="country-filters__country">Алжир</li>
+          <li class="country-filters__country">Ангола</li>
+          <li class="country-filters__country">Андорра</li>
+          <li class="country-filters__country">Антигуа и Барбуда</li>
+          <li class="country-filters__country">Аргентина</li>
+          <li class="country-filters__country">Армения</li>
+          <li class="country-filters__country">Афганистан</li>
+        </ul>
+
+        <button type="button" class="button country-filters__button">Свернуть</button>
       </div>
-
-      <ul class="country-filters__countries">
-        <li class="country-filters__country">Австралия</li>
-        <li class="country-filters__country">Австрия</li>
-        <li class="country-filters__country">Азербайджан</li>
-        <li class="country-filters__country">Албания</li>
-        <li class="country-filters__country">Алжир</li>
-        <li class="country-filters__country">Ангола</li>
-        <li class="country-filters__country">Андорра</li>
-        <li class="country-filters__country">Антигуа и Барбуда</li>
-        <li class="country-filters__country">Аргентина</li>
-        <li class="country-filters__country">Армения</li>
-        <li class="country-filters__country">Афганистан</li>
-      </ul>
-
-      <button type="button" class="button country-filters__button">Свернуть</button>
-
     </div>
   </section>
 
@@ -453,5 +458,6 @@
 </footer>
 
 <script src="js/menu.js"></script>
+<script src="js/filters.js"></script>
 </body>
 </html>
