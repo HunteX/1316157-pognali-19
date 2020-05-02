@@ -25,6 +25,27 @@
     background-color: transparent;
     border: 0;
   }
+
+  &__caption {
+    position: relative;
+    width: 169px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.11;
+    text-align: left;
+    color: @white;
+    margin-top: 49px;
+  }
+
+  &__caption::after {
+    position: absolute;
+    content: "";
+    width: 173px;
+    height: 5px;
+    background-color: @mango;
+    border-radius: 10px;
+    bottom: -15px;
+  }
 }
 
 .catalog-header::after {
