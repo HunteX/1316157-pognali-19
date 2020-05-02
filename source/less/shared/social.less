@@ -12,8 +12,11 @@
   }
 
   &__item {
-    background-color: @light-gold;
     border-radius: 50%;
+  }
+
+  &__item--colored {
+    background-color: @light-gold;
   }
 
   &__icon {
@@ -22,8 +25,12 @@
     border-radius: 50%;
   }
 
-  &__icon:hover {
+  &__item--colored &__icon:hover {
     background-color: @mango-two;
+  }
+
+  &__item:not(&__item--colored) &__icon:hover {
+    opacity: 0.6;
   }
 
   &__icon:active {
