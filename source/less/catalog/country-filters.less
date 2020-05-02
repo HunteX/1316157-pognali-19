@@ -1,0 +1,52 @@
+@import "../shared/vars";
+@import "../shared/colors";
+
+.country-filters {
+  position: relative;
+  background-color: @pale-grey-four;
+  min-height: 890px;
+  border-radius: 0 0 30px 30px;
+
+  &__caption::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 10px;
+    background-image: url("@{imgPath}/filter.svg");
+    top: 6px;
+    left: -27px;
+  }
+
+  &__caption {
+    position: relative;
+    width: 194px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.38;
+    color: @dark-blue-grey;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    top: 16px;
+    left: 27px;
+  }
+
+  &__caption::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url("@{imgPath}/filter-close.svg");
+    top: 4px;
+    right: -42px;
+  }
+
+  &__continents {
+    margin-top: 46px;
+    margin-left: 26px;
+  }
+
+  &__alphabet {
+
+  }
+}
