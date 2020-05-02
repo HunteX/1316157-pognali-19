@@ -1,0 +1,31 @@
+@import "colors";
+@import "vars";
+
+.alphabet {
+  display: table;
+  border-collapse: collapse;
+
+  &__row {
+    display: table-row;
+  }
+
+  &__cell {
+    display: table-cell;
+    width: 45px;
+    height: 42px;
+    background-color: @white;
+    border: solid 1px @cloudy-blue;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1.4px;
+    color: @dark-slate-blue;
+  }
+
+  &__cell--selected {
+    background-color: @dark-slate-blue;
+    color: @white;
+  }
+}
