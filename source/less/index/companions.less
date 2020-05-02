@@ -158,6 +158,16 @@
     height: 62px;
     background-color: @light-gold;
   }
+
+  &__button::after {
+    background-image: url("@{imgPath}/triangle-arrow-right.svg");
+    top: 24px;
+    right: 24px;
+  }
+
+  &__button:hover {
+    background-color: @mango-two;
+  }
 }
 
 .companions::after {
