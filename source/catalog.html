@@ -5,7 +5,7 @@
   <title>HTML Academy: Погнали: Каталог</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="main-container">
 
 <header class="page-header">
   <a class="page-header__logo">
@@ -34,7 +34,7 @@
   </nav>
 </header>
 
-<main class="page-main">
+<main>
   <h1 class="visually-hidden">Каталог</h1>
 
   <section class="countries">
@@ -101,11 +101,11 @@
     </div>
   </section>
 
-  <section class="companions">
-    <div class="companions__wrapper slider">
-      <div class="companions__list slider__list">
-        <div class="companions__item slider__item">
-          <div class="companions__person person">
+  <section class="catalog">
+    <div class="catalog__wrapper slider">
+      <div class="catalog__list slider__list">
+        <div class="catalog__item slider__item">
+          <div class="catalog__person person">
             <div class="person__passport">
               <div class="person__avatar">
                 <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
@@ -154,7 +154,7 @@
             <button class="button" type="button">Позвать!</button>
           </div>
 
-          <div class="companions__person person">
+          <div class="catalog__person person">
             <div class="person__passport">
               <div class="person__avatar">
                 <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
@@ -199,7 +199,7 @@
             <button class="button" type="button">Позвать!</button>
           </div>
 
-          <div class="companions__person person">
+          <div class="catalog__person person">
             <div class="person__passport">
               <div class="person__avatar">
                 <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
@@ -248,7 +248,7 @@
             <button class="button" type="button">Позвать!</button>
           </div>
 
-          <div class="companions__person person">
+          <div class="catalog__person person">
             <div class="person__passport">
               <div class="person__avatar">
                 <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
@@ -302,7 +302,7 @@
 
       <button class="slider__show-more" type="button">Показать еще</button>
 
-      <p class="companions__toggles slider__toggles">
+      <p class="catalog__toggles slider__toggles">
         <button class="slider__toggle" type="button">&#9658;</button>
         <button class="slider__toggle" type="button">&#x25BA;</button>
       </p>
@@ -310,33 +310,33 @@
   </section>
 </main>
 
-<footer class="page-footer">
-  <div class="page-footer__wrapper">
-    <h2 class="page-footer__header">Погнали?</h2>
+<footer class="page-footer footer">
+  <div class="global-wrapper footer__wrapper">
+    <div class="footer__header"></div>
 
-    <div class="page-footer__socials social">
+    <div class="footer__socials social">
       <ul class="social__list">
         <li class="social__item" aria-label="Facebook">
           <a href="https://facebook.com">
-            <div class="page-footer__icon page-footer__icon--vk"></div>
+            <div class="social__icon social__icon--fb"></div>
           </a>
         </li>
         <li class="social__item" aria-label="Vkontakte">
           <a href="https://vk.com">
-            <div class="page-footer__icon page-footer__icon--fb"></div>
+            <div class="social__icon social__icon--vk"></div>
           </a>
         </li>
         <li class="social__item" aria-label="Instagram">
           <a href="https://instagram.com">
-            <div class="page-footer__icon page-footer__icon--ig"></div>
+            <div class="social__icon social__icon--ig"></div>
           </a>
         </li>
       </ul>
     </div>
 
-    <div class="page-footer__copyright copyright">
-      <div class="copyright__text">Разработано</div>
-      <a class="copyright__link" href="https://htmlacademy.ru">&nbsp;</a>
+    <div class="footer__copyright">
+      <div class="footer__copy-text">Разработано</div>
+      <a class="footer__copy-link" href="https://htmlacademy.ru">&nbsp;</a>
     </div>
   </div>
 </footer>
