@@ -199,15 +199,18 @@
           <li class="filters__item filters__item--opened">
             <div class="filters__caption">Левел</div>
             <div class="filters__content">
-              <div class="filters__levels">
-                <label>
-                  <input type="text" name="from" class="filters__from">
-                </label>
-                <label>
-                  <input type="text" name="to" class="filters__to">
-                </label>
+              <div class="filters__levels level">
+                <div class="level__inputs">
+                  <label class="level__text">
+                    <input type="number" name="from" class="level__input level__from">
+                  </label>
+                  <label>
+                    <input type="number" name="to" class="level__input level__to">
+                  </label>
+                </div>
               </div>
-              <div class="filters__range"></div>
+
+              <div class="level__range"></div>
             </div>
           </li>
         </ul>
