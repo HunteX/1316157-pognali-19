@@ -1,0 +1,51 @@
+@import "../shared/vars";
+@import "../shared/colors";
+
+.filters {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid @macaroni-and-cheese;
+  }
+
+  &__caption {
+    flex-grow: 1;
+    position: relative;
+    width: 46px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.13;
+    text-align: left;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  &__caption::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 20px;
+    width: 8px;
+    height: 4px;
+    background-image: url("@{imgPath}/dropdown.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  &__item--opened &__caption::after {
+    transform: rotate(180deg);
+  }
+}
