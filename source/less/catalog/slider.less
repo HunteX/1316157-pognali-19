@@ -1,0 +1,39 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.slider {
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    min-height: 165px;
+  }
+
+  &__show-more::before {
+    position: absolute;
+    content: "";
+    background: transparent url("@{imgPath}/qty-plus-mobile.svg") center no-repeat;
+    width: 18px;
+    height: 18px;
+    top: 6px;
+    left: 43px;
+  }
+
+  &__show-more {
+    position: relative;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.76;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+    margin-top: 26px;
+    margin-bottom: 27px;
+  }
+
+  &__show-more:hover {
+    opacity: 0.6;
+  }
+
+  &__show-more:active {
+    opacity: 0.3;
+  }
+}
