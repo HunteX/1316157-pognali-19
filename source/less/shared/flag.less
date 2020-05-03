@@ -1,0 +1,32 @@
+@import "vars";
+
+.flag-common(@direction, @width, @height) {
+  background-image: url("@{imgPath}/flags/@{direction}.png");
+  background-size: @width @height;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flag-thailand(@width, @height) {
+  .flag-common("thailand", @width, @height);
+}
+
+.flag-france(@width, @height) {
+  .flag-common("france", @width, @height);
+}
+
+.flag-czech(@width, @height) {
+  .flag-common("czech", @width, @height);
+}
+
+.flag-belgium(@width, @height) {
+  .flag-common("belgium", @width, @height);
+}
+
+.flag-seychelles(@width, @height) {
+  .flag-common("seychelles", @width, @height);
+}
+
+.flag-srilanka(@width, @height) {
+  .flag-common("srilanka", @width, @height);
+}
