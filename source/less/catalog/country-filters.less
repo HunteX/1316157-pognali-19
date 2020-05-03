@@ -6,10 +6,15 @@
   background-color: @pale-grey-four;
   min-height: 747px;
   border-radius: 0 0 20px 20px;
+  padding-top: 1px;
 
   &__controls {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 21px;
+    margin-top: 15px;
   }
 
   &__caption::before {
@@ -23,6 +28,7 @@
   }
 
   &__caption {
+    position: relative;
     width: 194px;
     font-size: 16px;
     font-weight: bold;
@@ -33,18 +39,26 @@
     text-transform: uppercase;
   }
 
+  &__buttons {
+    display: flex;
+  }
+
   &__open {
     width: 27px;
     height: 5px;
     background-image: url("@{imgPath}/dots.svg");
+    background-repeat: no-repeat;
+    background-size: 27px 5px;
     background-color: transparent;
   }
 
   &__close {
     display: none;
-    width: 12px;
+    width: 27px;
     height: 12px;
     background-image: url("@{imgPath}/filter-close.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
     background-color: transparent;
   }
 
