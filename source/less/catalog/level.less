@@ -60,4 +60,67 @@
     right: -4px;
     z-index: 1;
   }
+
+  &__range {
+    position: relative;
+    margin-top: 26px;
+    width: 210px;
+  }
+
+  &__scale {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    left: 0;
+    height: 3px;
+  }
+
+  &__bar {
+    border-radius: 1.5px;
+    background-color: @dark-slate-blue;
+    height: 3px;
+  }
+
+  &__bar1 {
+    opacity: 0.2;
+    width: 30%;
+    left: 0;
+  }
+
+  &__bar2 {
+    width: 70%;
+    left: 30%;
+  }
+
+  &__toggle-min,
+  &__toggle-max {
+    position: absolute;
+    content: "";
+    top: -5px;
+    width: 13px;
+    height: 13px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__toggle-min {
+    left: 30%;
+  }
+
+  &__toggle-max {
+    left: 100%;
+  }
+
+  &__toggle-min:hover,
+  &__toggle-max:hover {
+    width: 16px;
+    height: 16px;
+    top: -6px;
+  }
+
+  &__toggle-min:active,
+  &__toggle-max:active {
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
 }
