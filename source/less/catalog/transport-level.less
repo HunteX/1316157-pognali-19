@@ -1,10 +1,16 @@
 @import "../shared/vars";
 @import "../shared/colors";
+@import "../shared/status-bar";
 
 .transport-level {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+
+  &__headers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__directions {
     list-style: none;
@@ -33,7 +39,7 @@
 
   &__header1::after {
     width: 94px;
-    right: -35px;
+    right: -104px;
   }
 
   &__header2::after {
@@ -50,5 +56,48 @@
     line-height: 1.2;
     color: @four;
     margin-bottom: 10px;
+  }
+
+  &__values {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__chart {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 0.75;
+    text-align: center;
+    color: @dark-slate-blue;
+    margin-right: 10px;
+  }
+
+  &__chart::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 45px;
+    top: -14px;
+    right: -9px;
+
+  }
+
+  &__chart--99::after {
+    .status-bar(99);
+  }
+
+  &__chart--80::after {
+    .status-bar(80);
+  }
+
+  &__chart--50::after {
+    .status-bar(50);
+  }
+
+  &__chart--25::after {
+    .status-bar(25);
   }
 }
