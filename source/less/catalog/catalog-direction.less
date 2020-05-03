@@ -1,0 +1,30 @@
+@import "../shared/vars";
+@import "../shared/colors";
+@import "../shared/direction";
+
+.catalog-direction {
+  width: 33px;
+  height: 33px;
+  background-color: @white;
+  border-radius: 50%;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--avia {
+    .direction-avia(14px, 16px);
+  }
+
+  &--bus {
+    .direction-bus(13px, 16px);
+  }
+
+  &--velo {
+    .direction-velo(19px, 17px);
+  }
+
+  &--run {
+    .direction-run(15px, 17px);
+  }
+}

@@ -1,0 +1,24 @@
+@import "vars";
+
+.direction-common(@direction, @width, @height) {
+  background-image: url("@{imgPath}/directions/@{direction}.svg");
+  background-size: @width @height;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.direction-avia(@width, @height) {
+  .direction-common("plane", @width, @height);
+}
+
+.direction-bus(@width, @height) {
+  .direction-common("bus", @width, @height);
+}
+
+.direction-velo(@width, @height) {
+  .direction-common("bike", @width, @height);
+}
+
+.direction-run(@width, @height) {
+  .direction-common("run", @width, @height);
+}
