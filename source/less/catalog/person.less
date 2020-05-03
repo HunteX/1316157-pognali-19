@@ -1,0 +1,88 @@
+@import "../shared/vars";
+@import "../shared/colors";
+
+.person {
+  display: flex;
+  flex-direction: column;
+  background-color: @white;
+  margin-top: 24px;
+  border-radius: 20px;
+  min-height: 624px;
+  justify-content: space-between;
+  padding: 25px;
+
+  &__passport {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__avatar-image {
+    border-radius: 50%;
+  }
+
+  &__avatar {
+    position: relative;
+  }
+
+  &__avatar::after {
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 31px;
+    background: @pale-grey url("@{imgPath}/heart.svg") center no-repeat;
+    background-size: 13px 11px;
+    border-radius: 15.5px;
+    top: 40px;
+    right: -11px;
+  }
+
+  &__avatar--online::after {
+    background: @very-light-pink-two url("@{imgPath}/heart-active.svg") center no-repeat;
+    background-size: 13px 11px;
+  }
+
+  &__private {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 18px;
+    flex-grow: 1;
+  }
+
+  &__private::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 2.6px;
+    background-color: @salmon;
+    top: 7px;
+    right: -3px;
+  }
+
+  &__private--online::after {
+    background-color: @green-apple;
+  }
+
+  &__name {
+    width: 78px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: @dark-slate-blue;
+    margin: 0;
+  }
+
+  &__likes {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-align: left;
+    color: @dark-two;
+    margin: 0;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+  }
+}
