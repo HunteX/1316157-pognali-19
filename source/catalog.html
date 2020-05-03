@@ -8,7 +8,6 @@
 <body class="main-container">
 
 <header class="catalog-header">
-
   <div class="global-wrapper catalog-header__wrapper">
     <div class="catalog-header__fixed">
       <a class="catalog-header__logo">
@@ -193,12 +192,12 @@
           </li>
           <li class="filters__item">
             <div class="filters__caption">Транспорт</div>
-            <div class="filters__content filters__content--opened directions">
-              <ul class="directions__list">
-                <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                <li class="directions__direction directions__direction--bus directions__direction--active"></li>
-                <li class="directions__direction directions__direction--velo"></li>
-                <li class="directions__direction directions__direction--run directions__direction--active"></li>
+            <div class="filters__content filters__content--opened catalog-directions">
+              <ul class="catalog-directions__list">
+                <li class="catalog-directions__direction catalog-directions__direction--avia catalog-directions__direction--active"></li>
+                <li class="catalog-directions__direction catalog-directions__direction--bus catalog-directions__direction--active"></li>
+                <li class="catalog-directions__direction catalog-directions__direction--velo"></li>
+                <li class="catalog-directions__direction catalog-directions__direction--run catalog-directions__direction--active"></li>
               </ul>
             </div>
           </li>
@@ -222,245 +221,245 @@
     </div>
   </section>
 
-  <section class="catalog">
-    <div class="global-wrapper catalog__wrapper slider">
-      <div class="catalog__list slider__list">
-        <div class="catalog__item slider__item">
-          <div class="catalog__person person">
-            <div class="person__passport">
-              <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Таня Фирсова">
-              </div>
-              <div class="person__private">
-                <p class="person__name">Таня Фирсова</p>
-                <p class="person__likes">1,5 м</p>
-              </div>
-            </div>
-            <div class="person__hashtags">
-              #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
-            </div>
-            <div class="person__header">хочет посетить:</div>
-            <div class="person__wishes flags">
-              <ul class="flags__list">
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--sri-lanka"></div>
-                  <p class="flags__country">Шри-Ланка</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--thailand"></div>
-                  <p class="flags__country">Тайланд</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--seychelles"></div>
-                  <p class="flags__country">Сейшелы</p>
-                </li>
-              </ul>
-            </div>
-            <div class="person__transport-level">
-              <div class="person__header">транспорт:</div>
-              <div class="person__directions directions">
-                <ul class="directions__list">
-                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--bus"></li>
-                  <li class="directions__direction directions__direction--velo"></li>
-                  <li class="directions__direction directions__direction--run"></li>
-                </ul>
-              </div>
-              <div class="person__header">левел:</div>
-              <div class="person__level">
-                <div class="person__chart">99</div>
-              </div>
-            </div>
-            <button class="button" type="button">Позвать!</button>
-          </div>
+<!--  <section class="catalog">-->
+<!--    <div class="global-wrapper catalog__wrapper slider">-->
+<!--      <div class="catalog__list slider__list">-->
+<!--        <div class="catalog__item slider__item">-->
+<!--          <div class="catalog__person person">-->
+<!--            <div class="person__passport">-->
+<!--              <div class="person__avatar">-->
+<!--                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"-->
+<!--                  alt="Таня Фирсова">-->
+<!--              </div>-->
+<!--              <div class="person__private">-->
+<!--                <p class="person__name">Таня Фирсова</p>-->
+<!--                <p class="person__likes">1,5 м</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="person__hashtags">-->
+<!--              #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи-->
+<!--            </div>-->
+<!--            <div class="person__header">хочет посетить:</div>-->
+<!--            <div class="person__wishes flags">-->
+<!--              <ul class="flags__list">-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;sri-lanka"></div>-->
+<!--                  <p class="flags__country">Шри-Ланка</p>-->
+<!--                </li>-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;thailand"></div>-->
+<!--                  <p class="flags__country">Тайланд</p>-->
+<!--                </li>-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;seychelles"></div>-->
+<!--                  <p class="flags__country">Сейшелы</p>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--            <div class="person__transport-level">-->
+<!--              <div class="person__header">транспорт:</div>-->
+<!--              <div class="person__directions directions">-->
+<!--                <ul class="directions__list">-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;avia directions__direction&#45;&#45;active"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;bus"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;velo"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;run"></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              <div class="person__header">левел:</div>-->
+<!--              <div class="person__level">-->
+<!--                <div class="person__chart">99</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button class="button" type="button">Позвать!</button>-->
+<!--          </div>-->
 
-          <div class="catalog__person person">
-            <div class="person__passport">
-              <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Петя Демин">
-              </div>
-              <div class="person__private">
-                <p class="person__name">Петя Демин</p>
-                <p class="person__likes">1500</p>
-              </div>
-            </div>
-            <div class="person__hashtags">
-              #бургер #бар #футбол #концерт #крафт
-            </div>
-            <div class="person__header">хочет посетить:</div>
-            <div class="person__wishes flags">
-              <ul class="flags__list">
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--belgium"></div>
-                  <p class="flags__country">Бельгия</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--czech"></div>
-                  <p class="flags__country">Чехия</p>
-                </li>
-              </ul>
-            </div>
-            <div class="person__transport-level">
-              <div class="person__header">транспорт:</div>
-              <div class="person__directions directions">
-                <ul class="directions__list">
-                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--bus directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--velo"></li>
-                  <li class="directions__direction directions__direction--run directions__direction--active"></li>
-                </ul>
-              </div>
-              <div class="person__header">левел:</div>
-              <div class="person__level">
-                <div class="person__chart">80</div>
-              </div>
-            </div>
-            <button class="button" type="button">Позвать!</button>
-          </div>
+<!--          <div class="catalog__person person">-->
+<!--            <div class="person__passport">-->
+<!--              <div class="person__avatar">-->
+<!--                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"-->
+<!--                  alt="Петя Демин">-->
+<!--              </div>-->
+<!--              <div class="person__private">-->
+<!--                <p class="person__name">Петя Демин</p>-->
+<!--                <p class="person__likes">1500</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="person__hashtags">-->
+<!--              #бургер #бар #футбол #концерт #крафт-->
+<!--            </div>-->
+<!--            <div class="person__header">хочет посетить:</div>-->
+<!--            <div class="person__wishes flags">-->
+<!--              <ul class="flags__list">-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;belgium"></div>-->
+<!--                  <p class="flags__country">Бельгия</p>-->
+<!--                </li>-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;czech"></div>-->
+<!--                  <p class="flags__country">Чехия</p>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--            <div class="person__transport-level">-->
+<!--              <div class="person__header">транспорт:</div>-->
+<!--              <div class="person__directions directions">-->
+<!--                <ul class="directions__list">-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;avia directions__direction&#45;&#45;active"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;bus directions__direction&#45;&#45;active"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;velo"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;run directions__direction&#45;&#45;active"></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              <div class="person__header">левел:</div>-->
+<!--              <div class="person__level">-->
+<!--                <div class="person__chart">80</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button class="button" type="button">Позвать!</button>-->
+<!--          </div>-->
 
-          <div class="catalog__person person">
-            <div class="person__passport">
-              <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Марк Смолов">
-              </div>
-              <div class="person__private">
-                <p class="person__name">Марк Смолов</p>
-                <p class="person__likes">170</p>
-              </div>
-            </div>
-            <div class="person__hashtags">
-              #рэп #тату #хайпбист #кроссовки #суприм
-            </div>
-            <div class="person__header">хочет посетить:</div>
-            <div class="person__wishes flags">
-              <ul class="flags__list">
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--usa"></div>
-                  <p class="flags__country">США</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--australia"></div>
-                  <p class="flags__country">Австралия</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--dominika"></div>
-                  <p class="flags__country">Доминика</p>
-                </li>
-              </ul>
-            </div>
-            <div class="person__transport-level">
-              <div class="person__header">транспорт:</div>
-              <div class="person__directions directions">
-                <ul class="directions__list">
-                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--bus"></li>
-                  <li class="directions__direction directions__direction--velo directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--run"></li>
-                </ul>
-              </div>
-              <div class="person__header">левел:</div>
-              <div class="person__level">
-                <div class="person__chart">25</div>
-              </div>
-            </div>
-            <button class="button" type="button">Позвать!</button>
-          </div>
+<!--          <div class="catalog__person person">-->
+<!--            <div class="person__passport">-->
+<!--              <div class="person__avatar">-->
+<!--                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"-->
+<!--                  alt="Марк Смолов">-->
+<!--              </div>-->
+<!--              <div class="person__private">-->
+<!--                <p class="person__name">Марк Смолов</p>-->
+<!--                <p class="person__likes">170</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="person__hashtags">-->
+<!--              #рэп #тату #хайпбист #кроссовки #суприм-->
+<!--            </div>-->
+<!--            <div class="person__header">хочет посетить:</div>-->
+<!--            <div class="person__wishes flags">-->
+<!--              <ul class="flags__list">-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;usa"></div>-->
+<!--                  <p class="flags__country">США</p>-->
+<!--                </li>-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;australia"></div>-->
+<!--                  <p class="flags__country">Австралия</p>-->
+<!--                </li>-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;dominika"></div>-->
+<!--                  <p class="flags__country">Доминика</p>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--            <div class="person__transport-level">-->
+<!--              <div class="person__header">транспорт:</div>-->
+<!--              <div class="person__directions directions">-->
+<!--                <ul class="directions__list">-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;avia directions__direction&#45;&#45;active"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;bus"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;velo directions__direction&#45;&#45;active"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;run"></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              <div class="person__header">левел:</div>-->
+<!--              <div class="person__level">-->
+<!--                <div class="person__chart">25</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button class="button" type="button">Позвать!</button>-->
+<!--          </div>-->
 
-          <div class="catalog__person person">
-            <div class="person__passport">
-              <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
-                  alt="Лариса Роговая">
-              </div>
-              <div class="person__private">
-                <p class="person__name">Лариса Роговая</p>
-                <p class="person__likes">23</p>
-              </div>
-            </div>
-            <div class="person__hashtags">
-              #образование #карьера #учеба #линкедин
-            </div>
-            <div class="person__header">хочет посетить:</div>
-            <div class="person__wishes flags">
-              <ul class="flags__list">
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--uk"></div>
-                  <p class="flags__country">Великобритания</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--germany"></div>
-                  <p class="flags__country">Германия</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--dominika"></div>
-                  <p class="flags__country">Доминика</p>
-                </li>
-              </ul>
-            </div>
-            <div class="person__transport-level">
-              <div class="person__header">транспорт:</div>
-              <div class="person__directions directions">
-                <ul class="directions__list">
-                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--bus directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--velo"></li>
-                  <li class="directions__direction directions__direction--run"></li>
-                </ul>
-              </div>
-              <div class="person__header">левел:</div>
-              <div class="person__level">
-                <div class="person__chart">50</div>
-              </div>
-            </div>
-            <button class="button" type="button">Позвать!</button>
-          </div>
+<!--          <div class="catalog__person person">-->
+<!--            <div class="person__passport">-->
+<!--              <div class="person__avatar">-->
+<!--                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"-->
+<!--                  alt="Лариса Роговая">-->
+<!--              </div>-->
+<!--              <div class="person__private">-->
+<!--                <p class="person__name">Лариса Роговая</p>-->
+<!--                <p class="person__likes">23</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="person__hashtags">-->
+<!--              #образование #карьера #учеба #линкедин-->
+<!--            </div>-->
+<!--            <div class="person__header">хочет посетить:</div>-->
+<!--            <div class="person__wishes flags">-->
+<!--              <ul class="flags__list">-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;uk"></div>-->
+<!--                  <p class="flags__country">Великобритания</p>-->
+<!--                </li>-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;germany"></div>-->
+<!--                  <p class="flags__country">Германия</p>-->
+<!--                </li>-->
+<!--                <li class="flags__item">-->
+<!--                  <div class="flags__flag flag flag&#45;&#45;dominika"></div>-->
+<!--                  <p class="flags__country">Доминика</p>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </div>-->
+<!--            <div class="person__transport-level">-->
+<!--              <div class="person__header">транспорт:</div>-->
+<!--              <div class="person__directions directions">-->
+<!--                <ul class="directions__list">-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;avia directions__direction&#45;&#45;active"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;bus directions__direction&#45;&#45;active"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;velo"></li>-->
+<!--                  <li class="directions__direction directions__direction&#45;&#45;run"></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--              <div class="person__header">левел:</div>-->
+<!--              <div class="person__level">-->
+<!--                <div class="person__chart">50</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <button class="button" type="button">Позвать!</button>-->
+<!--          </div>-->
 
-        </div>
-      </div>
+<!--        </div>-->
+<!--      </div>-->
 
-      <button class="slider__show-more" type="button">Показать еще</button>
+<!--      <button class="slider__show-more" type="button">Показать еще</button>-->
 
-      <p class="catalog__toggles slider__toggles">
-        <button class="slider__toggle" type="button">&#9658;</button>
-        <button class="slider__toggle" type="button">&#x25BA;</button>
-      </p>
-    </div>
-  </section>
+<!--      <p class="catalog__toggles slider__toggles">-->
+<!--        <button class="slider__toggle" type="button">&#9658;</button>-->
+<!--        <button class="slider__toggle" type="button">&#x25BA;</button>-->
+<!--      </p>-->
+<!--    </div>-->
+<!--  </section>-->
 </main>
 
-<footer class="page-footer footer">
-  <div class="global-wrapper footer__wrapper">
-    <div class="footer__header"></div>
+<!--<footer class="page-footer footer">-->
+<!--  <div class="global-wrapper footer__wrapper">-->
+<!--    <div class="footer__header"></div>-->
 
-    <div class="footer__socials social">
-      <ul class="social__list">
-        <li class="social__item social__item--colored" aria-label="Facebook">
-          <a href="https://facebook.com">
-            <div class="social__icon social__icon--fb"></div>
-          </a>
-        </li>
-        <li class="social__item social__item--colored" aria-label="Vkontakte">
-          <a href="https://vk.com">
-            <div class="social__icon social__icon--vk"></div>
-          </a>
-        </li>
-        <li class="social__item social__item--colored" aria-label="Instagram">
-          <a href="https://instagram.com">
-            <div class="social__icon social__icon--ig"></div>
-          </a>
-        </li>
-      </ul>
-    </div>
+<!--    <div class="footer__socials social">-->
+<!--      <ul class="social__list">-->
+<!--        <li class="social__item social__item&#45;&#45;colored" aria-label="Facebook">-->
+<!--          <a href="https://facebook.com">-->
+<!--            <div class="social__icon social__icon&#45;&#45;fb"></div>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="social__item social__item&#45;&#45;colored" aria-label="Vkontakte">-->
+<!--          <a href="https://vk.com">-->
+<!--            <div class="social__icon social__icon&#45;&#45;vk"></div>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="social__item social__item&#45;&#45;colored" aria-label="Instagram">-->
+<!--          <a href="https://instagram.com">-->
+<!--            <div class="social__icon social__icon&#45;&#45;ig"></div>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
 
-    <div class="footer__copyright">
-      <div class="footer__copy-text">Разработано</div>
-      <a class="footer__copy-link" href="https://htmlacademy.ru">&nbsp;</a>
-    </div>
-  </div>
-</footer>
+<!--    <div class="footer__copyright">-->
+<!--      <div class="footer__copy-text">Разработано</div>-->
+<!--      <a class="footer__copy-link" href="https://htmlacademy.ru">&nbsp;</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
 
 <script src="js/menu.js"></script>
 <script src="js/filters.js"></script>
