@@ -1,31 +1,34 @@
 @import "../shared/vars";
 @import "../shared/flag";
 
+@width: 35px;
+@height: 24px;
+
 .index-flag {
   width: 35px;
   height: 24px;
 
   &--thailand {
-    .flag-thailand(35px, 24px);
+    .flag("thailand", @width, @height);
   }
 
   &--france {
-    .flag-france(35px, 24px);
+    .flag("france", @width, @height);
   }
 
   &--czech {
-    .flag-czech(35px, 24px);
+    .flag("czech", @width, @height);
   }
 
   &--belgium {
-    .flag-belgium(35px, 24px);
+    .flag("belgium", @width, @height);
   }
 
   &--seychelles {
-    .flag-seychelles(35px, 24px);
+    .flag("seychelles", @width, @height);
   }
 
   &--srilanka {
-    .flag-srilanka(35px, 24px);
+    .flag("srilanka", @width, @height);
   }
 }

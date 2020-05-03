@@ -247,13 +247,14 @@
     <div class="global-wrapper catalog__wrapper slider">
       <div class="catalog__list slider__list">
         <div class="catalog__item slider__item">
+
           <div class="catalog__person person">
             <div class="person__passport">
-              <div class="person__avatar person__avatar--online">
+              <div class="person__avatar person__avatar--active">
                 <img class="person__avatar-image" src="img/firsova-mobile@1x.jpg" width="70" height="70"
                   alt="Таня Фирсова">
               </div>
-              <div class="person__private person__private--online">
+              <div class="person__private">
                 <p class="person__name">Таня Фирсова</p>
                 <p class="person__likes">1,5 м</p>
               </div>
@@ -304,7 +305,7 @@
           <div class="catalog__person person">
             <div class="person__passport">
               <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
+                <img class="person__avatar-image" src="img/demin-mobile@1x.jpg" width="70" height="70"
                   alt="Петя Демин">
               </div>
               <div class="person__private">
@@ -315,41 +316,46 @@
             <div class="person__hashtags">
               #бургер #бар #футбол #концерт #крафт
             </div>
-            <div class="person__header">хочет посетить:</div>
-            <div class="person__wishes flags">
-              <ul class="flags__list">
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--belgium"></div>
-                  <p class="flags__country">Бельгия</p>
+
+            <div class="person__wishes wishes">
+              <div class="wishes__header">хочет посетить:</div>
+
+              <ul class="wishes__list">
+                <li class="wishes__item">
+                  <div class="wishes__flag catalog-flag catalog-flag--belgium"></div>
+                  <p class="wishes__country">Бельгия</p>
                 </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--czech"></div>
-                  <p class="flags__country">Чехия</p>
+                <li class="wishes__item">
+                  <div class="wishes__flag catalog-flag catalog-flag--czech"></div>
+                  <p class="wishes__country">Чехия</p>
                 </li>
               </ul>
             </div>
-            <div class="person__transport-level">
-              <div class="person__header">транспорт:</div>
-              <div class="person__directions directions">
-                <ul class="directions__list">
-                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--bus directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--velo"></li>
-                  <li class="directions__direction directions__direction--run directions__direction--active"></li>
-                </ul>
+
+            <div class="person__transport-level transport-level">
+              <div class="transport-level__headers">
+                <div class="transport-level__header1">транспорт:</div>
+                <div class="transport-level__header2">левел:</div>
               </div>
-              <div class="person__header">левел:</div>
-              <div class="person__level">
-                <div class="person__chart">80</div>
+
+              <div class="transport-level__values">
+                <ul class="transport-level__directions">
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--avia catalog-direction--active"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--bus catalog-direction--active"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--velo"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--run catalog-direction--active"></li>
+                </ul>
+                <div class="transport-level__chart transport-level__chart--80">80</div>
               </div>
             </div>
-            <button class="button" type="button">Позвать!</button>
+
+            <button type="button" class="button person__button">Позвать!</button>
           </div>
 
           <div class="catalog__person person">
             <div class="person__passport">
               <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
+                <img class="person__avatar-image" src="img/smolov-mobile@1x.jpg" width="70" height="70"
                   alt="Марк Смолов">
               </div>
               <div class="person__private">
@@ -360,48 +366,53 @@
             <div class="person__hashtags">
               #рэп #тату #хайпбист #кроссовки #суприм
             </div>
-            <div class="person__header">хочет посетить:</div>
-            <div class="person__wishes flags">
-              <ul class="flags__list">
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--usa"></div>
-                  <p class="flags__country">США</p>
+
+            <div class="person__wishes wishes">
+              <div class="wishes__header">хочет посетить:</div>
+
+              <ul class="wishes__list">
+                <li class="wishes__item">
+                  <div class="wishes__flag catalog-flag catalog-flag--usa"></div>
+                  <p class="wishes__country">США</p>
                 </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--australia"></div>
-                  <p class="flags__country">Австралия</p>
+                <li class="wishes__item">
+                  <div class="wishes__flag catalog-flag catalog-flag--australia"></div>
+                  <p class="wishes__country">Австралия</p>
                 </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--dominika"></div>
-                  <p class="flags__country">Доминика</p>
+                <li class="wishes__item">
+                  <div class="wishes__flag catalog-flag catalog-flag--dominica"></div>
+                  <p class="wishes__country">Доминика</p>
                 </li>
               </ul>
             </div>
-            <div class="person__transport-level">
-              <div class="person__header">транспорт:</div>
-              <div class="person__directions directions">
-                <ul class="directions__list">
-                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--bus"></li>
-                  <li class="directions__direction directions__direction--velo directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--run"></li>
-                </ul>
+
+            <div class="person__transport-level transport-level">
+              <div class="transport-level__headers">
+                <div class="transport-level__header1">транспорт:</div>
+                <div class="transport-level__header2">левел:</div>
               </div>
-              <div class="person__header">левел:</div>
-              <div class="person__level">
-                <div class="person__chart">25</div>
+
+              <div class="transport-level__values">
+                <ul class="transport-level__directions">
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--avia catalog-direction--active"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--bus"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--velo catalog-direction--active"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--run"></li>
+                </ul>
+                <div class="transport-level__chart transport-level__chart--25">25</div>
               </div>
             </div>
-            <button class="button" type="button">Позвать!</button>
+
+            <button type="button" class="button person__button">Позвать!</button>
           </div>
 
           <div class="catalog__person person">
             <div class="person__passport">
               <div class="person__avatar">
-                <img class="person__avatar-image" src="https://via.placeholder.com/70x70" width="70" height="70"
+                <img class="person__avatar-image" src="img/rogovaya-mobile@1x.jpg" width="70" height="70"
                   alt="Лариса Роговая">
               </div>
-              <div class="person__private">
+              <div class="person__private person__private--online">
                 <p class="person__name">Лариса Роговая</p>
                 <p class="person__likes">23</p>
               </div>
@@ -409,40 +420,42 @@
             <div class="person__hashtags">
               #образование #карьера #учеба #линкедин
             </div>
-            <div class="person__header">хочет посетить:</div>
-            <div class="person__wishes flags">
-              <ul class="flags__list">
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--uk"></div>
-                  <p class="flags__country">Великобритания</p>
+
+            <div class="person__wishes wishes">
+              <div class="wishes__header">хочет посетить:</div>
+
+              <ul class="wishes__list">
+                <li class="wishes__item">
+                  <div class="wishes__flag catalog-flag catalog-flag--uk"></div>
+                  <p class="wishes__country">Великобритания</p>
                 </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--germany"></div>
-                  <p class="flags__country">Германия</p>
-                </li>
-                <li class="flags__item">
-                  <div class="flags__flag flag flag--dominika"></div>
-                  <p class="flags__country">Доминика</p>
+                <li class="wishes__item">
+                  <div class="wishes__flag catalog-flag catalog-flag--germany"></div>
+                  <p class="wishes__country">Германия</p>
                 </li>
               </ul>
             </div>
-            <div class="person__transport-level">
-              <div class="person__header">транспорт:</div>
-              <div class="person__directions directions">
-                <ul class="directions__list">
-                  <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--bus directions__direction--active"></li>
-                  <li class="directions__direction directions__direction--velo"></li>
-                  <li class="directions__direction directions__direction--run"></li>
-                </ul>
+
+            <div class="person__transport-level transport-level">
+              <div class="transport-level__headers">
+                <div class="transport-level__header1">транспорт:</div>
+                <div class="transport-level__header2">левел:</div>
               </div>
-              <div class="person__header">левел:</div>
-              <div class="person__level">
-                <div class="person__chart">50</div>
+
+              <div class="transport-level__values">
+                <ul class="transport-level__directions">
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--avia catalog-direction--active"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--bus catalog-direction--active"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--velo"></li>
+                  <li class="catalog-direction catalog-direction--bg catalog-direction--run"></li>
+                </ul>
+                <div class="transport-level__chart transport-level__chart--50">50</div>
               </div>
             </div>
-            <button class="button" type="button">Позвать!</button>
+
+            <button type="button" class="button person__button">Позвать!</button>
           </div>
+
         </div>
       </div>
 
