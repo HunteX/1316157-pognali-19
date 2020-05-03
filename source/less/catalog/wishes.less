@@ -1,0 +1,40 @@
+@import "../shared/vars";
+@import "../shared/colors";
+
+.wishes {
+  &__header::before,
+  &__header::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: @table-border;
+  }
+
+  &__header::before {
+    width: 13px;
+    top: 9px;
+    left: -26px;
+  }
+
+  &__header::after {
+    width: 135px;
+    top: 9px;
+    right: -128px;
+  }
+
+  &__header {
+    position: relative;
+    background: @white;
+    width: 116px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: @four;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
