@@ -1,7 +1,7 @@
-@import "../shared/colors";
-@import "../shared/vars";
+@import "colors";
+@import "vars";
 
-.catalog-header {
+.shared-header {
   position: relative;
   background-color: @bg-default;
   min-height: 143px;
@@ -48,14 +48,14 @@
     bottom: -15px;
     z-index: 1;
   }
-}
 
-.catalog-header::after {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  background-color: @pale-grey-four;
-  width: 100%;
-  height: 20px;
-  z-index: -1;
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    background-color: @pale-grey-four;
+    width: 100%;
+    height: 20px;
+    z-index: -1;
+  }
 }
