@@ -79,23 +79,27 @@
   <h1 class="visually-hidden">Направления</h1>
 
   <section class="profile">
-    <div class="profile__wrapper">
+    <div class="global-wrapper profile__wrapper">
       <div class="profile__person">
-        <div class="profile__level"></div>
-        <div class="profile__avatar"></div>
+        <div class="profile__level">
+          <div class="profile__skill">80</div>
+          <div class="profile__description">level</div>
+        </div>
+        <img class="profile__avatar" src="img/photo-account-mobile@1x.jpg" width="70" height="70" alt="Аватар">
       </div>
-      <button type="button" class="button button-change">Сменить фото</button>
+      <button type="button" class="button profile__change">Сменить фото</button>
       <div class="profile__area">
-        <header>Тэги</header>
+        <header class="profile__tag-header profile__tag-header1">Тэги</header>
         <p class="profile__tags">#бургер #бар #футбол #концерт #крафт</p>
       </div>
-      <div class="profile__area directions">
-        <header>Транспорт</header>
-        <ul class="directions__list">
-          <li class="directions__direction directions__direction--avia directions__direction--active"></li>
-          <li class="directions__direction directions__direction--bus directions__direction--active"></li>
-          <li class="directions__direction directions__direction--velo"></li>
-          <li class="directions__direction directions__direction--run directions__direction--active"></li>
+      <div class="profile__area">
+        <header class="profile__tag-header profile__tag-header2">Транспорт</header>
+        <ul class="profile__directions">
+          <li
+            class="shared-direction shared-direction--avia shared-direction--active"></li>
+          <li class="shared-direction shared-direction--bus shared-direction--active"></li>
+          <li class="shared-direction shared-direction--velo"></li>
+          <li class="shared-direction shared-direction--run shared-direction--active"></li>
         </ul>
       </div>
     </div>
