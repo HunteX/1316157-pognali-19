@@ -3,6 +3,7 @@
 @import "../shared/flag";
 
 .super-select {
+  position: relative;
   width: 221px;
   height: 42px;
   display: flex;
@@ -83,5 +84,21 @@
 
   &__flag--czech {
     .flag("czech", 35px, 24px);
+  }
+
+  &__dotnext {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+    top: 17px;
+    right: 49px;
+  }
+
+  &__dotnext--empty {
+    border: solid 1px @cloudy-blue;
+    background-color: @white;
   }
 }
