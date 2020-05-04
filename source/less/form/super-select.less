@@ -1,0 +1,67 @@
+@import "../shared/colors";
+@import "../shared/vars";
+@import "../shared/flag";
+
+.super-select {
+  width: 221px;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+
+  &__element {
+    width: 168px;
+    height: 42px;
+    border-radius: 4px;
+    border: solid 1px @cloudy-blue;
+    background-color: @white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1.4px;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+  }
+
+  &__flag {
+    position: relative;
+    width: 53px;
+    height: 42px;
+    border-radius: 4px;
+    border: solid 1px @cloudy-blue;
+    background-color: @white;
+    margin-left: -1px;
+  }
+
+  &__flag::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 36px;
+    background: @white url("@{imgPath}/dropdown-form.svg") center no-repeat;
+    background-size: 12px 7px;
+    top: 2px;
+    left: -28px;
+    cursor: pointer;
+  }
+
+  &__flag::after {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 21px;
+    background: @pale-grey url("@{imgPath}/small-cross.svg") center no-repeat;
+    background-size: 9px 9px;
+    border-radius: 50%;
+    top: -11px;
+    left: 41px;
+    cursor: pointer;
+  }
+
+  &__flag--bh {
+    .flag("bh", 35px, 24px);
+  }
+
+  &__flag--cz {
+    .flag("czech", 35px, 24px);
+  }
+}
