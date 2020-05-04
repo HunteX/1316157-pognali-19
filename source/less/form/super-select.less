@@ -2,11 +2,20 @@
 @import "../shared/vars";
 @import "../shared/flag";
 
+.hide-select-arrow {
+  // stackoverflow.com/questions/16603979/how-to-remove-the-default-arrow-icon-from-a-dropdown-list-select-element
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
 .super-select {
   width: 221px;
   height: 42px;
   display: flex;
   flex-direction: row;
+  margin-bottom: 22px;
 
   &__element {
     width: 168px;
@@ -17,9 +26,18 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 1.29;
-    letter-spacing: 1.4px;
+    letter-spacing: 0.4px;
     color: @dark-slate-blue;
     text-transform: uppercase;
+    padding-left: 10px;
+    padding-right: 10px;
+    .hide-select-arrow();
+  }
+
+  &__element--empty {
+    border-right-style: hidden;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &__flag {
@@ -44,6 +62,17 @@
     cursor: pointer;
   }
 
+  &__flag--empty {
+    border-left-style: hidden;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  &__flag--empty::before {
+    top: 2px;
+    left: 20px;
+  }
+
   &__flag::after {
     position: absolute;
     content: "";
@@ -61,7 +90,7 @@
     .flag("bh", 35px, 24px);
   }
 
-  &__flag--cz {
+  &__flag--czech {
     .flag("czech", 35px, 24px);
   }
 }
