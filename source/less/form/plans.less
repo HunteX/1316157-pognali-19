@@ -1,0 +1,33 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.plans {
+  position: relative;
+  background-color: @pale-grey-two;
+  border-radius: 20px 20px 0 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    background-color: @pale-grey;
+    height: 20px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 456px;
+  }
+
+  &__caption {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: @dark-slate-blue;
+  }
+}

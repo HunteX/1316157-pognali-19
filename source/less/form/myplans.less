@@ -1,0 +1,52 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.myplans {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 318px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 154px;
+    background-color: @white;
+    border-radius: 10px;
+    padding: 24px;
+  }
+
+  &__header {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-slate-blue;
+    margin-bottom: 21px;
+  }
+
+  &__companions,
+  &__period {
+    margin: 0 0 7px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    color: @dark-slate-blue;
+  }
+
+  &__change {
+    width: 73px;
+    height: 11px;
+    opacity: 0.3;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    letter-spacing: 1.4px;
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+  }
+}
