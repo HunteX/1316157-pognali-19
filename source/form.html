@@ -129,7 +129,7 @@
   </section>
 
   <section class="new">
-    <div class="new__wrapper">
+    <div class="global-wrapper new__wrapper">
       <header class="new__header">
         <div class="new__caption">Добавить план:</div>
         <ul class="new__dots">
@@ -145,13 +145,13 @@
           Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую
           длительность.
         </p>
-        <div class="step1__companions companions">
-          <label for="counter1" class="companions__label"></label>
+        <div class="step1__companions new-companions">
+          <label for="counter1" class="new-companions__label"></label>
           <input id="counter1" type="text" value="2">
-          <label for="counter2" class="companions__label"></label>
+          <label for="counter2" class="new-companions__label"></label>
           <input id="counter2" type="text" value="2">
           <label>
-            <input type="checkbox" name="checkbox1" class="companions__children" checked>
+            <input type="checkbox" name="checkbox1" class="new-companions__children" checked>
             Можно с детьми
           </label>
           <div class="step1__calendar calendar">
@@ -163,81 +163,81 @@
         <button type="button" class="button button-next">Следующий шаг</button>
       </section>
 
-      <section class="new__step step2">
-        <div class="step2__wrapper">
-          <header class="step2__header">Шаг 2. Маршрут</header>
-          <p class="step2__description">
-            Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
-          </p>
-          <ul class="step2__list">
-            <li class="step2__item">
-              <label>
-                <select>
-                  <option disabled>Выберите страну</option>
-                  <option value="country-bag" selected>Босния и Герцеговина</option>
-                  <option value="country-cz">Чехословакия</option>
-                </select>
-              </label>
-              <div class="step2__flag step2__flag--bag"></div>
-            </li>
-            <li class="step2__item">
-              <label>
-                <select>
-                  <option disabled>Выберите страну</option>
-                  <option value="country-bag">Босния и Герцеговина</option>
-                  <option value="country-cz" selected>Чехословакия</option>
-                </select>
-              </label>
-              <div class="step2__flag step2__flag--cz"></div>
-            </li>
-            <li class="step2__item">
-              <label>
-                <select>
-                  <option disabled selected>Выберите страну</option>
-                  <option value="country-bag">Босния и Герцеговина</option>
-                  <option value="country-cz">Чехословакия</option>
-                </select>
-              </label>
-              <div class="step2__flag step2__flag--empty"></div>
-            </li>
-          </ul>
-          <button type="button" class="button button-next">Следующий шаг</button>
-          <button type="button" class="button button-prev">На шаг назад</button>
-        </div>
-      </section>
+<!--      <section class="new__step step2">-->
+<!--        <div class="step2__wrapper">-->
+<!--          <header class="step2__header">Шаг 2. Маршрут</header>-->
+<!--          <p class="step2__description">-->
+<!--            Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.-->
+<!--          </p>-->
+<!--          <ul class="step2__list">-->
+<!--            <li class="step2__item">-->
+<!--              <label>-->
+<!--                <select>-->
+<!--                  <option disabled>Выберите страну</option>-->
+<!--                  <option value="country-bag" selected>Босния и Герцеговина</option>-->
+<!--                  <option value="country-cz">Чехословакия</option>-->
+<!--                </select>-->
+<!--              </label>-->
+<!--              <div class="step2__flag step2__flag&#45;&#45;bag"></div>-->
+<!--            </li>-->
+<!--            <li class="step2__item">-->
+<!--              <label>-->
+<!--                <select>-->
+<!--                  <option disabled>Выберите страну</option>-->
+<!--                  <option value="country-bag">Босния и Герцеговина</option>-->
+<!--                  <option value="country-cz" selected>Чехословакия</option>-->
+<!--                </select>-->
+<!--              </label>-->
+<!--              <div class="step2__flag step2__flag&#45;&#45;cz"></div>-->
+<!--            </li>-->
+<!--            <li class="step2__item">-->
+<!--              <label>-->
+<!--                <select>-->
+<!--                  <option disabled selected>Выберите страну</option>-->
+<!--                  <option value="country-bag">Босния и Герцеговина</option>-->
+<!--                  <option value="country-cz">Чехословакия</option>-->
+<!--                </select>-->
+<!--              </label>-->
+<!--              <div class="step2__flag step2__flag&#45;&#45;empty"></div>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <button type="button" class="button button-next">Следующий шаг</button>-->
+<!--          <button type="button" class="button button-prev">На шаг назад</button>-->
+<!--        </div>-->
+<!--      </section>-->
 
-      <section class="new__step step3">
-        <div class="step3__wrapper">
-          <header class="step3__header">Шаг 3. Развлечения</header>
-          <p class="step3__description">
-            Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
-          </p>
-          <ul class="step3__list hobbies">
-            <li class="hobbies__item">
-              <div class="hobbies__header">
-                <div class="hobbies__country">Босния и Герцеговина</div>
-                <div class="hobbies__flag hobbies__flag--bag"></div>
-              </div>
-              <label>
-                <textarea placeholder="План действий" class="hobbies__text"></textarea>
-              </label>
-            </li>
-            <li class="hobbies__item">
-              <div class="hobbies__header">
-                <div class="hobbies__country">Чехословакия</div>
-                <div class="hobbies__flag hobbies__flag--cz"></div>
-              </div>
-              <label>
-                <textarea placeholder="План действий" class="hobbies__text">
-                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-                </textarea>
-              </label>
-            </li>
-          </ul>
-          <button type="button" class="button button-next">Отправить</button>
-          <button type="button" class="button button-prev">На шаг назад</button>
-        </div>
-      </section>
+<!--      <section class="new__step step3">-->
+<!--        <div class="step3__wrapper">-->
+<!--          <header class="step3__header">Шаг 3. Развлечения</header>-->
+<!--          <p class="step3__description">-->
+<!--            Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.-->
+<!--          </p>-->
+<!--          <ul class="step3__list hobbies">-->
+<!--            <li class="hobbies__item">-->
+<!--              <div class="hobbies__header">-->
+<!--                <div class="hobbies__country">Босния и Герцеговина</div>-->
+<!--                <div class="hobbies__flag hobbies__flag&#45;&#45;bag"></div>-->
+<!--              </div>-->
+<!--              <label>-->
+<!--                <textarea placeholder="План действий" class="hobbies__text"></textarea>-->
+<!--              </label>-->
+<!--            </li>-->
+<!--            <li class="hobbies__item">-->
+<!--              <div class="hobbies__header">-->
+<!--                <div class="hobbies__country">Чехословакия</div>-->
+<!--                <div class="hobbies__flag hobbies__flag&#45;&#45;cz"></div>-->
+<!--              </div>-->
+<!--              <label>-->
+<!--                <textarea placeholder="План действий" class="hobbies__text">-->
+<!--                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.-->
+<!--                </textarea>-->
+<!--              </label>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <button type="button" class="button button-next">Отправить</button>-->
+<!--          <button type="button" class="button button-prev">На шаг назад</button>-->
+<!--        </div>-->
+<!--      </section>-->
     </div>
   </section>
 </main>
