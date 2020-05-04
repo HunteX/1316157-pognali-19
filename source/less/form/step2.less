@@ -9,4 +9,20 @@
     margin: 0;
     padding: 0;
   }
+
+  &__item {
+    position: relative;
+  }
+
+  &__item::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 10px;
+    background: transparent url("@{imgPath}/small-arrow.svg") center no-repeat;
+    background-size: 5px 10px;
+    bottom: -15px;
+    right: 52px;
+    opacity: 0.3;
+  }
 }
