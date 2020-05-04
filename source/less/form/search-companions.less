@@ -8,6 +8,8 @@
   &__field {
     display: flex;
     flex-direction: column;
+    min-height: 87px;
+    padding-bottom: 21px;
   }
 
   &__captions {
@@ -22,6 +24,7 @@
     line-height: 1;
     color: @dark-slate-blue;
     text-transform: uppercase;
+    padding-bottom: 9px;
   }
 
   &__text {
@@ -76,5 +79,32 @@
     background-image: url("@{imgPath}/qty-plus-mobile.svg");
     background-size: 14px 14px;
     right: 11px;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__children {
+    position: relative;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1;
+    color: @four;
+  }
+
+  &__children::before {
+    cursor: pointer;
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: solid 1px @cloudy-blue;
+    background: @white url("@{imgPath}/tick.svg") center no-repeat;
+    background-size: 9px 9px;
+    top: -6px;
+    left: -30px;
   }
 }
