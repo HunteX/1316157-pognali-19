@@ -1,0 +1,20 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.map {
+  position: relative;
+  min-height: 330px;
+  background: url("@{imgPath}/map.png") no-repeat;
+  z-index: -1;
+  top: -34px;
+
+  &__marker {
+    position: absolute;
+    content: "";
+    background: url("@{imgPath}/map-marker.svg") no-repeat;
+    width: 41px;
+    height: 41px;
+    top: 140px;
+    left: 140px;
+  }
+}

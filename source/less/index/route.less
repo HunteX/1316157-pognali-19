@@ -1,0 +1,60 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.route {
+  position: relative;
+  background-color: @light-gold;
+  min-height: 206px;
+  border-radius: 0 0 30px 30px;
+
+  &__caption::before {
+    position: absolute;
+    content: "";
+    background: @dark-blue-grey-two url("@{imgPath}/contacts-location.svg") no-repeat;
+    background-size: 14px 22px, 45px 45px;
+    background-position: 15px 12px, 0 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    left: -60px;
+  }
+
+  &__caption {
+    position: relative;
+    margin: 0;
+    width: 143px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.38;
+    text-align: left;
+    color: @dark-blue-grey;
+    text-transform: uppercase;
+    top: 33px;
+    left: 61px;
+  }
+
+  &__button {
+    width: 270px;
+    height: 62px;
+    border: solid 3px @dark-blue-grey;
+    background-color: @light-gold;
+    top: 65px;
+    padding-left: 21px;
+  }
+
+  &__button::after {
+    background-color: @dark-blue-grey;
+    mask-image: url("@{imgPath}/triangle-arrow-right.svg");
+    top: 22px;
+    right: 20px;
+  }
+
+  &__button:hover::after {
+    background-color: @white;
+  }
+
+  &__button:hover {
+    background-color: @dark-blue-grey;
+    color: @white;
+  }
+}

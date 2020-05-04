@@ -1,0 +1,54 @@
+@import "colors";
+@import "vars";
+
+.social {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    border-radius: 50%;
+  }
+
+  &__item--colored {
+    background-color: @light-gold;
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+
+  &__item--colored &__icon:hover {
+    background-color: @mango-two;
+  }
+
+  &__item:not(&__item--colored) &__icon:hover {
+    opacity: 0.6;
+  }
+
+  &__icon:active {
+    opacity: 0.3;
+  }
+
+  &__icon--fb {
+    background: url("@{imgPath}/facebook.svg") no-repeat center;
+    background-size: 11px 21px;
+  }
+
+  &__icon--vk {
+    background: url("@{imgPath}/vk.svg") no-repeat center;
+    background-size: 23px 12px;
+  }
+
+  &__icon--ig {
+    background: url("@{imgPath}/instagram.svg") no-repeat center;
+    background-size: 18px 18px;
+  }
+}

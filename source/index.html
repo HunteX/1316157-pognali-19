@@ -7,43 +7,73 @@
 </head>
 <body class="main-container">
 
-<header class="page-header">
+<header class="index-header">
 
-  <!-- TODO: может стоит везде использовать один класс? -->
-  <div class="global-wrapper page-header__wrapper">
-    <div class="page-header__fixed">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19"
+  <div class="global-wrapper index-header__wrapper">
+    <div class="index-header__fixed">
+      <a class="index-header__logo">
+        <img class="index-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19"
           alt="Погнали">
       </a>
-      <button class="page-header__toggle" type="button" title="Открыть меню"></button>
+      <button class="index-header__toggle" type="button" title="Открыть меню" onclick="toggleMenu()"></button>
     </div>
 
-    <!-- TODO: вынести в модалку -->
-    <nav class="visually-hidden main-nav">
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>О сервисе</a>
+        <div class="main-nav__header">
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19"
+              alt="Погнали">
+          </a>
+          <button class="main-nav__close" type="button" title="Закрыть меню" onclick="toggleMenu()"></button>
+        </div>
+
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">О сервисе</a>
           </li>
-          <li class="site-list__item">
-            <a href="form.html">Направления</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Направления</a>
           </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Попутчики</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Попутчики</a>
           </li>
         </ul>
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__login" href="#">Авторизация</a>
-          </li>
-        </ul>
+
+        <div class="main-nav__auth">
+          <button type="button" class="button main-nav__button-auth">Авторизация</button>
+        </div>
+
+        <div class="main-nav__contacts">
+          <div class="main-nav__phone">8 800 555-86-28</div>
+          <div class="main-nav__mailto">mail@htmlacademy.ru</div>
+        </div>
+
+        <div class="main-nav__socials social">
+          <ul class="social__list">
+            <li class="social__item" aria-label="Facebook">
+              <a href="https://facebook.com">
+                <div class="social__icon social__icon--fb"></div>
+              </a>
+            </li>
+            <li class="social__item" aria-label="Vkontakte">
+              <a href="https://vk.com">
+                <div class="social__icon social__icon--vk"></div>
+              </a>
+            </li>
+            <li class="social__item" aria-label="Instagram">
+              <a href="https://instagram.com">
+                <div class="social__icon social__icon--ig"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <p class="page-header__description">В путешествие с крутыми попутчиками!</p>
+    <p class="index-header__description">В путешествие с крутыми попутчиками!</p>
 
-    <div class="page-header__promo">
+    <div class="index-header__promo">
       <button class="button button-menu-small button-menu-small--call" type="button"></button>
       <button class="button button-menu-small button-menu-small--mail" type="button"></button>
       <button class="button button-menu-medium" type="button"></button>
@@ -51,7 +81,7 @@
   </div>
 </header>
 
-<main class="page-main">
+<main>
   <h1 class="visually-hidden">Погнали</h1>
 
   <section class="best-app">
@@ -112,7 +142,7 @@
           <figure class="directions__direction">
             <img class="directions__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Тайланд">
             <figcaption class="directions__details">
-              <div class="directions__flag flag flag--thailand"></div>
+              <div class="directions__flag index-flag index-flag--thailand"></div>
               <div class="directions__container">
                 <p class="directions__country">Тайланд</p>
                 <p class="directions__text">Джунгли зовут!</p>
@@ -125,7 +155,7 @@
           <figure class="directions__direction">
             <img class="directions__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
             <figcaption class="directions__details">
-              <div class="directions__flag flag flag--france"></div>
+              <div class="directions__flag index-flag index-flag--france"></div>
               <div class="directions__container">
                 <p class="directions__country">Франция</p>
                 <p class="directions__text">Трэ бьен, манифик!</p>
@@ -138,7 +168,7 @@
           <figure class="directions__direction">
             <img class="directions__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
             <figcaption class="directions__details">
-              <div class="directions__flag flag flag--czech"></div>
+              <div class="directions__flag index-flag index-flag--czech"></div>
               <div class="directions__container">
                 <p class="directions__country">Чехия</p>
                 <p class="directions__text">Закоулки старой Европы</p>
@@ -168,43 +198,45 @@
       <ul class="companions__list">
         <li class="companions__item">
           <figure class="companions__companion">
-            <img class="companions__image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Попутчик Таня Фирсова">
+            <img class="companions__image" src="img/firsova-desktop@1x.jpg" width="270" height="270"
+              alt="Попутчик Таня Фирсова">
             <figcaption class="companions__companion-details">
               <div class="companions__flags">
-                <div class="companions__flag flag flag--srilanka"></div>
-                <div class="companions__flag flag flag--thailand"></div>
-                <div class="companions__flag flag flag--seychelles"></div>
+                <div class="companions__flag index-flag index-flag--srilanka"></div>
+                <div class="companions__flag index-flag index-flag--thailand"></div>
+                <div class="companions__flag index-flag index-flag--seychelles"></div>
               </div>
               <div class="companions__name">Таня Фирсова</div>
               <div class="companions__hashtags">
                 #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
               </div>
               <div class="companions__directions">
-                <div class="companions__direction direction direction--avia direction--active"></div>
-                <div class="companions__direction direction direction--bus"></div>
-                <div class="companions__direction direction direction--velo"></div>
-                <div class="companions__direction direction direction--run"></div>
+                <div class="companions__direction index-direction index-direction--avia index-direction--active"></div>
+                <div class="companions__direction index-direction index-direction--bus"></div>
+                <div class="companions__direction index-direction index-direction--velo"></div>
+                <div class="companions__direction index-direction index-direction--run"></div>
               </div>
             </figcaption>
           </figure>
         </li>
         <li class="companions__item">
           <figure class="companions__companion">
-            <img class="companions__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Попутчик Петя Демин">
+            <img class="companions__image" src="img/demin-desktop@1x.jpg" width="270" height="270"
+              alt="Попутчик Петя Демин">
             <figcaption class="companions__companion-details">
               <div class="companions__flags">
-                <div class="companions__flag flag flag--belgium"></div>
-                <div class="companions__flag flag flag--czech"></div>
+                <div class="companions__flag index-flag index-flag--belgium"></div>
+                <div class="companions__flag index-flag index-flag--czech"></div>
               </div>
               <div class="companions__name">Петя Демин</div>
               <div class="companions__hashtags">
                 #бургер #бар #футбол #концерт #крафт
               </div>
               <div class="companions__directions">
-                <div class="companions__direction direction direction--avia direction--active"></div>
-                <div class="companions__direction direction direction--bus direction--active"></div>
-                <div class="companions__direction direction direction--velo"></div>
-                <div class="companions__direction direction direction--run direction--active"></div>
+                <div class="companions__direction index-direction index-direction--avia index-direction--active"></div>
+                <div class="companions__direction index-direction index-direction--bus index-direction--active"></div>
+                <div class="companions__direction index-direction index-direction--velo"></div>
+                <div class="companions__direction index-direction index-direction--run index-direction--active"></div>
               </div>
             </figcaption>
           </figure>
@@ -220,29 +252,34 @@
     <div class="global-wrapper profile-add__wrapper">
       <header class="profile-add__header">
         <h2 class="profile-add__caption">Добавьте свой профиль</h2>
-        <div class="profile-add__icon">&nbsp;</div>
       </header>
       <ul class="profile-add__list">
         <li class="profile-add__item">
-          <div class="profile-add__text">
-            <p class="profile-add__service">Базовое размещение</p>
-            <p class="profile-add__price">Бесплатно</p>
+          <div class="profile-add__cell">
+            <div class="profile-add__service">Базовое размещение</div>
+            <div class="profile-add__price">Бесплатно</div>
           </div>
-          <div class="profile-add__index">1</div>
+          <div class="profile-add__cell">
+            <div class="profile-add__index profile-add__index--color1">1</div>
+          </div>
         </li>
         <li class="profile-add__item">
-          <div class="profile-add__text">
-            <p class="profile-add__service">Вывод на первых позициях</p>
-            <p class="profile-add__price">99 руб./мес</p>
+          <div class="profile-add__cell">
+            <div class="profile-add__service">Вывод на первых позициях</div>
+            <div class="profile-add__price">99 руб./мес</div>
           </div>
-          <div class="profile-add__index">2</div>
+          <div class="profile-add__cell">
+            <div class="profile-add__index profile-add__index--color2">2</div>
+          </div>
         </li>
         <li class="profile-add__item">
-          <div class="profile-add__text">
-            <p class="profile-add__service">Кастомный цвет карточки</p>
-            <p class="profile-add__price">59 руб./мес</p>
+          <div class="profile-add__cell">
+            <div class="profile-add__service">Кастомный цвет карточки</div>
+            <div class="profile-add__price">59 руб./мес</div>
           </div>
-          <div class="profile-add__index">3</div>
+          <div class="profile-add__cell">
+            <div class="profile-add__index profile-add__index--color3">3</div>
+          </div>
         </li>
       </ul>
 
@@ -256,14 +293,15 @@
         <h2 class="register__caption">Заинтересовались?</h2>
       </header>
       <div class="register__description">
-        Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
-        <a href="#" class="register__auth">авторизуйтесь.</a>
+        Зарегистрируйтесь,<br> это быстро и бесплатно!<br>Уже зарегистрированы? Тогда скорее
+        <a href="#" class="register__auth">авторизуйтесь</a>.
       </div>
-      <label>
-        <input type="text" class="register__email">
+      <label class="email">
+        <input type="email" class="email__input register__email" placeholder="E-mail">
+        <button type="button" class="button email__button"></button>
       </label>
       <div class="register__questions">
-        Остались вопросы? Мы с радостью на них ответим!
+        Остались вопросы?<br>Мы с радостью на них ответим!
       </div>
 
       <div class="register__contacts">
@@ -277,44 +315,49 @@
     <div class="global-wrapper route__wrapper">
       <header class="route__header">
         <h2 class="route__caption">Ул. Большая Конюшенная, 19/8</h2>
-        <button class="button button-route" type="button">Проложить маршрут</button>
       </header>
-      <div class="route__map"></div>
+
+      <button type="button" class="button button-big-arrow route__button">Проложить маршрут</button>
     </div>
+  </section>
+
+  <section class="map">
+    <div class="map__marker"></div>
   </section>
 
 </main>
 
-<footer class="page-footer">
-  <div class="global-wrapper page-footer__wrapper">
-    <h2 class="page-footer__header">Погнали?</h2>
+<footer class="page-footer footer">
+  <div class="global-wrapper footer__wrapper">
+    <div class="footer__header"></div>
 
-    <div class="page-footer__socials social">
+    <div class="footer__socials social">
       <ul class="social__list">
-        <li class="social__item" aria-label="Facebook">
+        <li class="social__item social__item--colored" aria-label="Facebook">
           <a href="https://facebook.com">
-            <div class="page-footer__icon page-footer__icon--vk"></div>
+            <div class="social__icon social__icon--fb"></div>
           </a>
         </li>
-        <li class="social__item" aria-label="Vkontakte">
+        <li class="social__item social__item--colored" aria-label="Vkontakte">
           <a href="https://vk.com">
-            <div class="page-footer__icon page-footer__icon--fb"></div>
+            <div class="social__icon social__icon--vk"></div>
           </a>
         </li>
-        <li class="social__item" aria-label="Instagram">
+        <li class="social__item social__item--colored" aria-label="Instagram">
           <a href="https://instagram.com">
-            <div class="page-footer__icon page-footer__icon--ig"></div>
+            <div class="social__icon social__icon--ig"></div>
           </a>
         </li>
       </ul>
     </div>
 
-    <div class="page-footer__copyright copyright">
-      <div class="copyright__text">Разработано</div>
-      <a class="copyright__link" href="https://htmlacademy.ru">&nbsp;</a>
+    <div class="footer__copyright">
+      <div class="footer__copy-text">Разработано</div>
+      <a class="footer__copy-link" href="https://htmlacademy.ru">&nbsp;</a>
     </div>
   </div>
 </footer>
 
+<script src="js/menu.js"></script>
 </body>
 </html>

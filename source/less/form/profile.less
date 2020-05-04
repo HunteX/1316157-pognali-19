@@ -1,0 +1,134 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  background-color: @pale-grey;
+  min-height: 423px;
+  border: 1px solid transparent;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    min-height: 423px;
+    justify-content: space-around;
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  &__level {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__level::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: url("@{imgPath}/bars/statusbar-big.png") center no-repeat;
+    background-size: 100px 100px;
+  }
+
+  &__skill {
+    width: 39px;
+    height: 29px;
+    font-size: 38px;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    color: @dark-two;
+    border-bottom: 2px solid @cloudy-blue;
+    padding-bottom: 37px;
+  }
+
+  &__description {
+    width: 29px;
+    height: 14px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.22;
+    text-align: center;
+    color: @four;
+  }
+
+  &__avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  &__change {
+    width: 270px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: @pale-grey-two;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.76;
+    text-align: center;
+    color: @dark-two;
+  }
+
+  &__change:hover {
+    opacity: 0.6;
+  }
+
+  &__change:active {
+    opacity: 0.3;
+  }
+
+  &__area {
+    position: relative;
+    border-radius: 10px;
+    border: solid 1px @cloudy-blue;
+    padding: 0 20px 0 20px;
+  }
+
+  &__tag-header {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.13;
+    text-align: center;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+    background: @pale-grey;
+    padding-left: 20px;
+    padding-right: 20px;
+    top: -9px;
+  }
+
+  &__tag-header1 {
+    left: 94px;
+  }
+
+  &__tag-header2 {
+    left: 73px;
+  }
+
+  &__tags {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    text-align: left;
+    color: @four;
+  }
+
+  &__directions {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+}
