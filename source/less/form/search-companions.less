@@ -1,0 +1,80 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.search-companions {
+  display: flex;
+  flex-direction: column;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__captions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    opacity: 0.3;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    text-align: right;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+  }
+
+  &__counter {
+    width: 220px;
+    height: 43px;
+    border-radius: 4px;
+    border: solid 1px @cloudy-blue;
+    background-color: @white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 1.5px;
+    color: @dark-slate-blue;
+  }
+
+  &__controls {
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__controls::before,
+  &__controls::after {
+    cursor: pointer;
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    opacity: 0.3;
+    top: -29px;
+  }
+
+  &__controls::before {
+    background-image: url("@{imgPath}/qty-minus-mobile.svg");
+    background-size: 8px 14px;
+    left: 11px;
+  }
+
+  &__controls::after {
+    background-image: url("@{imgPath}/qty-plus-mobile.svg");
+    background-size: 14px 14px;
+    right: 11px;
+  }
+}
