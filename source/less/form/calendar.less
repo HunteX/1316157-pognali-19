@@ -1,0 +1,42 @@
+@import "../shared/colors";
+@import "../shared/vars";
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: @dark-slate-blue;
+    border-top: 1px solid @cloudy-blue;
+    border-bottom: 1px solid @cloudy-blue;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &__header::before,
+  &__header::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 17px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  &__header::before {
+    background: @white url("@{imgPath}/month-arrow-left.svg") center no-repeat;
+    background-size: 9px 17px;
+    left: 0;
+  }
+
+  &__header::after {
+    background: @white url("@{imgPath}/month-arrow-right.svg") center no-repeat;
+    background-size: 9px 17px;
+    right: 0;
+  }
+}
