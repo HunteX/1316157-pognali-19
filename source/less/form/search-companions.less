@@ -92,19 +92,23 @@
     font-weight: normal;
     line-height: 1;
     color: @four;
+    cursor: pointer;
   }
 
   &__children::before {
-    cursor: pointer;
     position: absolute;
     content: "";
     width: 26px;
     height: 26px;
     border-radius: 4px;
     border: solid 1px @cloudy-blue;
-    background: @white url("@{imgPath}/tick.svg") center no-repeat;
     background-size: 9px 9px;
     top: -6px;
     left: -30px;
+  }
+
+  &__checkbox:checked + &__children::before {
+    background: @white url("@{imgPath}/tick.svg") center no-repeat;
+    background-size: 9px 9px;
   }
 }
