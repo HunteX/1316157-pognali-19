@@ -4,8 +4,9 @@
 .calendar {
   display: flex;
   flex-direction: column;
+  padding-bottom: 23px;
 
-  &__header {
+  &__caption {
     position: relative;
     font-size: 20px;
     font-weight: bold;
@@ -18,8 +19,8 @@
     padding-bottom: 12px;
   }
 
-  &__header::before,
-  &__header::after {
+  &__caption::before,
+  &__caption::after {
     position: absolute;
     content: "";
     width: 9px;
@@ -28,15 +29,71 @@
     cursor: pointer;
   }
 
-  &__header::before {
+  &__caption::before {
     background: @white url("@{imgPath}/month-arrow-left.svg") center no-repeat;
     background-size: 9px 17px;
     left: 0;
   }
 
-  &__header::after {
+  &__caption::after {
     background: @white url("@{imgPath}/month-arrow-right.svg") center no-repeat;
     background-size: 9px 17px;
     right: 0;
+  }
+
+  &__table {
+    display: table;
+    height: 210px;
+    border-collapse: collapse;
+    margin-top: 17px;
+  }
+
+  &__row {
+    display: table-row;
+  }
+
+  &__cell {
+    display: table-cell;
+    width: 30px;
+    height: 30px;
+    border: 1px solid @cloudy-blue;
+    background-color: @pale-grey;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: @four;
+    cursor: pointer;
+  }
+
+  &__cell--disabled {
+    background-color: @white;
+    opacity: 0.3;
+  }
+
+  &__cell--selected {
+    background-color: @dark-slate-blue;
+    color: @white;
+  }
+
+  &__cell:hover {
+    background-color: @dark-slate-blue;
+    outline: 2px solid @orange-red;
+    color: @white;
+  }
+
+  &__cell-header {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+  }
+
+  &__cell-header:hover {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: @four;
   }
 }

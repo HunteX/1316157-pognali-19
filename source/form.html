@@ -167,9 +167,72 @@
           <label for="checkbox" class="search-companions__children">Можно с детьми</label>
 
           <div class="step1__calendar calendar">
-            <header class="calendar__header">Март 2019</header>
-            <!-- TODO: сделать календарь -->
-            <table class="calendar__month"></table>
+            <header class="calendar__caption">Март 2019</header>
+            <div class="calendar__table">
+              <div class="calendar__row calendar__header">
+                <div class="calendar__cell calendar__cell-header">П</div>
+                <div class="calendar__cell calendar__cell-header">В</div>
+                <div class="calendar__cell calendar__cell-header">С</div>
+                <div class="calendar__cell calendar__cell-header">Ч</div>
+                <div class="calendar__cell calendar__cell-header">П</div>
+                <div class="calendar__cell calendar__cell-header calendar__cell-header--weekend">С</div>
+                <div class="calendar__cell calendar__cell-header calendar__cell-header--weekend">В</div>
+              </div>
+              <div class="calendar__row">
+                <div class="calendar__cell calendar__cell--disabled">23</div>
+                <div class="calendar__cell calendar__cell--disabled">24</div>
+                <div class="calendar__cell calendar__cell--disabled">25</div>
+                <div class="calendar__cell calendar__cell--disabled">26</div>
+                <div class="calendar__cell calendar__cell--disabled">27</div>
+                <div class="calendar__cell calendar__cell--disabled">28</div>
+                <div class="calendar__cell calendar__cell--disabled">1</div>
+              </div>
+              <div class="calendar__row">
+                <div class="calendar__cell calendar__cell--disabled">2</div>
+                <div class="calendar__cell calendar__cell--disabled">3</div>
+                <div class="calendar__cell calendar__cell--disabled">4</div>
+                <div class="calendar__cell calendar__cell--disabled">5</div>
+                <div class="calendar__cell calendar__cell--disabled">6</div>
+                <div class="calendar__cell calendar__cell--disabled">7</div>
+                <div class="calendar__cell calendar__cell--disabled">8</div>
+              </div>
+              <div class="calendar__row">
+                <div class="calendar__cell calendar__cell--disabled">9</div>
+                <div class="calendar__cell calendar__cell--disabled">10</div>
+                <div class="calendar__cell calendar__cell--disabled">11</div>
+                <div class="calendar__cell calendar__cell--disabled">12</div>
+                <div class="calendar__cell calendar__cell--disabled">13</div>
+                <div class="calendar__cell calendar__cell--disabled">14</div>
+                <div class="calendar__cell calendar__cell--disabled">15</div>
+              </div>
+              <div class="calendar__row">
+                <div class="calendar__cell calendar__cell--disabled">16</div>
+                <div class="calendar__cell calendar__cell--disabled">17</div>
+                <div class="calendar__cell calendar__cell--disabled">18</div>
+                <div class="calendar__cell calendar__cell--disabled">19</div>
+                <div class="calendar__cell calendar__cell--disabled">20</div>
+                <div class="calendar__cell calendar__cell--disabled">21</div>
+                <div class="calendar__cell calendar__cell--disabled">22</div>
+              </div>
+              <div class="calendar__row">
+                <div class="calendar__cell calendar__cell--disabled">23</div>
+                <div class="calendar__cell calendar__cell--disabled">24</div>
+                <div class="calendar__cell calendar__cell--disabled">25</div>
+                <div class="calendar__cell calendar__cell--selected">26</div>
+                <div class="calendar__cell calendar__cell--selected">27</div>
+                <div class="calendar__cell calendar__cell--selected">28</div>
+                <div class="calendar__cell">29</div>
+              </div>
+              <div class="calendar__row">
+                <div class="calendar__cell">30</div>
+                <div class="calendar__cell">31</div>
+                <div class="calendar__cell">1</div>
+                <div class="calendar__cell">2</div>
+                <div class="calendar__cell">3</div>
+                <div class="calendar__cell">4</div>
+                <div class="calendar__cell">5</div>
+              </div>
+            </div>
           </div>
         </div>
         <button type="button" class="button search-companions__next">Следующий шаг</button>
@@ -254,36 +317,36 @@
   </section>
 </main>
 
-<footer class="page-footer footer">
-  <div class="global-wrapper footer__wrapper">
-    <div class="footer__header"></div>
+<!--<footer class="page-footer footer">-->
+<!--  <div class="global-wrapper footer__wrapper">-->
+<!--    <div class="footer__header"></div>-->
 
-    <div class="footer__socials social">
-      <ul class="social__list">
-        <li class="social__item social__item--colored" aria-label="Facebook">
-          <a href="https://facebook.com">
-            <div class="social__icon social__icon--fb"></div>
-          </a>
-        </li>
-        <li class="social__item social__item--colored" aria-label="Vkontakte">
-          <a href="https://vk.com">
-            <div class="social__icon social__icon--vk"></div>
-          </a>
-        </li>
-        <li class="social__item social__item--colored" aria-label="Instagram">
-          <a href="https://instagram.com">
-            <div class="social__icon social__icon--ig"></div>
-          </a>
-        </li>
-      </ul>
-    </div>
+<!--    <div class="footer__socials social">-->
+<!--      <ul class="social__list">-->
+<!--        <li class="social__item social__item&#45;&#45;colored" aria-label="Facebook">-->
+<!--          <a href="https://facebook.com">-->
+<!--            <div class="social__icon social__icon&#45;&#45;fb"></div>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="social__item social__item&#45;&#45;colored" aria-label="Vkontakte">-->
+<!--          <a href="https://vk.com">-->
+<!--            <div class="social__icon social__icon&#45;&#45;vk"></div>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="social__item social__item&#45;&#45;colored" aria-label="Instagram">-->
+<!--          <a href="https://instagram.com">-->
+<!--            <div class="social__icon social__icon&#45;&#45;ig"></div>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
 
-    <div class="footer__copyright">
-      <div class="footer__copy-text">Разработано</div>
-      <a class="footer__copy-link" href="https://htmlacademy.ru">&nbsp;</a>
-    </div>
-  </div>
-</footer>
+<!--    <div class="footer__copyright">-->
+<!--      <div class="footer__copy-text">Разработано</div>-->
+<!--      <a class="footer__copy-link" href="https://htmlacademy.ru">&nbsp;</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</footer>-->
 
 <script src="js/menu.js"></script>
 </body>
