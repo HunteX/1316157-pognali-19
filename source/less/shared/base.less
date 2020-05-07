@@ -1,19 +1,20 @@
 @import "../shared/vars";
 @import "../shared/colors";
 
-@font-face {
-  font-weight: normal;
-  font-family: "BloggerSans";
+.common-font(@font-family, @font-weight) {
   font-style: normal;
   font-display: swap;
+  font-weight: @font-weight;
+  font-family: @font-family;
+}
+
+@font-face {
+  .common-font("BloggerSans", normal);
   src: url("@{fontPath}/bloggersans.woff2"), url("@{fontPath}/bloggersans.woff");
 }
 
 @font-face {
-  font-weight: bold;
-  font-family: "BloggerSans";
-  font-style: normal;
-  font-display: swap;
+  .common-font("BloggerSans", bold);
   src: url("@{fontPath}/bloggersans-bold.woff2"), url("@{fontPath}/bloggersans-bold.woff");
 }
 
