@@ -1,0 +1,21 @@
+@import "../shared/vars";
+@import "../shared/colors";
+
+.menu {
+  width: 100%;
+  min-height: 19px;
+  outline: 1px solid red;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 52px;
+  }
+}

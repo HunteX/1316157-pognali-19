@@ -1,0 +1,61 @@
+@import "../shared/vars";
+@import "../shared/colors";
+
+.navigation {
+  position: relative;
+
+  &__toggle {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+  }
+
+  &--opened &__toggle {
+    background: url("@{imgPath}/filter-close.svg");
+    width: 19px;
+    height: 19px;
+  }
+
+  &--closed &__toggle {
+    background-image: url("@{imgPath}/menu-white.svg");
+    width: 25px;
+    height: 11px;
+  }
+
+  &--closed &__container {
+    display: none;
+  }
+
+  &--opened &__container {
+    display: flex;
+    width: 100%;
+    min-height: 568px;
+    position: absolute;
+    top: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__toggle {
+      margin-left: 24px;
+    }
+
+    &__container {
+      min-height: 910px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: static;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__container {
+      display: block;
+      width: auto;
+    }
+  }
+}
