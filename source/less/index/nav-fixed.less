@@ -9,15 +9,21 @@
   height: 568px;
   background-color: @white;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 27px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 436px;
+    margin-top: 109px;
+  }
 
   &__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-grow: 1;
   }
 
   &__close {
@@ -29,8 +35,8 @@
   }
 
   &__list {
-    flex-grow: 1;
     list-style: none;
+    margin: 0;
   }
 
   &__item {
@@ -54,7 +60,6 @@
   }
 
   &__auth {
-    flex-grow: 1;
     min-height: 50px;
   }
 
@@ -69,6 +74,7 @@
     text-align: center;
     color: @dark-two;
     text-transform: uppercase;
+    margin-top: 35px;
   }
 
   &__button-auth:hover {
@@ -80,9 +86,9 @@
   }
 
   &__contacts {
-    flex-grow: 1;
     position: relative;
     margin-left: 60px;
+    margin-top: 50px;
   }
 
   &__phone::before,
@@ -124,6 +130,7 @@
   &__mailto {
     position: relative;
     width: 119px;
+    height: 45px;
     font-size: 16px;
     font-weight: bold;
     line-height: 1.38;
@@ -132,7 +139,6 @@
   }
 
   &__mailto {
-    margin-top: 23px;
     text-transform: uppercase;
   }
 
