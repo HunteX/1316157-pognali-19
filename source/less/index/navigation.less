@@ -2,8 +2,6 @@
 @import "../shared/colors";
 
 .navigation {
-  position: relative;
-
   &__toggle {
     cursor: pointer;
     background-repeat: no-repeat;
@@ -15,12 +13,15 @@
     background: url("@{imgPath}/filter-close.svg");
     width: 19px;
     height: 19px;
+    z-index: 2;
+    position: relative;
   }
 
   &--closed &__toggle {
     background-image: url("@{imgPath}/menu-white.svg");
     width: 25px;
     height: 11px;
+    z-index: -1;
   }
 
   &--closed &__container {
