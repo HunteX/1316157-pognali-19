@@ -13,7 +13,7 @@
     font-weight: 300;
     line-height: 1.38;
     color: @white;
-    margin-top: 19px;
+    margin-top: 17px;
   }
 
   &__extra {
@@ -24,5 +24,26 @@
     line-height: 1.38;
     color: @white;
     margin-top: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 9px;
+
+    &__description {
+      padding: 0;
+      width: 260px;
+      height: 57px;
+      font-size: 28px;
+      line-height: 1.18;
+    }
+
+    &__extra {
+      width: 246px;
+      height: 70px;
+      font-size: 21px;
+      font-stretch: normal;
+      line-height: 1.19;
+      margin-top: 54px;
+    }
   }
 }

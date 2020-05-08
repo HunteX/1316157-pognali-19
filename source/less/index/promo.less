@@ -2,17 +2,27 @@
 @import "../shared/colors";
 
 .promo {
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 1.11;
-  text-align: center;
-  color: @white;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 45px;
 
   &__description {
     width: 237px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.11;
+    text-align: center;
+    color: @white;
+    margin-top: 45px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__description {
+      width: 395px;
+      height: 196px;
+      font-size: 60px;
+      line-height: 1.17;
+      margin-top: 68px;
+    }
   }
 }
