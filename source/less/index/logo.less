@@ -2,6 +2,8 @@
 @import "../shared/colors";
 
 .logo {
+  flex-grow: 1;
+
   &__image {
     display: none;
   }
@@ -11,6 +13,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    flex-grow: 0;
+
     &__image--mobile {
       display: none;
     }
