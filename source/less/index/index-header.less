@@ -10,9 +10,8 @@
   background-repeat: no-repeat;
   background-color: @bg-default;
 
-  &__wrapper {
-    position: relative;
-    min-height: 478px;
+  &__menu-wrapper {
+    min-height: 70px;
     padding-top: 27px;
     padding-left: 25px;
     padding-right: 25px;
@@ -21,7 +20,7 @@
   @media (min-width: @tablet-width) {
     background-image: none;
 
-    &__wrapper {
+    &__menu-wrapper {
       min-height: 400px;
       padding-top: 40px;
       padding-left: 40px;
@@ -30,7 +29,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    &__wrapper {
+    background-image: url("@{imgPath}/traveller-illustration-mobile@1x.png"), url("@{imgPath}/globe-back-mobile@1x.jpg");
+
+    &__menu-wrapper {
       padding-top: 48px;
       padding-left: 60px;
       padding-right: 60px;

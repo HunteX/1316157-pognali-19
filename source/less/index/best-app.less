@@ -3,14 +3,17 @@
 
 .best-app {
   width: 100%;
-  min-height: 285px;
-  background-color: @bg-default;
+
+  &__wrapper {
+    min-height: 285px;
+    background-color: @bg-default;
+    padding: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 591px;
     background-image: url("@{imgPath}/traveller-illustration-tablet@1x.png"), url("@{imgPath}/globe-back-tablet@1x.jpg");
     background-position: 285px 3px, -355px -19px;
     background-repeat: no-repeat;
-    background-color: @bg-default;
   }
 }
