@@ -78,6 +78,66 @@
 
     &__wrapper {
       flex-direction: row;
+      margin-top: 230px;
+    }
+
+    &__picture {
+      position: relative;
+      order: 2;
+      width: 376px;
+    }
+
+    &__image {
+      top: 53px;
+      left: 9px;
+      background: url("@{imgPath}/about-tablet@1x.png") center no-repeat;
+      width: 376px;
+      height: 548px;
+    }
+
+    &__about {
+      margin-top: 0;
+      order: 1;
+      padding-left: 25px;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__header {
+      margin-top: 43px;
+    }
+
+    &__caption {
+      font-size: 45px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &__description {
+      width: 300px;
+      height: 225px;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.18;
+      margin-top: -12px;
+    }
+
+    &__extra {
+      width: 256px;
+      height: 70px;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1.19;
+      margin-top: -18px;
+    }
+
+    &__button {
+      width: 274px;
+      height: 81px;
+      border-radius: 20px;
+      background-color: @light-gold;
     }
   }
 }
