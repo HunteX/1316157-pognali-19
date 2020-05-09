@@ -28,7 +28,7 @@
     z-index: 2;
   }
 
-  &__image-shadow {
+  &__caption-shadow {
     position: absolute;
     width: 140px;
     height: 132px;
@@ -75,5 +75,9 @@
   @media (min-width: @tablet-width) {
     .z-background-bottom(60px, @pale-grey);
     min-height: 920px;
+
+    &__wrapper {
+      flex-direction: row;
+    }
   }
 }
