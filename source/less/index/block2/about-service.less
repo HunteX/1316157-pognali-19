@@ -6,7 +6,7 @@
   width: 100%;
   min-height: 631px;
 
-  background: @dark-blue-grey url("@{imgPath}/about-mobile@1x.png") no-repeat 18px 278px;
+  background-color: @dark-blue-grey;
 
   &__wrapper {
     margin-top: 279px;
@@ -16,7 +16,32 @@
     padding-top: 30px;
   }
 
+  &__image {
+    position: absolute;
+    top: 278px;
+    left: 18px;
+    background: url("@{imgPath}/about-mobile@1x.png") center no-repeat;
+    width: 292px;
+    height: 352px;
+    z-index: 2;
+  }
+
+  &__image-shadow {
+    position: absolute;
+    width: 140px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: @dark-blue-grey-four;
+    left: -23px;
+    top: 278px;
+  }
+
+  &__container {
+    z-index: 3;
+  }
+
   &__caption {
+    position: relative;
     font-size: 24px;
     font-weight: bold;
     line-height: 1;
@@ -25,6 +50,7 @@
   }
 
   &__description {
+    z-index: 1;
     width: 212px;
     font-size: 16px;
     font-weight: 300;
@@ -34,6 +60,7 @@
   }
 
   &__extra {
+    z-index: 1;
     width: 195px;
     font-size: 16px;
     font-weight: bold;
