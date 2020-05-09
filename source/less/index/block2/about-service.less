@@ -88,7 +88,6 @@
     &__picture {
       position: relative;
       order: 2;
-      width: 376px;
     }
 
     &__image {
@@ -151,6 +150,55 @@
       height: 81px;
       border-radius: 20px;
       background-color: @light-gold;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 750px;
+
+    &__wrapper {
+      margin-top: 0;
+    }
+
+    &__header {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &__caption-shadow {
+      width: 213px;
+      height: 213px;
+      border-radius: 20px;
+      top: 70px;
+      left: 60px;
+    }
+
+    &__image {
+      top: 84px;
+      left: 10px;
+      background: url("@{imgPath}/about-desktop@1x.png") center no-repeat;
+      width: 630px;
+      height: 665px;
+    }
+
+    &__about {
+      margin-top: 91px;
+      padding-left: 80px;
+      min-height: 540px;
+      justify-content: space-around;
+    }
+
+    &__description {
+      width: 611px;
+      height: 93px;
+      margin-top: -20px;
+    }
+
+    &__extra {
+      width: 409px;
+      height: 46px;
+      margin-top: -31px;
+      margin-bottom: 20px;
     }
   }
 }
