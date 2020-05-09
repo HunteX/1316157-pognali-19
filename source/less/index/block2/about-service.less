@@ -1,5 +1,44 @@
 @import "../../shared/index";
 
 .about-service {
-  
+  .margin-fix();
+  .z-background-bottom(30px, @pale-grey);
+  width: 100%;
+  min-height: 631px;
+
+  background: @dark-blue-grey url("@{imgPath}/about-mobile@1x.png") no-repeat 18px 278px;
+
+  &__wrapper {
+    margin-top: 279px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 49px;
+    padding-top: 30px;
+  }
+
+  &__caption {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    color: @mango;
+    margin: 0;
+  }
+
+  &__description {
+    width: 212px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.38;
+    color: @white;
+    margin: 21px 0 0;
+  }
+
+  &__extra {
+    width: 195px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.38;
+    color: @white;
+    margin: 18px 0 0;
+  }
 }
