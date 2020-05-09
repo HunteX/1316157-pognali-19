@@ -20,4 +20,33 @@
     color: @four;
     margin: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    &__wrapper {
+      position: relative;
+      padding-left: 49px;
+      min-height: 258px;
+    }
+
+    &__wrapper::before {
+      position: absolute;
+      content: "";
+      width: 289px;
+      height: 575px;
+      background-size: 289px 575px;
+      background: url("@{imgPath}/flags-back@1x.png") no-repeat;
+      top: 80px;
+      right: 15px;
+    }
+
+    &__caption {
+      .orange-header-big();
+      margin-bottom: 57px;
+    }
+
+    &__description {
+      font-size: 28px;
+      line-height: 1.18;
+    }
+  }
 }
