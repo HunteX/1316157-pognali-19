@@ -1,0 +1,8 @@
+@import "vars";
+
+.flag(@flag, @width, @height) {
+  background-image: url("@{imgPath}/flags/@{flag}.png");
+  background-size: @width @height;
+  background-repeat: no-repeat;
+  background-position: center;
+}
