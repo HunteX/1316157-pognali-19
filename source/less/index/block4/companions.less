@@ -9,8 +9,8 @@
 
   background-color: @dark-blue-grey;
   background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-mobile@1x.png");
-  background-repeat: no-repeat;
   background-position: 152px 38px, -10px 310px;
+  background-repeat: no-repeat;
 
   &__wrapper {
     padding-top: 69px;
@@ -25,5 +25,18 @@
     height: 62px;
     border-radius: 10px;
     background-color: @light-gold;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 1200px;
+
+    background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-desktop@1x.png");
+    background-position: 40px 424px, 408px 78px;
+
+    &__wrapper {
+      padding-top: 135px;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
   }
 }
