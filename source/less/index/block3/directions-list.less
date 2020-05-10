@@ -168,4 +168,33 @@
       top: 16px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    order: 1;
+    flex-grow: 1;
+    padding-top: 0;
+    width: 338px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      top: -72px;
+      left: -38px;
+    }
+
+    &__item {
+      width: 559px;
+    }
+
+    &__details {
+      padding-top: 23px;
+      padding-bottom: 19px;
+    }
+
+    &__flag {
+      right: -35px;
+      top: 23px;
+    }
+  }
 }

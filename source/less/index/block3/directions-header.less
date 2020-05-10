@@ -3,9 +3,8 @@
 
 .directions-header {
   &__wrapper {
-    min-height: 285px;
+    min-height: 214px;
     padding-left: 25px;
-    padding-top: 71px;
   }
 
   &__caption {
@@ -35,7 +34,7 @@
       height: 575px;
       background-size: 289px 575px;
       background: url("@{imgPath}/flags-back@1x.png") no-repeat;
-      top: 80px;
+      top: 9px;
       right: 15px;
     }
 
@@ -47,6 +46,19 @@
     &__description {
       font-size: 28px;
       line-height: 1.18;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    order: 2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper::before {
+      top: -73px;
+      right: -180px;
     }
   }
 }

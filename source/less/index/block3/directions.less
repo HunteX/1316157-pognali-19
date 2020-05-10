@@ -5,12 +5,29 @@
   background-color: @pale-grey;
   .z-background-bottom(30px, @dark-blue-grey);
 
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 71px;
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 1094px;
     .z-background-bottom(60px, @dark-blue-grey);
 
     &__wrapper {
       padding-left: 76px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 751px;
+
+    &__wrapper {
+      flex-direction: row;
+      padding-top: 161px;
+      padding-left: 98px;
+      padding-right: 98px;
     }
   }
 }
