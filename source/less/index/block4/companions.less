@@ -4,9 +4,13 @@
 .companions {
   .margin-fix();
   .z-background-bottom(30px, @pale-grey);
-  background-color: @dark-blue-grey;
   width: 100%;
   min-height: 1300px;
+
+  background-color: @dark-blue-grey;
+  background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 152px 38px, -10px 310px;
 
   &__wrapper {
     padding-top: 69px;
