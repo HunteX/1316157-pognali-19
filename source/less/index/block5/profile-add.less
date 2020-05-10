@@ -29,7 +29,7 @@
   }
 
   &__item {
-    width: 244px;
+    width: 100%;
     display: flex;
     flex-direction: row;
   }
@@ -40,8 +40,10 @@
   }
 
   &__cell:first-child {
-    width: 200px;
+    flex-grow: 1;
     border-top: 1px solid @table-border;
+    display: flex;
+    flex-direction: column;
   }
 
   &__cell:last-child {
@@ -80,7 +82,7 @@
   }
 
   &__index--color1::before {
-    background-color: @mango;
+    background-color: @mango-three;
   }
 
   &__index--color2::before {
@@ -96,5 +98,65 @@
     font-weight: bold;
     line-height: 1;
     color: @dark-blue-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    .z-background-bottom(60px, @dark-blue-grey);
+    min-height: 557px;
+
+    background-position: 584px 408px;
+
+    &__wrapper {
+      padding-top: 68px;
+      padding-left: 40px;
+      padding-right: 74px;
+    }
+
+    &__header {
+      margin-left: 104px;
+    }
+
+    &__caption {
+      .orange-header-big();
+      width: auto;
+      margin-bottom: 78px;
+    }
+
+    &__item {
+      flex-direction: row-reverse;
+    }
+
+    &__cell {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &__cell:first-child {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__cell:last-child {
+      width: 90px;
+    }
+
+    &__index::before {
+      width: 67px;
+      height: 67px;
+      top: -17px;
+      left: 0;
+    }
+
+    &__index {
+      font-size: 28px;
+      text-align: center;
+      margin-right: 18px;
+    }
+
+    &__service,
+    &__price {
+      font-size: 28px;
+      line-height: 1.18;
+    }
   }
 }
