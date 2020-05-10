@@ -8,12 +8,9 @@
   min-height: 452px;
 
   background-color: @pale-grey;
-  background-image: url("@{imgPath}/rates@1x.png");
-  background-size: 99px 99px;
-  background-repeat: no-repeat;
-  background-position: 195px 36px;
 
   &__wrapper {
+    position: relative;
     padding: 49px 26px 38px 50px;
   }
 
@@ -50,6 +47,22 @@
     width: 34px;
   }
 
+  &__shadow {
+    display: none;
+  }
+
+  &__logo {
+    position: absolute;
+    background-color: transparent;
+    background-image: url("@{imgPath}/rates@1x.png");
+    background-size: 99px 99px;
+    background-repeat: no-repeat;
+    width: 99px;
+    height: 99px;
+    right: 26px;
+    top: 36px;
+  }
+
   &__service,
   &__price {
     font-size: 16px;
@@ -66,7 +79,7 @@
     color: @white;
     text-align: right;
     padding-top: 6px;
-    padding-right: 3px;
+    padding-right: 13px;
     z-index: 0;
   }
 
@@ -76,7 +89,7 @@
     width: 34px;
     height: 34px;
     top: -5px;
-    left: 10px;
+    left: 0;
     border-radius: 50%;
     z-index: -1;
   }
@@ -104,12 +117,11 @@
     .z-background-bottom(60px, @dark-blue-grey);
     min-height: 557px;
 
-    background-position: 584px 408px;
-
     &__wrapper {
       padding-top: 68px;
       padding-left: 40px;
       padding-right: 74px;
+      z-index: 1;
     }
 
     &__header {
@@ -144,7 +156,7 @@
       width: 67px;
       height: 67px;
       top: -17px;
-      left: 0;
+      left: -5px;
     }
 
     &__index {
@@ -157,6 +169,23 @@
     &__price {
       font-size: 28px;
       line-height: 1.18;
+    }
+
+    &__logo {
+      right: 86px;
+      top: 408px;
+    }
+
+    &__shadow {
+      display: block;
+      position: absolute;
+      right: 40px;
+      top: 148px;
+      width: 198px;
+      height: 285px;
+      border-radius: 20px;
+      background-color: @pale-grey-four;
+      z-index: -1;
     }
   }
 }
