@@ -13,6 +13,8 @@
   background-repeat: no-repeat;
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
     padding-top: 69px;
   }
 
@@ -44,6 +46,28 @@
       width: 618px;
       height: 81px;
       border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 749px;
+
+    background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-desktop@1x.png");
+    background-position: 547px 131px, 191px 383px;
+
+    &__wrapper {
+      flex-direction: row;
+      padding: 131px 59px 0 131px;
+    }
+
+    &__controls {
+      position: absolute;
+      bottom: 134px;
+    }
+
+    &__button {
+      width: 280px;
+      height: 81px;
     }
   }
 }

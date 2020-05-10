@@ -80,4 +80,17 @@
       margin: 42px 0 0 0;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+
+    &__wrapper {
+      margin-top: -8px;
+    }
+
+    &__caption-shadow {
+      top: -65px;
+      left: -71px;
+    }
+  }
 }
