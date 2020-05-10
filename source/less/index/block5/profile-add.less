@@ -156,13 +156,13 @@
       width: 67px;
       height: 67px;
       top: -17px;
-      left: -5px;
+      left: 0;
     }
 
     &__index {
       font-size: 28px;
       text-align: center;
-      margin-right: 18px;
+      margin-right: 11px;
     }
 
     &__service,
@@ -186,6 +186,37 @@
       border-radius: 20px;
       background-color: @pale-grey-four;
       z-index: -1;
+    }
+
+    &__controls {
+      position: relative;
+    }
+
+    &__controls::before {
+      position: absolute;
+      content: "";
+      background-image: url("@{imgPath}/business.svg");
+      background-size: 17px 21px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: @pale-grey-four;
+      width: 67px;
+      height: 67px;
+      top: -24px;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &__link {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+      color: @light-navy;
+      margin-left: 88px;
+    }
+
+    &__list {
+      padding-bottom: 58px;
     }
   }
 }
