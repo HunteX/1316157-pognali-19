@@ -44,6 +44,11 @@
     position: absolute;
     bottom: 80px;
     left: 25px;
+    z-index: 2;
+  }
+
+  &__flag--desktop {
+    display: none;
   }
 
   &__country {
@@ -152,10 +157,14 @@
       margin-left: 28px;
     }
 
-    &__flag {
-      .flag("thailand", 70px, 47px);
-      width: 70px;
-      height: 47px;
+    &__flag--mobile {
+      display: none;
+    }
+
+    &__flag--desktop {
+      display: block;
+      left: 397px;
+      top: 16px;
     }
   }
 }
