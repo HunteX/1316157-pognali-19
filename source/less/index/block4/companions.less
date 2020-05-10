@@ -28,7 +28,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 1200px;
+    .z-background-bottom(60px, @pale-grey);
+    min-height: 1253px;
 
     background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-desktop@1x.png");
     background-position: 40px 424px, 408px 78px;
@@ -37,6 +38,12 @@
       padding-top: 135px;
       padding-left: 75px;
       padding-right: 75px;
+    }
+
+    &__button {
+      width: 618px;
+      height: 81px;
+      border-radius: 20px;
     }
   }
 }
