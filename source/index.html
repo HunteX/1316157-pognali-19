@@ -361,11 +361,11 @@
       <div class="profile-add__logo"></div>
 
       <div class="profile-add__controls">
-        <a class="profile-add__link" href="#">Показать тарифы для бизнеса</a>
+        <button class="button profile-add__button" onclick="toggleTariffsPopup()">Показать тарифы для бизнеса</button>
       </div>
     </div>
 
-    <div class="profile-add__popup tariffs-popup">
+    <div class="profile-add__popup tariffs-popup tariffs-popup--opened">
       <header class="tariffs-popup__header">
         <h2 class="tariffs-popup__caption">Бизнес-тарифы</h2>
       </header>
@@ -392,7 +392,7 @@
       </div>
 
       <div class="tariffs-popup__controls">
-        <a href="#" class="tariffs-popup__button">Закрыть окно</a>
+        <button class="button tariffs-popup__button" onclick="toggleTariffsPopup()">Закрыть окно</button>
       </div>
     </div>
   </section>
@@ -481,5 +481,6 @@
 </footer>
 
 <script src="js/menu.js"></script>
+<script src="js/tariffs-popup.js"></script>
 </body>
 </html>
