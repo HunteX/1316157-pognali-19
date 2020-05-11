@@ -2,13 +2,12 @@
 @import "../../shared/vars";
 
 .map {
-  position: relative;
   width: 100%;
   min-height: 330px;
   background: url("@{imgPath}/map.png") no-repeat;
   background-size: cover;
   z-index: -1;
-  top: -34px;
+  margin-top: -34px;
 
   &__marker {
     position: absolute;
@@ -22,7 +21,7 @@
 
   @media (min-width: @tablet-width) {
     min-height: 570px;
-    top: -54px;
+    margin-top: -54px;
 
     &__marker {
       width: 54px;
