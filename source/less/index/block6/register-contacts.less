@@ -4,6 +4,8 @@
 .register-contacts {
   margin-left: -30px;
   margin-top: 32px;
+  display: flex;
+  flex-direction: column;
 
   &__phone::before,
   &__mailto::before {
@@ -86,12 +88,55 @@
     &__mailto::after {
       width: 27px;
       height: 19px;
-      top: 6px;
+      top: 3px;
       left: -69px;
     }
 
     &__mailto {
       margin-top: 38px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 77px;
+    margin-left: 68px;
+
+    &__phone::before,
+    &__mailto::before {
+      width: 90px;
+      height: 90px;
+      top: -33px;
+      left: -122px;
+    }
+
+    &__phone,
+    &__mailto {
+      margin-top: 0;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1;
+      color: @light-gold-two;
+    }
+
+    &__mailto {
+      margin-left: 185px;
+    }
+
+    &__phone::after {
+      width: 36px;
+      height: 36px;
+      top: -4px;
+      left: -94px;
+    }
+
+    &__mailto::after {
+      width: 36px;
+      height: 26px;
+      top: 0;
+      left: -94px;
     }
   }
 }
