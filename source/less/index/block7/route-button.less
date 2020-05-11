@@ -1,0 +1,25 @@
+@import "../../shared/vars";
+@import "../../shared/colors";
+
+.route-button {
+  position: relative;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  color: @dark-slate-blue;
+  padding-left: 24px;
+  padding-bottom: 4px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 14px;
+  }
+}
