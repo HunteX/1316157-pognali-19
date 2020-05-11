@@ -38,7 +38,7 @@
     font-size: 16px;
     font-weight: normal;
     line-height: 1.38;
-    color: @four;
+    color: @greyish-brown;
   }
 
   &__copy-link {
@@ -55,5 +55,40 @@
 
   &__copy-link:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: -55px;
+    .z-background-top(60px, @white);
+
+    &__wrapper {
+      min-height: 154px;
+      flex-direction: row;
+      padding-top: 11px;
+      padding-left: 42px;
+      padding-right: 38px;
+    }
+
+    &__socials {
+      margin-top: 0;
+    }
+
+    &__copyright {
+      width: 155px;
+      align-self: auto;
+      margin-top: 0;
+      padding-top: 9px;
+      border-top: none;
+    }
+
+    &__copy-text {
+      font-size: 20px;
+      line-height: 1.2;
+      text-align: left;
+    }
+
+    &__copy-link {
+      margin-top: 0;
+    }
   }
 }
