@@ -47,7 +47,8 @@
     content: "";
     width: 60px;
     height: 62px;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: @light-gold;
     top: 0;
     right: 0;
@@ -61,5 +62,32 @@
     height: 14px;
     top: 24px;
     right: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__input {
+      width: 620px;
+      height: 81px;
+      border-radius: 20px;
+      padding-left: 37px;
+    }
+
+    &__button {
+      width: 82px;
+      height: 81px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    &__button::after {
+      top: 33px;
+      right: 36px;
+    }
+
+    &__input::placeholder {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+    }
   }
 }
