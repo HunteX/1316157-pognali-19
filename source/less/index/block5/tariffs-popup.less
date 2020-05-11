@@ -1,12 +1,18 @@
 @import "../../shared/index";
 @import "../common/index";
 
+/*
+  height выставлен специально для IE, иначе это никак не работает
+  пробовал и это в том числе: https://github.com/philipwalton/flexbugs
+*/
+
 .tariffs-popup {
   display: none;
   top: -10px;
   left: 25px;
   position: absolute;
   width: 270px;
+  height: 443px;
   min-height: 443px;
   border-radius: 20px;
   box-shadow: 0 20px 50px 0 @dark-slate-blue-10;
@@ -86,6 +92,7 @@
     left: 37px;
 
     width: 688px;
+    height: 526px;
     min-height: 526px;
     border-radius: 30px;
     z-index: 1;
@@ -133,6 +140,7 @@
 
   @media (min-width: @desktop-width) {
     width: 750px;
+    height: 526px;
     min-height: 526px;
     top: 101px;
     left: 344px;
