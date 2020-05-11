@@ -64,9 +64,8 @@
     &__wrapper {
       min-height: 154px;
       flex-direction: row;
-      padding-top: 11px;
-      padding-left: 42px;
-      padding-right: 38px;
+      align-items: center;
+      padding: 43px 38px 41px 42px;
     }
 
     &__socials {
@@ -78,7 +77,7 @@
       width: 155px;
       align-self: auto;
       margin-top: 0;
-      padding-top: 9px;
+      padding-top: 0;
       border-top: none;
     }
 
@@ -90,6 +89,17 @@
 
     &__copy-link {
       margin-top: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      padding-left: 60px;
+      padding-right: 61px;
+    }
+
+    &__socials {
+      margin-left: -61px;
     }
   }
 }
