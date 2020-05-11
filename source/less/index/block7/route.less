@@ -60,6 +60,7 @@
     }
 
     &__button {
+      width: 618px;
       margin-top: 40px;
     }
 
@@ -77,6 +78,37 @@
       font-size: 28px;
       font-weight: bold;
       line-height: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      min-height: 200px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 133px;
+      padding-left: 404px;
+      margin-top: -6px;
+    }
+
+    &__caption {
+      width: 432px;
+      font-size: 28px;
+    }
+
+    &__caption::before {
+      width: 90px;
+      height: 90px;
+      background-size: 28px 43px;
+      background-position: 31px 27px;
+      left: -121px;
+      top: -31px;
+    }
+
+    &__button {
+      width: 324px;
+      margin-top: 0;
     }
   }
 }
