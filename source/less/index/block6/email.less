@@ -88,4 +88,21 @@
       line-height: 1;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &__button {
+      width: 325px;
+    }
+
+    &__button::before {
+      position: absolute;
+      content: "Регистрация";
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+      color: @dark-slate-blue;
+      top: 28px;
+      left: 36px;
+    }
+  }
 }
