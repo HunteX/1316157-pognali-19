@@ -41,4 +41,19 @@
     background-color: @dark-blue-grey;
     color: @white;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 618px;
+    height: 81px;
+    border-radius: 20px;
+    font-size: 24px;
+    padding-left: 32px;
+
+    &::after {
+      width: 10px;
+      height: 14px;
+      top: 32px;
+      right: 33px;
+    }
+  }
 }

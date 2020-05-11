@@ -25,8 +25,8 @@
     position: absolute;
     content: "";
     background: @dark-blue-grey-two url("@{imgPath}/contacts-location.svg") no-repeat;
-    background-size: 14px 22px, 45px 45px;
-    background-position: 15px 12px, 0 0;
+    background-size: 14px 22px;
+    background-position: 15px 12px;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -41,5 +41,33 @@
     line-height: 1.38;
     color: @dark-blue-grey;
     text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__wrapper {
+      min-height: 324px;
+      padding: 43px 76px 85px 75px;
+      align-items: center;
+    }
+
+    &__header {
+      margin-left: 0;
+    }
+
+    &__caption::before {
+      width: 67px;
+      height: 67px;
+      background-size: 21px 31px;
+      background-position: 23px 18px;
+      left: -94px;
+      top: -20px;
+    }
+
+    &__caption {
+      width: 100%;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1;
+    }
   }
 }
