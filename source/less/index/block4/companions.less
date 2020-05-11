@@ -1,0 +1,75 @@
+@import "../../shared/index";
+@import "../common/index";
+
+.companions {
+  .margin-fix();
+  .z-background-bottom(30px, @pale-grey);
+  width: 100%;
+  min-height: 1322px;
+
+  background-color: @dark-blue-grey;
+  background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-mobile@1x.png");
+  background-position: 152px 38px, -10px 310px;
+  background-repeat: no-repeat;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 69px;
+  }
+
+  &__controls {
+    margin-top: 10px;
+  }
+
+  &__button {
+    width: 270px;
+    height: 62px;
+    border-radius: 10px;
+    background-color: @light-gold;
+  }
+
+  @media (min-width: @tablet-width) {
+    .z-background-bottom(60px, @pale-grey);
+    min-height: 1253px;
+
+    background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-desktop@1x.png");
+    background-position: 40px 424px, 408px 78px;
+
+    &__wrapper {
+      padding-top: 135px;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+
+    &__button {
+      width: 618px;
+      height: 81px;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 749px;
+
+    background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-desktop@1x.png");
+    background-position: 547px 131px, 191px 383px;
+
+    &__wrapper {
+      position: relative;
+      flex-direction: row;
+      padding: 131px 59px 0 131px;
+    }
+
+    &__controls {
+      position: absolute;
+      bottom: 70px;
+      left: 131px;
+    }
+
+    &__button {
+      width: 280px;
+      height: 81px;
+    }
+  }
+}

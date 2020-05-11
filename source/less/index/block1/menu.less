@@ -1,0 +1,19 @@
+@import "../../shared/index";
+
+.menu {
+  width: 100%;
+  min-height: 19px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 52px;
+  }
+}

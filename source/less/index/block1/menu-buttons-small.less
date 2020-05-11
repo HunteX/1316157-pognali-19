@@ -1,0 +1,69 @@
+@import "../../shared/index";
+
+.menu-buttons-small {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    content: "";
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
+  &--call {
+    background: @mango;
+  }
+
+  &--call:hover {
+    background: @dusty-orange;
+  }
+
+  &--call::before {
+    top: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    background-image: url("@{imgPath}/topmenu-phone.svg");
+  }
+
+  &--mail {
+    background: @mango-two;
+  }
+
+  &--mail:hover {
+    background: @mango;
+  }
+
+  &--mail::before {
+    top: 13px;
+    left: 11px;
+    width: 18px;
+    height: 14px;
+    background-image: url("@{imgPath}/topmenu-mail.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    &--call::before {
+      top: 16px;
+      left: 16px;
+    }
+
+    &--mail::before {
+      top: 18px;
+      left: 16px;
+    }
+  }
+}

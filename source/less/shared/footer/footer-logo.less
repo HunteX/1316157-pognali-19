@@ -1,0 +1,32 @@
+@import "../vars";
+@import "../colors";
+
+.footer-logo {
+  &__image--tablet {
+    display: none;
+  }
+
+  &__image--desktop {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__image--mobile {
+      display: none;
+    }
+
+    &__image--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__image--tablet {
+      display: none;
+    }
+
+    &__image--desktop {
+      display: block;
+    }
+  }
+}

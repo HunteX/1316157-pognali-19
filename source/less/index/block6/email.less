@@ -1,0 +1,106 @@
+@import "../../shared/colors";
+@import "../../shared/vars";
+
+.email {
+  position: relative;
+
+  &__input {
+    width: 100%;
+    height: 62px;
+    background-color: @white;
+    border: none;
+    padding-left: 22px;
+    padding-right: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 10px;
+  }
+
+  &__input:focus {
+    border: solid 4px @white;
+    background-color: transparent;
+    color: @white;
+    outline: none;
+  }
+
+  &__input::placeholder {
+    opacity: 0.3;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: @placeholder;
+  }
+
+  &__input:hover::placeholder {
+    opacity: 1;
+  }
+
+  &__input:invalid {
+    color: red;
+  }
+
+  &__button {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 62px;
+    border-radius: 10px;
+    background-color: @light-gold;
+    top: 0;
+    right: 0;
+  }
+
+  &__button::after {
+    position: absolute;
+    content: "";
+    background-image: url("@{imgPath}/triangle-arrow-right.svg");
+    width: 10px;
+    height: 14px;
+    top: 24px;
+    right: 24px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__input {
+      height: 81px;
+      border-radius: 20px;
+      padding-left: 37px;
+    }
+
+    &__button {
+      width: 82px;
+      height: 81px;
+      border-radius: 0 20px 20px 0;
+    }
+
+    &__button::after {
+      top: 33px;
+      right: 36px;
+    }
+
+    &__input::placeholder {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__button {
+      width: 325px;
+    }
+
+    &__button::before {
+      position: absolute;
+      content: "Регистрация";
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+      color: @dark-slate-blue;
+      top: 28px;
+      left: 36px;
+    }
+  }
+}

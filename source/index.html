@@ -2,254 +2,329 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="main-container">
 
 <header class="index-header">
+  <div class="index-header__menu-wrapper">
+    <div class="index-header__menu menu">
+      <div class="menu__logo logo">
+        <a class="logo__link">
+          <img class="logo__image logo__image--mobile" src="img/logo-mobile-white@1x.png" width="100" height="19"
+            alt="Погнали">
+          <img class="logo__image logo__image--tablet" src="img/logo-tablet-white@1x.png" width="166" height="42"
+            alt="Погнали">
+          <img class="logo__image logo__image--desktop" src="img/logo-desktop-white@1x.png" width="200" height="52"
+            alt="Погнали">
+        </a>
+      </div>
 
-  <div class="global-wrapper index-header__wrapper">
-    <div class="index-header__fixed">
-      <a class="index-header__logo">
-        <img class="index-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19"
-          alt="Погнали">
-      </a>
-      <button class="index-header__toggle" type="button" title="Открыть меню" onclick="toggleMenu()"></button>
-    </div>
+      <div class="menu__nav navigation navigation--opened">
+        <button class="navigation__toggle" type="button" onclick="toggleMenu()"></button>
 
-    <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <div class="main-nav__header">
-          <a class="main-nav__logo">
-            <img class="main-nav__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19"
+        <div class="navigation__container nav-fixed">
+          <div class="nav-fixed__logo">
+            <img class="nav-fixed__image nav-fixed__image--mobile" src="img/logo-mobile-blue@1x.png" width="100"
+              height="19"
               alt="Погнали">
-          </a>
-          <button class="main-nav__close" type="button" title="Закрыть меню" onclick="toggleMenu()"></button>
-        </div>
+            <img class="nav-fixed__image nav-fixed__image--tablet" src="img/logo-tablet-blue@1x.png" width="166"
+              height="42"
+              alt="Погнали">
+          </div>
 
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">О сервисе</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Направления</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Попутчики</a>
-          </li>
-        </ul>
+          <div class="nav-fixed__wrapper">
+            <ul class="nav-fixed__list">
+              <li class="nav-fixed__item">
+                <a class="nav-fixed__link" href="index.html">О сервисе</a>
+              </li>
+              <li class="nav-fixed__item">
+                <a class="nav-fixed__link" href="form.html">Направления</a>
+              </li>
+              <li class="nav-fixed__item">
+                <a class="nav-fixed__link" href="catalog.html">Попутчики</a>
+              </li>
+            </ul>
 
-        <div class="main-nav__auth">
-          <button type="button" class="button main-nav__button-auth">Авторизация</button>
-        </div>
+            <div class="nav-fixed__auth">
+              <button type="button" class="button nav-fixed__button-auth">Авторизация</button>
+            </div>
 
-        <div class="main-nav__contacts">
-          <div class="main-nav__phone">8 800 555-86-28</div>
-          <div class="main-nav__mailto">mail@htmlacademy.ru</div>
-        </div>
+            <div class="nav-fixed__contacts">
+              <div class="nav-fixed__phone">8 800 555-86-28</div>
+              <div class="nav-fixed__mailto">mail@htmlacademy.ru</div>
+            </div>
 
-        <div class="main-nav__socials social">
-          <ul class="social__list">
-            <li class="social__item" aria-label="Facebook">
-              <a href="https://facebook.com">
-                <div class="social__icon social__icon--fb"></div>
-              </a>
-            </li>
-            <li class="social__item" aria-label="Vkontakte">
-              <a href="https://vk.com">
-                <div class="social__icon social__icon--vk"></div>
-              </a>
-            </li>
-            <li class="social__item" aria-label="Instagram">
-              <a href="https://instagram.com">
-                <div class="social__icon social__icon--ig"></div>
-              </a>
-            </li>
-          </ul>
+            <div class="nav-fixed__socials social">
+              <ul class="social__list">
+                <li class="social__item" aria-label="Facebook">
+                  <a href="https://facebook.com">
+                    <div class="social__icon social__icon--fb"></div>
+                  </a>
+                </li>
+                <li class="social__item" aria-label="Vkontakte">
+                  <a href="https://vk.com">
+                    <div class="social__icon social__icon--vk"></div>
+                  </a>
+                </li>
+                <li class="social__item" aria-label="Instagram">
+                  <a href="https://instagram.com">
+                    <div class="social__icon social__icon--ig"></div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
 
-    <p class="index-header__description">В путешествие с крутыми попутчиками!</p>
-
-    <div class="index-header__promo">
-      <button class="button button-menu-small button-menu-small--call" type="button"></button>
-      <button class="button button-menu-small button-menu-small--mail" type="button"></button>
-      <button class="button button-menu-medium" type="button"></button>
+      <div class="menu__buttons menu-buttons">
+        <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--call" type="button"></button>
+        <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--mail" type="button"></button>
+        <button class="button menu-buttons__button menu-buttons-medium" type="button">Авторизация</button>
+      </div>
     </div>
+  </div>
+
+  <div class="index-header__best-app best-app">
+    <div class="best-app__promo promo">
+      <div class="promo__description">В путешествие<br> с крутыми<br> попутчиками!</div>
+    </div>
+
+    <div class="best-app__wrapper">
+      <div class="index-header__feedback feedback">
+        <div class="feedback__description">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</div>
+        <div class="feedback__extra">Мурат Эльтазин<br>главный редактор газеты &laquo;гаджетлайф&raquo;</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="index-header__advantages advantages">
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <div class="advantages__text">Выберите<br> направление</div>
+        <div class="advantages__index">1</div>
+      </li>
+      <li class="advantages__item">
+        <div class="advantages__text">Изучите идеи<br> путешественников</div>
+        <div class="advantages__index">2</div>
+      </li>
+      <li class="advantages__item">
+        <div class="advantages__text">Находите тех,<br> кто похож на вас</div>
+        <div class="advantages__index">3</div>
+      </li>
+      <li class="advantages__item">
+        <div class="advantages__text">Путешествуйте<br> вместе!</div>
+        <div class="advantages__index">4</div>
+      </li>
+    </ul>
   </div>
 </header>
 
 <main>
   <h1 class="visually-hidden">Погнали</h1>
 
-  <section class="best-app">
-    <div class="global-wrapper best-app__wrapper1">
-      <h2 class="best-app__description">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</h2>
-      <p class="best-app__extra">Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</p>
-    </div>
-
-    <div class="global-wrapper best-app__wrapper2">
-      <ul class="best-app__list">
-        <li class="best-app__item">
-          <div class="best-app__text">Выберите направление</div>
-          <div class="best-app__index">1</div>
-        </li>
-        <li class="best-app__item">
-          <div class="best-app__text">Изучите идеи путешественников</div>
-          <div class="best-app__index">2</div>
-        </li>
-        <li class="best-app__item">
-          <div class="best-app__text">Находите тех, кто похож на вас</div>
-          <div class="best-app__index">3</div>
-        </li>
-        <li class="best-app__item">
-          <div class="best-app__text">Путешествуйте вместе!</div>
-          <div class="best-app__index">4</div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
   <section class="about-service">
-    <div class="global-wrapper about-service__wrapper">
-      <header class="about-service__header">
-        <h2 class="about-service__caption">О сервисе</h2>
-      </header>
-      <p class="about-service__description">
-        Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и
-        черпайте вдохновение в чужих.
-      </p>
-      <p class="about-service__extra">
-        А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
-      </p>
+    <div class="main-wrapper about-service__wrapper">
+      <div class="about-service__picture">
+        <div class="about-service__image"></div>
+      </div>
+
+      <div class="about-service__about">
+        <header class="about-service__header">
+          <h2 class="about-service__caption">О сервисе</h2>
+        </header>
+        <p class="about-service__description">
+          Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и
+          черпайте вдохновение в чужих.
+        </p>
+        <p class="about-service__extra">
+          А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
+        </p>
+
+        <button type="button" class="button about-service__button">Подробнее</button>
+      </div>
+
+      <div class="about-service__caption-shadow"></div>
     </div>
   </section>
 
   <section class="directions">
-    <div class="global-wrapper directions__wrapper">
-      <header class="directions__header">
-        <h2 class="directions__caption">Направления</h2>
+    <div class="main-wrapper directions__wrapper">
+      <header class="directions__header directions-header">
+        <div class="directions-header__wrapper">
+          <h2 class="directions-header__caption">Направления</h2>
+
+          <p class="directions-header__description">
+            Мы не продаем туры<br>
+            и ничего не рекламируем.<br>
+            Люди сами пишут о странах,<br>
+            куда хотели бы отправиться<br>
+            и чем можно там заняться.
+          </p>
+        </div>
       </header>
-      <p class="directions__description">
-        Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно
-        там
-        заняться.
-      </p>
-      <ul class="directions__list">
-        <li class="directions__item">
-          <figure class="directions__direction">
-            <img class="directions__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Тайланд">
-            <figcaption class="directions__details">
-              <div class="directions__flag index-flag index-flag--thailand"></div>
-              <div class="directions__container">
-                <p class="directions__country">Тайланд</p>
-                <p class="directions__text">Джунгли зовут!</p>
+
+      <ul class="directions__list directions-list">
+        <li class="directions-list__item">
+          <figure class="directions-list__direction">
+            <img class="directions-list__image directions-list__image--mobile" src="img/thailand-mobile@1x.jpg"
+              width="270" height="110" alt="Тайланд">
+            <img class="directions-list__image directions-list__image--desktop" src="img/thailand-desktop@1x.jpg"
+              width="186" height="140" alt="Тайланд">
+            <figcaption class="directions-list__details">
+              <div class="directions-list__container">
+                <img class="directions-list__flag directions-list__flag--mobile" src="img/flags/thailand.png" width="35"
+                  height="24" alt="Тайланд">
+                <img class="directions-list__flag directions-list__flag--desktop" src="img/flags/thailand-desktop.png"
+                  width="70" height="47" alt="Тайланд">
+                <p class="directions-list__country">Таиланд</p>
+                <p class="directions-list__text">Джунгли зовут!</p>
               </div>
-              <div class="directions__count">18321</div>
+              <div class="directions-list__count">18321</div>
             </figcaption>
           </figure>
         </li>
-        <li class="directions__item">
-          <figure class="directions__direction">
-            <img class="directions__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
-            <figcaption class="directions__details">
-              <div class="directions__flag index-flag index-flag--france"></div>
-              <div class="directions__container">
-                <p class="directions__country">Франция</p>
-                <p class="directions__text">Трэ бьен, манифик!</p>
+        <li class="directions-list__item">
+          <figure class="directions-list__direction">
+            <img class="directions-list__image directions-list__image--mobile" src="img/france-mobile@1x.jpg"
+              width="270" height="110" alt="Франция">
+            <img class="directions-list__image directions-list__image--desktop" src="img/france-desktop@1x.jpg"
+              width="186" height="140" alt="Франция">
+            <figcaption class="directions-list__details">
+              <div class="directions-list__container">
+                <img class="directions-list__flag directions-list__flag--mobile" src="img/flags/france.png" width="35"
+                  height="24" alt="Франция">
+                <img class="directions-list__flag directions-list__flag--desktop" src="img/flags/france-desktop.png"
+                  width="70" height="47" alt="Франция">
+                <p class="directions-list__country">Франция</p>
+                <p class="directions-list__text">Трэ бьен, манифик!</p>
               </div>
-              <div class="directions__count">12518</div>
+              <div class="directions-list__count">12518</div>
             </figcaption>
           </figure>
         </li>
-        <li class="directions__item">
-          <figure class="directions__direction">
-            <img class="directions__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
-            <figcaption class="directions__details">
-              <div class="directions__flag index-flag index-flag--czech"></div>
-              <div class="directions__container">
-                <p class="directions__country">Чехия</p>
-                <p class="directions__text">Закоулки старой Европы</p>
+        <li class="directions-list__item">
+          <figure class="directions-list__direction">
+            <img class="directions-list__image directions-list__image--mobile" src="img/czech-mobile@1x.jpg" width="270"
+              height="110" alt="Чехия">
+            <img class="directions-list__image directions-list__image--desktop" src="img/czech-desktop@1x.jpg"
+              width="186" height="140" alt="Чехия">
+            <figcaption class="directions-list__details">
+              <div class="directions-list__container">
+                <img class="directions-list__flag directions-list__flag--mobile" src="img/flags/czech.png" width="35"
+                  height="24" alt="Франция">
+                <img class="directions-list__flag directions-list__flag--desktop" src="img/flags/czech-desktop.png"
+                  width="70" height="47" alt="Франция">
+                <p class="directions-list__country">Чехия</p>
+                <p class="directions-list__text">Закоулки старой Европы</p>
               </div>
-              <div class="directions__count">5326</div>
+              <div class="directions-list__count">5326</div>
             </figcaption>
           </figure>
         </li>
       </ul>
 
-      <!-- TODO: href="catalog.html" -->
-      <button type="button" class="button button-big-arrow directions__button">Показать все</button>
+      <div class="directions__controls directions-controls">
+        <!-- TODO: href="catalog.html" -->
+        <button type="button" class="button button-big-arrow directions-controls__button">Показать все</button>
+      </div>
     </div>
   </section>
 
   <section class="companions">
-    <div class="global-wrapper companions__wrapper">
-      <header class="companions__header">
-        <h2 class="companions__caption">Попутчики</h2>
-      </header>
-      <p class="companions__description">
-        Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут
-        для хайкинга.
-      </p>
-      <p class="companions__extra">Теперь можно легко найти единомышленников!</p>
+    <div class="main-wrapper companions__wrapper">
+      <header class="companions__header companions-header">
+        <div class="companions-header__wrapper">
+          <h2 class="companions-header__caption">Попутчики</h2>
 
-      <ul class="companions__list">
-        <li class="companions__item">
-          <figure class="companions__companion">
-            <img class="companions__image" src="img/firsova-desktop@1x.jpg" width="270" height="270"
+          <p class="companions-header__description">
+            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому
+            маршрут
+            для хайкинга.
+          </p>
+          <p class="companions-header__extra">Теперь можно легко найти единомышленников!</p>
+        </div>
+        <div class="companions-header__caption-shadow"></div>
+      </header>
+
+      <ul class="companions__list companions-list">
+        <li class="companions-list__item">
+          <figure class="companions-list__companion">
+            <img class="companions-list__image companions-list__image--mobile" src="img/firsova-mobile@1x.jpg"
+              width="70" height="70"
               alt="Попутчик Таня Фирсова">
-            <figcaption class="companions__companion-details">
-              <div class="companions__flags">
-                <div class="companions__flag index-flag index-flag--srilanka"></div>
-                <div class="companions__flag index-flag index-flag--thailand"></div>
-                <div class="companions__flag index-flag index-flag--seychelles"></div>
+            <img class="companions-list__image companions-list__image--tablet" src="img/firsova-tablet@1x.jpg"
+              width="190" height="190"
+              alt="Попутчик Таня Фирсова">
+            <img class="companions-list__image companions-list__image--desktop" src="img/firsova-desktop@1x.jpg"
+              width="285" height="285"
+              alt="Попутчик Таня Фирсова">
+            <figcaption class="companions-list__companion-details">
+              <div class="companions-list__flags">
+                <div class="companions-list__flag index-flag index-flag--srilanka"></div>
+                <div class="companions-list__flag index-flag index-flag--thailand"></div>
+                <div class="companions-list__flag index-flag index-flag--seychelles"></div>
               </div>
-              <div class="companions__name">Таня Фирсова</div>
-              <div class="companions__hashtags">
+              <div class="companions-list__name">Таня Фирсова</div>
+              <div class="companions-list__hashtags">
                 #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
               </div>
-              <div class="companions__directions">
-                <div class="companions__direction index-direction index-direction--avia index-direction--active"></div>
-                <div class="companions__direction index-direction index-direction--bus"></div>
-                <div class="companions__direction index-direction index-direction--velo"></div>
-                <div class="companions__direction index-direction index-direction--run"></div>
+              <div class="companions-list__directions">
+                <div
+                  class="companions-list__direction index-direction index-direction--avia index-direction--active"></div>
+                <div class="companions-list__direction index-direction index-direction--bus"></div>
+                <div class="companions-list__direction index-direction index-direction--velo"></div>
+                <div class="companions-list__direction index-direction index-direction--run"></div>
               </div>
             </figcaption>
           </figure>
         </li>
-        <li class="companions__item">
-          <figure class="companions__companion">
-            <img class="companions__image" src="img/demin-desktop@1x.jpg" width="270" height="270"
+        <li class="companions-list__item">
+          <figure class="companions-list__companion">
+            <img class="companions-list__image companions-list__image--mobile" src="img/demin-mobile@1x.jpg" width="70"
+              height="70"
               alt="Попутчик Петя Демин">
-            <figcaption class="companions__companion-details">
-              <div class="companions__flags">
-                <div class="companions__flag index-flag index-flag--belgium"></div>
-                <div class="companions__flag index-flag index-flag--czech"></div>
+            <img class="companions-list__image companions-list__image--tablet" src="img/demin-tablet@1x.jpg" width="190"
+              height="190"
+              alt="Попутчик Петя Демин">
+            <img class="companions-list__image companions-list__image--desktop" src="img/demin-desktop@1x.jpg"
+              width="285" height="285"
+              alt="Попутчик Петя Демин">
+            <figcaption class="companions-list__companion-details">
+              <div class="companions-list__flags">
+                <div class="companions-list__flag index-flag index-flag--belgium"></div>
+                <div class="companions-list__flag index-flag index-flag--czech"></div>
               </div>
-              <div class="companions__name">Петя Демин</div>
-              <div class="companions__hashtags">
+              <div class="companions-list__name">Петя Демин</div>
+              <div class="companions-list__hashtags">
                 #бургер #бар #футбол #концерт #крафт
               </div>
-              <div class="companions__directions">
-                <div class="companions__direction index-direction index-direction--avia index-direction--active"></div>
-                <div class="companions__direction index-direction index-direction--bus index-direction--active"></div>
-                <div class="companions__direction index-direction index-direction--velo"></div>
-                <div class="companions__direction index-direction index-direction--run index-direction--active"></div>
+              <div class="companions-list__directions">
+                <div
+                  class="companions-list__direction index-direction index-direction--avia index-direction--active"></div>
+                <div
+                  class="companions-list__direction index-direction index-direction--bus index-direction--active"></div>
+                <div class="companions-list__direction index-direction index-direction--velo"></div>
+                <div
+                  class="companions-list__direction index-direction index-direction--run index-direction--active"></div>
               </div>
             </figcaption>
           </figure>
         </li>
       </ul>
 
-      <!-- TODO: href="form.html" -->
-      <button type="button" class="button button-big-arrow companions__button">Показать всех</button>
+      <div class="companions__controls">
+        <!-- TODO: href="form.html" -->
+        <button type="button" class="button button-big-arrow companions__button">Показать всех</button>
+      </div>
     </div>
   </section>
 
   <section class="profile-add">
-    <div class="global-wrapper profile-add__wrapper">
+    <div class="main-wrapper profile-add__wrapper">
       <header class="profile-add__header">
         <h2 class="profile-add__caption">Добавьте свой профиль</h2>
       </header>
@@ -282,54 +357,103 @@
           </div>
         </li>
       </ul>
+      <div class="profile-add__shadow"></div>
+      <div class="profile-add__logo"></div>
 
-      <a class="profile-add__link" href="#">Показать тарифы для бизнеса</a>
+      <div class="profile-add__controls">
+        <button class="button profile-add__button" onclick="toggleTariffsPopup()">Показать тарифы для бизнеса</button>
+      </div>
+    </div>
+
+    <div class="profile-add__popup tariffs-popup tariffs-popup--opened">
+      <header class="tariffs-popup__header">
+        <h2 class="tariffs-popup__caption">Бизнес-тарифы</h2>
+      </header>
+
+      <div class="tariffs-popup__wrapper">
+        <div class="tariffs-popup__table">
+          <div class="tariffs-popup__row">
+            <div class="tariffs-popup__cell">Реклама у блоггера</div>
+            <div class="tariffs-popup__cell">300 000 руб./пост</div>
+          </div>
+          <div class="tariffs-popup__row">
+            <div class="tariffs-popup__cell">Накрутка подписчиков</div>
+            <div class="tariffs-popup__cell">от 1 руб./шт.</div>
+          </div>
+          <div class="tariffs-popup__row">
+            <div class="tariffs-popup__cell">Лайки от ботов</div>
+            <div class="tariffs-popup__cell">от 20 коп./лайк</div>
+          </div>
+          <div class="tariffs-popup__row">
+            <div class="tariffs-popup__cell">Ваш продакт-плейсмент</div>
+            <div class="tariffs-popup__cell">Индивидуально</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tariffs-popup__controls">
+        <button class="button tariffs-popup__button" onclick="toggleTariffsPopup()">Закрыть окно</button>
+      </div>
     </div>
   </section>
 
   <section class="register">
-    <div class="global-wrapper register__wrapper">
+    <div class="main-wrapper register__wrapper">
       <header class="register__header">
         <h2 class="register__caption">Заинтересовались?</h2>
       </header>
       <div class="register__description">
-        Зарегистрируйтесь,<br> это быстро и бесплатно!<br>Уже зарегистрированы? Тогда скорее
-        <a href="#" class="register__auth">авторизуйтесь</a>.
+        <div class="register__agitate">Зарегистрируйтесь, это быстро и бесплатно!</div>
+        <div class="register__auth">Уже зарегистрированы? Тогда скорее <a href="#"
+          class="register__auth">авторизуйтесь</a>.
+        </div>
       </div>
-      <label class="email">
-        <input type="email" class="email__input register__email" placeholder="E-mail">
+      <div class="register__field email">
+        <label>
+          <input type="email" class="email__input register__email" placeholder="E-mail">
+        </label>
         <button type="button" class="button email__button"></button>
-      </label>
+      </div>
       <div class="register__questions">
-        Остались вопросы?<br>Мы с радостью на них ответим!
+        <div class="register__question">Остались вопросы?</div>
+        <div class="register__answer">Мы с радостью на них ответим!</div>
       </div>
 
-      <div class="register__contacts">
-        <div class="register__phone">8 800 555-86-28</div>
-        <div class="register__mailto">mail@htmlacademy.ru</div>
+      <div class="register__contacts register-contacts">
+        <div class="register-contacts__phone">8 800 555-86-28</div>
+        <div class="register-contacts__mailto">mail@htmlacademy.ru</div>
       </div>
     </div>
   </section>
 
   <section class="route">
-    <div class="global-wrapper route__wrapper">
+    <div class="main-wrapper route__wrapper">
       <header class="route__header">
         <h2 class="route__caption">Ул. Большая Конюшенная, 19/8</h2>
       </header>
 
-      <button type="button" class="button button-big-arrow route__button">Проложить маршрут</button>
+      <button type="button" class="button route__button route-button">Проложить маршрут</button>
     </div>
   </section>
 
   <section class="map">
     <div class="map__marker"></div>
   </section>
-
 </main>
 
-<footer class="page-footer footer">
-  <div class="global-wrapper footer__wrapper">
-    <div class="footer__header"></div>
+<footer class="index-footer footer">
+  <div class="main-wrapper footer__wrapper">
+    <div class="footer__logo footer-logo">
+      <img class="footer-logo__image footer-logo__image--mobile" src="img/logo-mobile-blue@1x.png" width="100"
+        height="19"
+        alt="Погнали">
+      <img class="footer-logo__image footer-logo__image--tablet" src="img/logo-tablet-blue@1x.png" width="166"
+        height="42"
+        alt="Погнали">
+      <img class="footer-logo__image footer-logo__image--desktop" src="img/logo-desktop-blue@1x.png" width="200"
+        height="52"
+        alt="Погнали">
+    </div>
 
     <div class="footer__socials social">
       <ul class="social__list">
@@ -353,11 +477,12 @@
 
     <div class="footer__copyright">
       <div class="footer__copy-text">Разработано</div>
-      <a class="footer__copy-link" href="https://htmlacademy.ru">&nbsp;</a>
+      <a class="footer__copy-link" href="https://htmlacademy.ru"></a>
     </div>
   </div>
 </footer>
 
 <script src="js/menu.js"></script>
+<script src="js/tariffs-popup.js"></script>
 </body>
 </html>

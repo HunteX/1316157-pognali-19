@@ -1,0 +1,54 @@
+@import "../../shared/vars";
+@import "../../shared/colors";
+
+.route-button {
+  position: relative;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  color: @dark-slate-blue;
+  height: 62px;
+  border: solid 3px @dark-blue-grey;
+  background-color: @light-gold;
+  text-align: left;
+  padding-left: 20px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 14px;
+    background-color: @dark-blue-grey;
+    mask-image: url("@{imgPath}/triangle-arrow-right.svg");
+    top: 22px;
+    right: 20px;
+  }
+
+  &:hover::after {
+    background-color: @white;
+  }
+
+  &:hover {
+    background-color: @dark-blue-grey;
+    color: @white;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 81px;
+    border-radius: 20px;
+    font-size: 24px;
+    padding-left: 32px;
+
+    &::after {
+      width: 10px;
+      height: 14px;
+      top: 32px;
+      right: 33px;
+    }
+  }
+}

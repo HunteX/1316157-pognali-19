@@ -1,0 +1,257 @@
+@import "../../shared/index";
+@import "../common/index";
+
+.profile-add {
+  position: relative;
+  .margin-fix();
+  .z-background-bottom(30px, @dark-blue-grey);
+  width: 100%;
+  min-height: 452px;
+
+  background-color: @pale-grey;
+
+  &__wrapper {
+    position: relative;
+    padding: 49px 26px 38px 50px;
+  }
+
+  &__caption {
+    .orange-header();
+    width: 101px;
+    margin-bottom: 44px;
+  }
+
+  &__list {
+    .list-reset();
+    padding-bottom: 32px;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__cell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__cell:first-child {
+    flex-grow: 1;
+    border-top: 1px solid @table-border;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cell:last-child {
+    width: 34px;
+  }
+
+  &__shadow {
+    display: none;
+  }
+
+  &__logo {
+    position: absolute;
+    background-color: transparent;
+    background-image: url("@{imgPath}/rates@1x.png");
+    background-size: 99px 99px;
+    background-repeat: no-repeat;
+    width: 99px;
+    height: 99px;
+    right: 26px;
+    top: 36px;
+  }
+
+  &__service,
+  &__price {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.38;
+    color: @greyish-brown;
+  }
+
+  &__index {
+    position: relative;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 0.88;
+    color: @white;
+    text-align: right;
+    padding-top: 6px;
+    padding-right: 13px;
+    z-index: 0;
+  }
+
+  &__index::before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 34px;
+    top: -5px;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  &__index--color1::before {
+    background-color: @mango-three;
+  }
+
+  &__index--color2::before {
+    background-color: @mango-two;
+  }
+
+  &__index--color3::before {
+    background-color: @light-gold;
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-blue-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    .z-background-bottom(60px, @dark-blue-grey);
+    min-height: 557px;
+
+    &__wrapper {
+      padding-top: 68px;
+      padding-left: 40px;
+      padding-right: 74px;
+      z-index: 1;
+    }
+
+    &__header {
+      margin-left: 104px;
+    }
+
+    &__caption {
+      .orange-header-big();
+      width: auto;
+      margin-bottom: 78px;
+    }
+
+    &__item {
+      flex-direction: row-reverse;
+    }
+
+    &__cell {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    &__cell:first-child {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__cell:last-child {
+      width: 90px;
+    }
+
+    &__index::before {
+      width: 67px;
+      height: 67px;
+      top: -17px;
+      left: 0;
+    }
+
+    &__index {
+      font-size: 28px;
+      text-align: center;
+      margin-right: 11px;
+    }
+
+    &__service,
+    &__price {
+      font-size: 28px;
+      line-height: 1.18;
+    }
+
+    &__logo {
+      right: 86px;
+      top: 408px;
+    }
+
+    &__shadow {
+      display: block;
+      position: absolute;
+      right: 40px;
+      top: 148px;
+      width: 198px;
+      height: 285px;
+      border-radius: 20px;
+      background-color: @pale-grey-four;
+      z-index: -1;
+    }
+
+    &__controls {
+      position: relative;
+    }
+
+    &__controls::before {
+      position: absolute;
+      content: "";
+      background-image: url("@{imgPath}/business.svg");
+      background-size: 17px 21px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: @pale-grey-four;
+      width: 67px;
+      height: 67px;
+      top: -24px;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &__button {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1;
+      color: @light-navy;
+      margin-left: 88px;
+    }
+
+    &__list {
+      padding-bottom: 58px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 751px;
+
+    &__wrapper {
+      padding-top: 100px;
+      padding-left: 131px;
+      padding-right: 133px;
+    }
+
+    &__caption {
+      margin-left: 245px;
+      margin-bottom: 138px;
+    }
+
+    &__list {
+      width: 903px;
+    }
+
+    &__shadow {
+      width: 444px;
+      height: 300px;
+      top: 233px;
+      right: 246px;
+    }
+
+    &__logo {
+      right: 134px;
+      top: 286px;
+      width: 198px;
+      height: 198px;
+      background-size: 198px 198px;
+    }
+  }
+}

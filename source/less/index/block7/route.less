@@ -1,0 +1,114 @@
+@import "../../shared/index";
+@import "../common/index";
+
+.route {
+  .margin-fix();
+  .z-background-bottom(30px, transparent);
+  width: 100%;
+
+  background-color: @light-gold;
+
+  &__wrapper {
+    min-height: 206px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 19px;
+    padding-bottom: 35px;
+  }
+
+  &__header {
+    margin-left: 61px;
+  }
+
+  &__caption::before {
+    position: absolute;
+    content: "";
+    background: @dark-blue-grey-two url("@{imgPath}/contacts-location.svg") no-repeat;
+    background-size: 14px 22px;
+    background-position: 15px 12px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    left: -60px;
+  }
+
+  &__caption {
+    position: relative;
+    width: 143px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.38;
+    color: @dark-blue-grey;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    .z-background-bottom(60px, transparent);
+
+    &__wrapper {
+      min-height: 324px;
+      padding-top: 43px;
+      padding-left: 75px;
+      padding-right: 76px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &__header {
+      margin-left: 0;
+    }
+
+    &__button {
+      width: 618px;
+      margin-top: 40px;
+    }
+
+    &__caption::before {
+      width: 67px;
+      height: 67px;
+      background-size: 21px 31px;
+      background-position: 23px 18px;
+      left: -94px;
+      top: -20px;
+    }
+
+    &__caption {
+      width: 100%;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      min-height: 200px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 133px;
+      padding-left: 404px;
+      margin-top: -6px;
+    }
+
+    &__caption {
+      width: 432px;
+      font-size: 28px;
+    }
+
+    &__caption::before {
+      width: 90px;
+      height: 90px;
+      background-size: 28px 43px;
+      background-position: 31px 27px;
+      left: -121px;
+      top: -31px;
+    }
+
+    &__button {
+      width: 324px;
+      margin-top: 0;
+    }
+  }
+}

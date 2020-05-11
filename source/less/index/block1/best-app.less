@@ -1,0 +1,29 @@
+@import "../../shared/index";
+
+.best-app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    min-height: 285px;
+    background-color: @bg-default;
+    padding: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 591px;
+
+    &__wrapper {
+      background-color: transparent;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+
+    &__wrapper {
+      padding: 0;
+    }
+  }
+}

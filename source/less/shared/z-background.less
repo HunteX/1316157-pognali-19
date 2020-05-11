@@ -1,0 +1,28 @@
+.z-background-pseudo(@value, @color) {
+  position: absolute;
+  content: "";
+  width: 100%;
+  z-index: -10;
+  height: @value;
+  background-color: @color;
+}
+
+.z-background-top(@value, @color) {
+  position: relative;
+  border-radius: @value @value 0 0;
+
+  &::before {
+    .z-background-pseudo(@value, @color);
+    top: 0;
+  }
+}
+
+.z-background-bottom(@value, @color) {
+  position: relative;
+  border-radius: 0 0 @value @value;
+
+  &::after {
+    .z-background-pseudo(@value, @color);
+    bottom: 0;
+  }
+}

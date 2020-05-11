@@ -1,0 +1,56 @@
+@import "../../shared/index";
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+
+  &__description {
+    width: 148px;
+    height: 37px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.38;
+    color: @white;
+    margin-top: 26px;
+  }
+
+  &__extra {
+    width: 155px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.38;
+    color: @white;
+    margin-top: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 54px;
+
+    &__description {
+      padding: 0;
+      width: 260px;
+      height: 57px;
+      font-size: 28px;
+      line-height: 1.18;
+    }
+
+    &__extra {
+      width: 246px;
+      height: 70px;
+      font-size: 21px;
+      font-stretch: normal;
+      line-height: 1.19;
+      margin-top: 54px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 31px;
+
+    &__description {
+      margin-top: 119px;
+    }
+  }
+}

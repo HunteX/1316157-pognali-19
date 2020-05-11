@@ -1,0 +1,34 @@
+@import "../../shared/index";
+
+.directions-controls {
+  margin-top: 17px;
+
+  &__button {
+    width: 270px;
+    height: 62px;
+    border-radius: 10px;
+    background-color: @light-gold;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 47px;
+
+    &__button {
+      width: 618px;
+      height: 81px;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 303px;
+    bottom: 139px;
+    margin-top: 0;
+
+    &__button {
+      width: 274px;
+      height: 81px;
+    }
+  }
+}

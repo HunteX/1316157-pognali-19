@@ -1,0 +1,75 @@
+@import "../../shared/index";
+
+.navigation {
+  z-index: 3;
+
+  &__toggle {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+  }
+
+  &--opened &__toggle {
+    background: url("@{imgPath}/filter-close.svg");
+    width: 19px;
+    height: 19px;
+    z-index: 3;
+    position: relative;
+  }
+
+  &--closed &__toggle {
+    background-image: url("@{imgPath}/menu-white.svg");
+    width: 25px;
+    height: 11px;
+    z-index: -1;
+  }
+
+  &--closed &__container {
+    display: none;
+  }
+
+  &--opened &__container {
+    display: flex;
+    width: 100%;
+    min-height: 568px;
+    position: absolute;
+    top: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__toggle {
+      margin-left: 24px;
+    }
+
+    &--opened &__container {
+      min-height: 910px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: static;
+
+    &__toggle {
+      display: none;
+    }
+
+    &--closed &__container,
+    &--opened &__container {
+      display: block;
+    }
+
+    &--opened &__container {
+      display: block;
+      width: 388px;
+      min-height: auto;
+      position: relative;
+      top: auto;
+    }
+
+    &__container {
+      min-height: 16px;
+    }
+  }
+}
