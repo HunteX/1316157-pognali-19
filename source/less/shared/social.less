@@ -1,13 +1,12 @@
 @import "colors";
 @import "vars";
+@import "list-reset";
 
 .social {
   &__list {
+    .list-reset();
     display: flex;
     flex-direction: row;
-    list-style: none;
-    margin: 0;
-    padding: 0;
     flex-wrap: wrap;
   }
 

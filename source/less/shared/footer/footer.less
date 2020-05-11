@@ -1,0 +1,59 @@
+@import "../vars";
+@import "../colors";
+@import "../margin-fix";
+@import "../z-background";
+
+.footer {
+  .margin-fix();
+  .z-background-top(30px, @white);
+  width: 100%;
+  margin-top: -25px;
+  background-color: @white;
+
+  &__wrapper {
+    min-height: 239px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 38px;
+    padding-bottom: 16px;
+  }
+
+  &__socials {
+    margin-top: 33px;
+  }
+
+  &__copyright {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 37px;
+    padding-top: 18px;
+    border-top: 1px solid @table-border;
+  }
+
+  &__copy-text {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    color: @four;
+  }
+
+  &__copy-link {
+    cursor: pointer;
+    width: 27px;
+    height: 34px;
+    background-image: url("@{imgPath}/htmlacademy.svg");
+    margin-top: -5px;
+  }
+
+  &__copy-link:hover {
+    opacity: 0.6;
+  }
+
+  &__copy-link:active {
+    opacity: 0.3;
+  }
+}
