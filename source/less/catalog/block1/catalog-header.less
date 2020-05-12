@@ -2,18 +2,47 @@
 
 .catalog-header {
   position: relative;
-  min-height: 143px;
-  background-color: @bg-default;
-  .z-background-bottom(30px, @pale-grey-four);
+  background-color: @dark-two;
+  .z-background-bottom(20px, @pale-grey-four);
 
   &__menu-wrapper {
-    min-height: 70px;
-    padding-top: 27px;
-    padding-left: 25px;
-    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    min-height: 143px;
+    justify-content: space-between;
+    padding: 18px 25px 13px;
   }
 
   &__buttons {
+    display: none;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__caption {
+    position: relative;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.11;
+    color: @white;
+    margin: 0;
+  }
+
+  &__caption::after {
+    position: absolute;
+    content: "";
+    width: 173px;
+    height: 5px;
+    border-radius: 2.4px;
+    background-color: @mango;
+    left: 0;
+    bottom: -15px;
+  }
+
+  &__button-main {
     display: none;
   }
 
