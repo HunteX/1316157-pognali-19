@@ -1,17 +1,14 @@
 function toggleCountryFilters() {
-  const element = document.querySelector(".country-filters__container");
-  const buttonOpen = document.querySelector(".country-filters__open");
-  const buttonClose = document.querySelector(".country-filters__close");
+  const element = document.querySelector(".filters-countries");
+  const classOpened = 'filters-countries--opened';
 
-  const hide = element.style.display === "flex";
+  const hide = element.classList.contains(classOpened);
 
   if (hide) {
-    element.style.display = "none";
-    buttonOpen.style.display = "block";
-    buttonClose.style.display = "none";
+    element.classList.remove(classOpened);
   } else {
-    element.style.display = "flex";
-    buttonOpen.style.display = "none";
-    buttonClose.style.display = "block";
+    element.classList.add(classOpened)
   }
 }
+
+toggleCountryFilters();

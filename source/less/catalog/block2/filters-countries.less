@@ -1,5 +1,20 @@
 @import "../../shared/index";
 
 .filters-countries {
+  background-color: @pale-grey-four;
+  .z-background-bottom(20px, @pale-grey);
 
+  &__wrapper {
+    min-height: 52px;
+  }
+
+  &--opened &__continents {
+    display: flex;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__continents {
+      display: flex;
+    }
+  }
 }

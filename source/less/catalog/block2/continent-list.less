@@ -1,0 +1,30 @@
+@import "../../shared/index";
+
+.continent-list {
+  display: none;
+
+  &__item {
+    cursor: pointer;
+    width: 55px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.38;
+    text-align: left;
+    color: @dark-blue-grey;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    opacity: 0.3;
+  }
+
+  &__item:hover {
+    opacity: 0.6;
+  }
+
+  &__radio:checked + &__item {
+    opacity: 1;
+  }
+
+  &__radio {
+    display: none;
+  }
+}
