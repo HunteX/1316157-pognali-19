@@ -1,0 +1,44 @@
+@import "../../shared/index";
+
+.catalog-header {
+  position: relative;
+  min-height: 143px;
+  background-color: @bg-default;
+  .z-background-bottom(30px, @pale-grey-four);
+
+  &__menu-wrapper {
+    min-height: 70px;
+    padding-top: 27px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  &__buttons {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 994px;
+
+    &__menu-wrapper {
+      min-height: 90px;
+      padding-top: 40px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    &__buttons {
+      display: flex;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 750px;
+
+    &__menu-wrapper {
+      padding-top: 48px;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+  }
+}
