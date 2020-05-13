@@ -121,13 +121,22 @@
     }
 
     &__label {
-      cursor: pointer;
       display: block;
+      cursor: pointer;
       font-size: 20px;
       font-weight: bold;
       line-height: 1.2;
       text-transform: uppercase;
       color: @dark-blue-grey;
+    }
+
+    &__label--hide,
+    &--open &__label {
+      display: none;
+    }
+
+    &--open &__label--hide {
+      display: block;
     }
 
     &__continents {
