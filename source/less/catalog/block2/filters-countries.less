@@ -14,6 +14,11 @@
 
   &__continents {
     display: none;
+    z-index: 1;
+  }
+
+  &--open {
+    border-radius: 0;
   }
 
   &--open &__continents {
@@ -22,6 +27,20 @@
     flex-direction: column;
     top: 68px;
     left: 50px;
+  }
+
+  &__container {
+    position: absolute;
+    display: none;
+    background-color: @pale-grey-four;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  &--open &__container {
+    display: block;
+    width: 100%;
+    min-height: 695px;
   }
 
   &__button {
@@ -35,6 +54,49 @@
     width: 12px;
     height: 14px;
     background: url("@{imgPath}/filter-close.svg") 0 0 no-repeat;
+  }
+
+  &__container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 139px 25px 27px;
+  }
+
+  &__countries {
+    .list-reset();
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    color: @greyish-brown;
+    align-self: flex-start;
+    margin-left: 26px;
+    margin-top: 7px;
+  }
+
+  &__toggle::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url("@{imgPath}/filter-close.svg");
+    top: 14px;
+    left: 85px;
+  }
+
+  &__toggle {
+    position: relative;
+    width: 270px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: @light-periwinkle;
+    font-size: 16.5px;
+    font-weight: bold;
+    line-height: 1.79;
+    color: @dark-two;
+    text-transform: uppercase;
+    padding-left: 30px;
+    margin-top: 30px;
   }
 
   @media (min-width: @tablet-width) {
