@@ -24,13 +24,9 @@
     letter-spacing: 1.4px;
   }
 
-  &__letter {
-    cursor: pointer;
-    color: rgba(25, 33, 68, 0.2);
-  }
-
-  &__cell--selected &__letter {
-    color: @dark-blue-grey;
+  &__cell--selected {
+    background-color: @dark-slate-blue;
+    color: @white;
   }
 
   &__list {
@@ -71,6 +67,15 @@
       display: flex;
       align-items: center;
       height: 80px;
+    }
+
+    &__letter {
+      cursor: pointer;
+      color: rgba(25, 33, 68, 0.2);
+    }
+
+    &__cell--selected &__letter {
+      color: @dark-blue-grey;
     }
 
     &__list {
