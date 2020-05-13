@@ -28,4 +28,27 @@
     background-color: @dark-slate-blue;
     color: @white;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 353px;
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__cell {
+      border: none;
+      background-color: transparent;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 0.4;
+      text-align: left;
+      color: @dark-blue-grey;
+      display: flex;
+      align-items: center;
+      height: 80px;
+    }
+  }
 }
