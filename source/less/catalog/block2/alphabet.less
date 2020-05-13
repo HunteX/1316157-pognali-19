@@ -22,12 +22,15 @@
     font-weight: 500;
     line-height: 1.29;
     letter-spacing: 1.4px;
-    color: @dark-slate-blue;
   }
 
-  &__cell--selected {
-    background-color: @dark-slate-blue;
-    color: @white;
+  &__letter {
+    cursor: pointer;
+    color: rgba(25, 33, 68, 0.2);
+  }
+
+  &__cell--selected &__letter {
+    color: @dark-blue-grey;
   }
 
   &__list {
@@ -68,6 +71,17 @@
       display: flex;
       align-items: center;
       height: 80px;
+    }
+
+    &__list {
+      width: 155px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &__cell--selected &__list {
+      top: 0;
+      left: 443px;
     }
   }
 
