@@ -27,11 +27,22 @@
     text-transform: uppercase;
   }
 
+  &__controls {
+    display: flex;
+    flex-direction: row;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 5px;
 
     &__caption {
       display: none;
+    }
+
+    &__controls {
+      width: 176px;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }

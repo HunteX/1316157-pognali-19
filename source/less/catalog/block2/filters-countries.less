@@ -1,5 +1,7 @@
 @import "../../shared/index";
 
+/* опять пришлоьс проставить height для IE */
+
 .filters-countries {
   background-color: @pale-grey-four;
   .z-background-bottom(20px, @pale-grey);
@@ -8,6 +10,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 52px;
     min-height: 52px;
     padding-left: 52px;
   }
@@ -44,10 +47,13 @@
   }
 
   &__button {
-    margin-right: 5px;
     width: 17px;
     height: 19px;
     background: transparent url("@{imgPath}/dots.svg") center no-repeat;
+  }
+
+  &__label {
+    display: none;
   }
 
   &--open &__button {
@@ -108,18 +114,47 @@
 
     &__wrapper {
       justify-content: center;
+      height: 135px;
       min-height: 135px;
       padding-left: 73px;
       padding-right: 75px;
+    }
+
+    &__label {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: @dark-blue-grey;
     }
 
     &__continents {
       display: flex;
     }
 
+    &--open {
+      border-radius: 0;
+    }
+
     &--open &__continents {
       position: static;
       flex-direction: row;
+    }
+
+    &__button {
+      width: 27px;
+      height: 5px;
+    }
+
+    &--open &__button {
+      width: 19px;
+      height: 19px;
+    }
+
+    &__container {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
     }
   }
 }
