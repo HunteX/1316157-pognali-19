@@ -91,12 +91,18 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 100%;
+
+    &__cell--selected &__list,
     &__list {
-      .list-reset();
+      position: static;
+      display: block;
       font-size: 20px;
       font-weight: normal;
       line-height: 1.5;
       color: @greyish-brown;
+      top: unset;
+      left: unset;
     }
   }
 }
