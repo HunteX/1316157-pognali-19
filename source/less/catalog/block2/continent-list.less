@@ -27,4 +27,32 @@
   &__radio {
     display: none;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 365px;
+    justify-content: space-between;
+
+    &__item {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: @dark-blue-grey;
+    }
+
+    &__item:nth-of-type(1) {
+      width: 69px;
+    }
+
+    &__item:nth-of-type(2) {
+      width: 47px;
+    }
+
+    &__item:nth-of-type(3) {
+      width: 85px;
+    }
+
+    &__item:nth-of-type(4) {
+      width: 80px;
+    }
+  }
 }

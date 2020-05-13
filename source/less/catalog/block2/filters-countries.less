@@ -104,9 +104,22 @@
   }
 
   @media (min-width: @tablet-width) {
+    .z-background-bottom(60px, @pale-grey);
+
+    &__wrapper {
+      justify-content: center;
+      min-height: 135px;
+      padding-left: 73px;
+      padding-right: 75px;
+    }
+
     &__continents {
-      position: static;
       display: flex;
+    }
+
+    &--open &__continents {
+      position: static;
+      flex-direction: row;
     }
   }
 }
