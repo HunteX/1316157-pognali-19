@@ -10,6 +10,7 @@
   }
 
   &__cell {
+    position: relative;
     display: table-cell;
     width: 45px;
     height: 42px;
@@ -27,6 +28,24 @@
   &__cell--selected {
     background-color: @dark-slate-blue;
     color: @white;
+  }
+
+  &__list {
+    .list-reset();
+    display: none;
+    width: 124px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: @greyish-brown;
+    top: 217px;
+  }
+
+  &__cell--selected &__list {
+    position: absolute;
+    display: block;
   }
 
   @media (min-width: @tablet-width) {
