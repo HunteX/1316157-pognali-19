@@ -6,10 +6,27 @@
 
   &__wrapper {
     min-height: 52px;
+    padding-left: 52px;
   }
 
-  &--opened &__continents {
+  &__continents {
+    display: none;
+  }
+
+  &--open &__continents {
     display: flex;
+  }
+
+  &__button {
+    width: 17px;
+    height: 19px;
+    background: transparent url("@{imgPath}/dots.svg") center no-repeat;
+  }
+
+  &--open &__button {
+    width: 12px;
+    height: 12px;
+    background: url("@{imgPath}/filter-close.svg") center no-repeat;
   }
 
   @media (min-width: @tablet-width) {

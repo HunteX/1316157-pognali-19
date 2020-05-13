@@ -1,6 +1,6 @@
 function toggleCountryFilters() {
   const element = document.querySelector(".filters-countries");
-  const classOpened = 'filters-countries--opened';
+  const classOpened = 'filters-countries--open';
 
   const hide = element.classList.contains(classOpened);
 
