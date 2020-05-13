@@ -5,6 +5,9 @@
   .z-background-bottom(20px, @pale-grey);
 
   &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 52px;
     padding-left: 52px;
   }
@@ -14,10 +17,15 @@
   }
 
   &--open &__continents {
+    position: absolute;
     display: flex;
+    flex-direction: column;
+    top: 68px;
+    left: 50px;
   }
 
   &__button {
+    margin-right: 5px;
     width: 17px;
     height: 19px;
     background: transparent url("@{imgPath}/dots.svg") center no-repeat;
@@ -25,12 +33,13 @@
 
   &--open &__button {
     width: 12px;
-    height: 12px;
-    background: url("@{imgPath}/filter-close.svg") center no-repeat;
+    height: 14px;
+    background: url("@{imgPath}/filter-close.svg") 0 0 no-repeat;
   }
 
   @media (min-width: @tablet-width) {
     &__continents {
+      position: static;
       display: flex;
     }
   }
