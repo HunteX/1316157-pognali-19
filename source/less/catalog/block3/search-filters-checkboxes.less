@@ -1,0 +1,46 @@
+@import "../../shared/index";
+
+.search-filters-checkboxes {
+  display: flex;
+  flex-direction: column;
+
+  &__label::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    left: -25px;
+    top: -2px;
+    border-radius: 5px;
+    background-color: @white;
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: left;
+    color: @greyish-brown;
+    margin-left: 24px;
+    padding-bottom: 10px;
+  }
+
+  &__label:hover {
+    opacity: 0.6;
+  }
+
+  &__label:active {
+    opacity: 0.3;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + &__label::before {
+    background: @white url("@{imgPath}/tick.svg") center no-repeat;
+    background-size: 9px 9px;
+  }
+}
