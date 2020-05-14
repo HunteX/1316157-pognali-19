@@ -92,6 +92,10 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 2316px;
 
     &__cell--selected &__list,
     &__list {
@@ -103,6 +107,18 @@
       color: @greyish-brown;
       top: unset;
       left: unset;
+      margin-top: 48px;
+    }
+
+    &__cell {
+      align-items: start;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 200px;
     }
   }
 }
