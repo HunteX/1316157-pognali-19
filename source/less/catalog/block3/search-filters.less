@@ -97,4 +97,56 @@
   &__button:active {
     background-color: @macaroni-and-cheese;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    padding: 37px 35px 35px 38px;
+
+    &__form {
+      min-height: 550px;
+    }
+
+    &__caption {
+      width: 460px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &__list {
+      min-height: 321px;
+      border-top: 1px solid @macaroni-and-cheese;
+      border-bottom: 1px solid @macaroni-and-cheese;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &__item--open {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__item--open &__content {
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 0;
+      width: 488px;
+    }
+
+    &__item-caption {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      width: auto;
+      padding-top: 0;
+      padding-bottom: 0;
+      border: none;
+    }
+
+    &__item-caption::after {
+      display: none;
+    }
+  }
 }
