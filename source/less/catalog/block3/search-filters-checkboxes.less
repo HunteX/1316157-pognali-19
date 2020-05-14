@@ -4,6 +4,11 @@
   display: none;
   flex-direction: column;
 
+  &__controls {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
   &__label::before {
     position: absolute;
     content: "";
@@ -24,7 +29,6 @@
     text-align: left;
     color: @greyish-brown;
     margin-left: 24px;
-    padding-bottom: 10px;
   }
 
   &__label:hover {
@@ -44,7 +48,7 @@
     background-size: 9px 9px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
     &__controls {
       flex-grow: 1;
       width: 164px;
@@ -57,7 +61,6 @@
     }
 
     &__label {
-      padding-bottom: 0;
       font-size: 20px;
       font-weight: normal;
       line-height: 1;
