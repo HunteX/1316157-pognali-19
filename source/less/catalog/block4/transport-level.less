@@ -1,0 +1,24 @@
+@import "../../shared/index";
+
+.transport-level {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: @table-border;
+    left: -26px;
+  }
+
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  &__list {
+    .list-reset();
+    display: flex;
+    flex-direction: row;
+  }
+}
