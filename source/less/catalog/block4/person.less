@@ -1,0 +1,99 @@
+@import "../../shared/index";
+
+.person {
+  padding: 15px 20px 22px 20px;
+
+  &__profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  &__avatar-image {
+    display: none;
+  }
+
+  &__avatar-image--mobile {
+    display: block;
+    border-radius: 50%;
+  }
+
+  &__private {
+    margin-left: 16px;
+  }
+
+  &__name {
+    position: relative;
+    width: 78px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-slate-blue;
+  }
+
+  &__name::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 2.6px;
+    background-color: @salmon;
+    top: 9px;
+    right: -64px;
+  }
+
+  &--online &__name::after {
+    background-color: @green-apple;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -39px;
+  }
+
+  &__button::before {
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 31px;
+    background: url("@{imgPath}/heart.svg") center no-repeat;
+    background-size: 13px 11px;
+    top: 0;
+    left: 0;
+  }
+
+  &__likes {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: @dark-two;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    border-radius: 15.5px;
+    background-color: @very-light-pink-two;
+  }
+
+  &__hashtags {
+    width: 100%;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: @greyish-brown;
+    margin-top: 14px;
+    margin-left: 5px;
+  }
+}
