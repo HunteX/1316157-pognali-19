@@ -1,10 +1,10 @@
 @import "../../shared/index";
 @import "../../shared/flag";
 
-@width: 26px;
-@height: 18px;
-
 .catalog-flag {
+  @width: 26px;
+  @height: 18px;
+
   &--thailand {
     .flag("thailand", @width, @height);
   }
@@ -47,5 +47,54 @@
 
   &--germany {
     .flag("germany", @width, @height);
+  }
+
+  @media (min-width: @tablet-width) {
+    @width: 35px;
+    @height: 24px;
+
+    &--thailand {
+      .flag("thailand", @width, @height);
+    }
+
+    &--france {
+      .flag("france", @width, @height);
+    }
+
+    &--czech {
+      .flag("czech", @width, @height);
+    }
+
+    &--belgium {
+      .flag("belgium", @width, @height);
+    }
+
+    &--seychelles {
+      .flag("seychelles", @width, @height);
+    }
+
+    &--srilanka {
+      .flag("srilanka", @width, @height);
+    }
+
+    &--usa {
+      .flag("usa", @width, @height);
+    }
+
+    &--australia {
+      .flag("australia", @width, @height);
+    }
+
+    &--dominica {
+      .flag("dominica", @width, @height);
+    }
+
+    &--uk {
+      .flag("uk", @width, @height);
+    }
+
+    &--germany {
+      .flag("germany", @width, @height);
+    }
   }
 }

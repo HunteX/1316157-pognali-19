@@ -55,4 +55,33 @@
     width: 26px;
     height: 18px;
   }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 689px;
+      left: -41px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__item {
+      padding-bottom: 0;
+      margin-right: 20px;
+    }
+
+    &__country {
+      width: 103px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    &__flag {
+      width: 35px;
+      height: 24px;
+    }
+  }
 }
