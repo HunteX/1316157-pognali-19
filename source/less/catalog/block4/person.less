@@ -8,13 +8,6 @@
   &__profile {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
-  &__avatar {
-    width: 70px;
-    height: 70px;
   }
 
   &__avatar-image {
@@ -94,13 +87,12 @@
   }
 
   &__hashtags {
-    width: 100%;
     font-size: 15px;
     font-weight: normal;
     line-height: 1.2;
     color: @greyish-brown;
     margin-top: 14px;
-    margin-left: 5px;
+    margin-left: -81px;
   }
 
   &__notes {
@@ -127,5 +119,38 @@
 
   &__summon:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 35px 25px 26px 35px;
+
+    &__profile {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    &__avatar-image--mobile {
+      display: none;
+    }
+
+    &__avatar-image--tablet {
+      display: block;
+      border-radius: 20px;
+    }
+
+    &__private {
+      margin-left: 33px;
+    }
+
+    &__name {
+      width: 190px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &__controls {
+      margin-left: 0;
+    }
   }
 }
