@@ -26,10 +26,8 @@
     margin-top: 14px;
   }
 
-  &__header1,
-  &__header2 {
+  &__header {
     position: relative;
-    width: 92px;
     font-size: 15px;
     font-weight: normal;
     line-height: 1.2;
@@ -39,7 +37,11 @@
     padding-left: 15px;
   }
 
-  &__header2 {
+  &__header--transport {
+    width: 92px;
+  }
+
+  &__header--level {
     width: 69px;
   }
 
@@ -54,5 +56,25 @@
   &__chart {
     margin-right: 3px;
     margin-top: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    position: absolute;
+    top: 18px;
+    left: 614px;
+
+    &::before {
+      display: none;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__list {
+      margin-top: 0;
+      flex-direction: column;
+    }
   }
 }
