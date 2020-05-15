@@ -78,4 +78,13 @@
       flex-direction: column;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    flex-direction: row;
+
+    &__list {
+      flex-direction: row;
+    }
+  }
 }

@@ -84,4 +84,23 @@
       height: 24px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      display: none;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__list {
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    &__item {
+      padding-bottom: 6px;
+    }
+  }
 }
