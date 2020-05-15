@@ -1,6 +1,14 @@
 @import "../../shared/index";
 
 .transport-level {
+  margin-top: 13px;
+  margin-bottom: 18px;
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
   &::before {
     position: absolute;
     content: "";
@@ -8,17 +16,43 @@
     height: 1px;
     background-color: @table-border;
     left: -26px;
+    top: 9px;
   }
-
-  position: relative;
-  width: 100%;
-
-  display: flex;
-  flex-direction: row;
 
   &__list {
     .list-reset();
     display: flex;
     flex-direction: row;
+    margin-top: 14px;
+  }
+
+  &__header1,
+  &__header2 {
+    position: relative;
+    width: 92px;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: @greyish-brown;
+    background-color: @white;
+    margin-left: -15px;
+    padding-left: 15px;
+  }
+
+  &__header2 {
+    width: 69px;
+  }
+
+  &__transport {
+    flex-grow: 1;
+  }
+
+  &__level {
+    width: 45px;
+  }
+
+  &__chart {
+    margin-right: 3px;
+    margin-top: 22px;
   }
 }
