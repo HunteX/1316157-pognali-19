@@ -8,7 +8,6 @@
   padding: 0 20px 0 20px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
 
   &__tag-header {
@@ -20,17 +19,19 @@
     color: @dark-slate-blue;
     text-transform: uppercase;
     background: @pale-grey;
-    padding-left: 20px;
-    padding-right: 20px;
     top: -9px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__tag-header1 {
-    left: 94px;
+    width: 71px;
   }
 
   &__tag-header2 {
-    left: 73px;
+    width: 110px;
   }
 
   &__tags {
@@ -49,17 +50,29 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding: 0 40px 0 40px;
+
     &__tag-header {
       font-size: 20px;
       font-weight: 500;
       line-height: 0.9;
       letter-spacing: 2px;
       text-align: center;
+      top: 83px;
+    }
+
+    &__tag-header1 {
+      width: 82px;
     }
 
     &__tag-header2 {
-      margin-left: 10px;
-      top: 83px;
+      width: 153px;
+    }
+
+    &__tags {
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.2;
     }
   }
 }
