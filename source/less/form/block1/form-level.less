@@ -1,12 +1,10 @@
 @import "../../shared/index";
 
 .form-level {
-  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
 
   &__skill::before {
     position: absolute;
@@ -41,5 +39,17 @@
     line-height: 1.22;
     text-align: center;
     color: @greyish-brown;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__skill::before {
+      width: 94px;
+      height: 94px;
+      background-size: 94px 94px;
+    }
+
+    &__skill {
+      width: 94px;
+    }
   }
 }
