@@ -133,4 +133,47 @@
       line-height: 0.9;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &__item {
+      min-height: 97px;
+      padding: 0 41px 0 42px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__header {
+      width: 583px;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    &__name {
+      margin-left: 33px;
+    }
+
+    &__info::before {
+      display: none;
+    }
+
+    &__info {
+      width: auto;
+      flex-grow: 1;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &__companions {
+      width: 177px;
+    }
+
+    &__period {
+      width: 307px;
+    }
+
+    &__link-change {
+      letter-spacing: 2px;
+    }
+  }
 }
