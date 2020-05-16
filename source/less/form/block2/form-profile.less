@@ -108,9 +108,12 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     &__wrapper {
       padding: 73px 60px 65px 124px;
+      justify-content: space-between;
     }
 
     &__level,
@@ -135,6 +138,22 @@
       top: 0;
       right: 155px;
       margin-top: 0;
+    }
+
+    &__tags {
+      order: 1;
+      width: 730px;
+      margin-top: 0;
+      flex-grow: 0;
+      align-self: flex-start;
+    }
+
+    &__transport {
+      order: 2;
+      width: 384px;
+      margin-right: 0;
+      margin-left: 0;
+      flex-grow: 0;
     }
 
     &__button {
