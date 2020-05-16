@@ -6,6 +6,10 @@
   border-radius: 10px;
   border: solid 1px @cloudy-blue;
   padding: 0 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   &__tag-header {
     position: absolute;
@@ -38,8 +42,24 @@
   }
 
   &__directions {
+    .list-reset();
     display: flex;
     flex-direction: row;
     list-style: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__tag-header {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    &__tag-header2 {
+      margin-left: 10px;
+      top: 83px;
+    }
   }
 }
