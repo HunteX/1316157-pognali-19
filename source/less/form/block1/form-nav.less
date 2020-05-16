@@ -1,0 +1,15 @@
+@import "../../shared/index";
+
+.form-nav {
+  .z-background-bottom(20px, @pale-grey);
+
+  @media (min-width: @tablet-width) {
+    .z-background-bottom(60px, @pale-grey);
+  }
+
+  @media (min-width: @desktop-width) {
+    &__link-main {
+      display: none;
+    }
+  }
+}
