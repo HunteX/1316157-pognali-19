@@ -159,6 +159,27 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: 783px;
+    width: 285px;
+    align-self: flex-start;
+    padding: 48px 48px 47px 47px;
+
+    &__caption {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &__item-caption {
+      border-top: none;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    &__form {
+      min-height: 840px;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
