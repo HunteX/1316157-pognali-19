@@ -3,7 +3,27 @@
 .form-profile {
   min-height: 425px;
   background-color: @pale-grey;
-
   padding-top: 22px;
   padding-bottom: 33px;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 270px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: @pale-grey-two;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.76;
+    text-align: center;
+    color: @dark-two;
+  }
 }
