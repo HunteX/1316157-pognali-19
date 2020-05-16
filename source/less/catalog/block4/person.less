@@ -131,7 +131,6 @@
 
     &__profile {
       flex-direction: row;
-      flex-wrap: nowrap;
     }
 
     &__avatar-image--mobile {
@@ -221,7 +220,7 @@
     min-height: 285px;
     display: flex;
     flex-direction: row;
-    padding-left: 346px;
+    padding: 48px 44px 47px 346px;
 
     &__avatar-image {
       position: absolute;
@@ -238,9 +237,15 @@
       border-radius: 20px 0 0 20px;
     }
 
+    &__profile,
+    &__notes {
+      flex-grow: 1;
+    }
+
     &__private {
-      position: static;
       margin-left: 0;
+      border-right: 1px solid @table-border;
+      min-height: 187px;
     }
 
     &__name::after {
@@ -255,10 +260,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-    }
-
-    &__controls {
-
     }
 
     &__submit {
