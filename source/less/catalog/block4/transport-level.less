@@ -1,0 +1,92 @@
+@import "../../shared/index";
+
+.transport-level {
+  margin-top: 13px;
+  margin-bottom: 18px;
+  position: relative;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: @table-border;
+    left: -26px;
+    top: 9px;
+  }
+
+  &__list {
+    .list-reset();
+    display: flex;
+    flex-direction: row;
+    margin-top: 14px;
+  }
+
+  &__header {
+    position: relative;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: @greyish-brown;
+    background-color: @white;
+    margin-left: -15px;
+    padding-left: 15px;
+  }
+
+  &__header--transport {
+    width: 92px;
+  }
+
+  &__header--level {
+    width: 69px;
+  }
+
+  &__transport {
+    flex-grow: 1;
+  }
+
+  &__level {
+    width: 45px;
+  }
+
+  &__chart {
+    margin-right: 3px;
+    margin-top: 22px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    flex-direction: column;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    &::before {
+      display: none;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__list {
+      margin-top: 0;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: static;
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &__list {
+      flex-direction: row;
+    }
+  }
+}

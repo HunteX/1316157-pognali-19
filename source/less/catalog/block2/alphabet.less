@@ -1,0 +1,125 @@
+@import "../../shared/index";
+
+.alphabet {
+  display: table;
+  border-collapse: collapse;
+  width: 225px;
+
+  &__row {
+    display: table-row;
+  }
+
+  &__cell {
+    position: relative;
+    display: table-cell;
+    width: 45px;
+    height: 42px;
+    background-color: @white;
+    border: solid 1px @cloudy-blue;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1.4px;
+  }
+
+  &__cell--selected {
+    background-color: @dark-slate-blue;
+    color: @white;
+  }
+
+  &__list {
+    .list-reset();
+    display: none;
+    width: 124px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: @greyish-brown;
+    top: 217px;
+  }
+
+  &__cell--selected &__list {
+    position: absolute;
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 353px;
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__cell {
+      border: none;
+      background-color: transparent;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 0.4;
+      text-align: left;
+      color: @dark-blue-grey;
+      display: flex;
+      align-items: center;
+      height: 80px;
+    }
+
+    &__letter {
+      cursor: pointer;
+      color: rgba(25, 33, 68, 0.2);
+    }
+
+    &__cell--selected &__letter {
+      color: @dark-blue-grey;
+    }
+
+    &__list {
+      width: 155px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    &__cell--selected &__list {
+      top: 0;
+      left: 443px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2316px;
+    min-height: 2316px;
+
+    &__cell--selected &__list,
+    &__list {
+      position: static;
+      display: block;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.5;
+      color: @greyish-brown;
+      top: unset;
+      left: unset;
+      margin-top: 48px;
+    }
+
+    &__cell {
+      align-items: start;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../shared/index";
+
+.catalog {
+  padding-top: 28px;
+  padding-bottom: 24px;
+
+  &__item {
+    width: 270px;
+  }
+
+  &__person {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 688px;
+    padding-top: 40px;
+    padding-bottom: 45px;
+
+    &__item {
+      width: 688px;
+    }
+
+    &__person {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 950px;
+    padding-top: 0;
+  }
+}

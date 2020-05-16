@@ -1,0 +1,271 @@
+@import "../../shared/index";
+
+.person {
+  border-radius: 20px;
+  padding: 15px 20px 22px 20px;
+  background-color: @white;
+
+  &__profile {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__avatar-image {
+    display: none;
+  }
+
+  &__avatar-image--mobile {
+    display: block;
+    border-radius: 50%;
+  }
+
+  &__private {
+    margin-left: 16px;
+  }
+
+  &__name {
+    position: relative;
+    width: 78px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-slate-blue;
+  }
+
+  &__name::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 2.6px;
+    background-color: @salmon;
+    top: 9px;
+    right: -64px;
+  }
+
+  &--online &__name::after {
+    background-color: @green-apple;
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -39px;
+  }
+
+  &__button-like::before {
+    position: absolute;
+    content: "";
+    width: 31px;
+    height: 31px;
+    background: url("@{imgPath}/heart.svg") center no-repeat;
+    background-size: 13px 11px;
+    top: 0;
+    left: 0;
+  }
+
+  &__button-like {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    border-radius: 15.5px;
+    background-color: @pale-grey;
+  }
+
+  &__button-like--liked {
+    background-color: @very-light-pink-two;
+  }
+
+  &__likes {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: @dark-two;
+    text-transform: uppercase;
+  }
+
+  &__hashtags {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: @greyish-brown;
+    margin-top: 14px;
+    margin-left: -81px;
+  }
+
+  &__notes {
+    padding-top: 13px;
+    padding-left: 6px;
+  }
+
+  &__summon {
+    display: none;
+  }
+
+  &__submit {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: @light-gold;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.76;
+    text-align: center;
+    color: @dark-two;
+  }
+
+  &__submit:hover {
+    background-color: @mango-two;
+  }
+
+  &__submit:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 35px 25px 26px 35px;
+
+    &__profile {
+      flex-direction: row;
+    }
+
+    &__avatar-image--mobile {
+      display: none;
+    }
+
+    &__avatar-image--tablet {
+      display: block;
+      border-radius: 20px;
+    }
+
+    &__private {
+      width: 300px;
+      margin-left: 33px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__name {
+      order: 1;
+      width: 190px;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    &__name::after {
+      right: -26px;
+      top: 14px;
+    }
+
+    &__controls {
+      order: 3;
+      margin-left: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+    &__likes {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+
+    &__button-like {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+    }
+
+    &__button-like::before {
+      width: 50px;
+      height: 50px;
+      background-size: 20px 17px;
+    }
+
+    &__hashtags {
+      width: 224px;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.2;
+      margin-top: 14px;
+      margin-left: 0;
+      order: 2;
+      align-self: flex-start;
+    }
+
+    &__submit {
+      display: none;
+    }
+
+    &__summon {
+      display: block;
+      width: 148px;
+      height: 50px;
+      border-radius: 25px;
+    }
+
+    &__notes {
+      padding-top: 21px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 950px;
+    min-height: 285px;
+    display: flex;
+    flex-direction: row;
+    padding: 48px 44px 47px 346px;
+
+    &__avatar-image {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &__avatar-image--tablet {
+      display: none;
+    }
+
+    &__avatar-image--desktop {
+      display: block;
+      border-radius: 20px 0 0 20px;
+    }
+
+    &__profile,
+    &__notes {
+      flex-grow: 1;
+    }
+
+    &__private {
+      margin-left: 0;
+      border-right: 1px solid @table-border;
+      min-height: 187px;
+    }
+
+    &__name::after {
+      right: 0;
+      left: -20px;
+      top: 12px;
+    }
+
+    &__notes {
+      padding-left: 0;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__submit {
+      top: unset;
+      left: 330px;
+      bottom: 42px;
+    }
+  }
+}

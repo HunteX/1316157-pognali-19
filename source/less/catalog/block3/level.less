@@ -1,5 +1,4 @@
-@import "../shared/colors";
-@import "../shared/vars";
+@import "../../shared/index";
 
 .level {
   display: flex;
@@ -122,5 +121,45 @@
   &__toggle-min:active,
   &__toggle-max:active {
     box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width - 1) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+
+    &__range {
+      margin-top: 20px;
+    }
+
+    &__input {
+      width: 75px;
+      height: 46px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__text::before {
+      top: 15px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__input {
+      width: 96px;
+      height: 46px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-align: center;
+      padding-left: 18px;
+    }
+
+    &__range {
+      width: 182px;
+    }
   }
 }

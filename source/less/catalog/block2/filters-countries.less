@@ -1,0 +1,221 @@
+@import "../../shared/index";
+
+/* опять пришлоьс проставить height для IE */
+
+.filters-countries {
+  background-color: @pale-grey-four;
+  .z-background-bottom(20px, @pale-grey);
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 52px;
+    min-height: 52px;
+    padding-left: 52px;
+  }
+
+  &__continents {
+    display: none;
+    z-index: 3;
+  }
+
+  &--open {
+    border-radius: 0;
+  }
+
+  &--open &__continents {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 68px;
+    left: 50px;
+  }
+
+  &__container {
+    position: absolute;
+    display: none;
+    background-color: @pale-grey-four;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 695px;
+    min-height: 695px;
+    padding-bottom: 27px;
+    z-index: 2;
+  }
+
+  &--open &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__button {
+    width: 17px;
+    height: 19px;
+    background: transparent url("@{imgPath}/dots.svg") center no-repeat;
+  }
+
+  &__label {
+    display: none;
+  }
+
+  &--open &__button {
+    width: 12px;
+    height: 14px;
+    background: url("@{imgPath}/filter-close.svg") 0 0 no-repeat;
+  }
+
+  &__container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 139px 25px 27px;
+  }
+
+  &__toggle::before {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-image: url("@{imgPath}/filter-close.svg");
+    top: 14px;
+    left: 85px;
+  }
+
+  &__toggle {
+    position: relative;
+    align-self: center;
+    width: 270px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: @light-periwinkle;
+    font-size: 16.5px;
+    font-weight: bold;
+    line-height: 1.79;
+    color: @dark-two;
+    text-transform: uppercase;
+    padding-left: 30px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .z-background-bottom(60px, @pale-grey);
+
+    &__wrapper {
+      justify-content: center;
+      height: 135px;
+      min-height: 135px;
+      padding-left: 73px;
+      padding-right: 75px;
+    }
+
+    &__label {
+      display: block;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: @dark-blue-grey;
+    }
+
+    &__label--hide,
+    &--open &__label {
+      display: none;
+    }
+
+    &--open &__label--hide {
+      display: block;
+    }
+
+    &__continents {
+      display: flex;
+    }
+
+    &--open {
+      border-radius: 0;
+    }
+
+    &--open &__continents {
+      position: static;
+      flex-direction: row;
+    }
+
+    &__button {
+      width: 27px;
+      height: 5px;
+    }
+
+    &--open &__button {
+      width: 19px;
+      height: 19px;
+    }
+
+    &--open &__container {
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      min-height: 637px;
+      height: auto;
+      padding-bottom: 74px;
+    }
+
+    &__container-wrapper {
+      padding: 0 75px 0;
+      align-items: flex-start;
+      min-height: 463px;
+      height: 463px;
+      justify-content: space-between;
+    }
+
+    &__toggle {
+      width: 618px;
+      height: 100px;
+      border-radius: 20px;
+      background-color: @light-periwinkle;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-top: 0;
+      align-self: center;
+    }
+
+    &__toggle::before {
+      width: 19px;
+      height: 19px;
+      background-image: url("@{imgPath}/filter-close.svg");
+      top: 40px;
+      left: 243px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__wrapper {
+      padding-left: 123px;
+      padding-right: 123px;
+    }
+
+    &--open &__container {
+      height: 2598px;
+      min-height: 2598px;
+      padding-bottom: 74px;
+      padding-left: 60px;
+      padding-right: 60px;
+      justify-content: space-between;
+    }
+
+    &__container-wrapper {
+      height: auto;
+      padding: 35px 240px 0 35px;
+    }
+
+    &__toggle::before {
+      left: 594px;
+    }
+
+    &__toggle {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../shared/index";
+@import "../../shared/status-bar";
+
+.chart {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 0.75;
+  text-align: center;
+  color: @dark-slate-blue;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 45px;
+    top: -14px;
+    right: -1px;
+  }
+
+  &--99::after {
+    .status-bar(99);
+  }
+
+  &--80::after {
+    .status-bar(80);
+  }
+
+  &--50::after {
+    .status-bar(50);
+  }
+
+  &--25::after {
+    .status-bar(25);
+  }
+}

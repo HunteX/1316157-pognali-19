@@ -1,0 +1,76 @@
+@import "../../shared/index";
+
+.search-filters-checkboxes {
+  display: none;
+  flex-direction: column;
+
+  &__controls {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  &__label::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    left: -25px;
+    top: -2px;
+    border-radius: 5px;
+    background-color: @white;
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: left;
+    color: @greyish-brown;
+    margin-left: 24px;
+  }
+
+  &__label:hover {
+    opacity: 0.6;
+  }
+
+  &__label:active {
+    opacity: 0.3;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + &__label::before {
+    background: @white url("@{imgPath}/tick.svg") center no-repeat;
+    background-size: 9px 9px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__controls {
+      flex-grow: 1;
+      width: 164px;
+    }
+
+    &__label::before {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      left: -33px;
+      top: 0;
+    }
+
+    &__label {
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1;
+      margin-left: 34px;
+    }
+
+    &__checkbox:checked + &__label::before {
+      background-size: 12px 12px;
+    }
+  }
+}
