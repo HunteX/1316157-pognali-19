@@ -1,0 +1,43 @@
+@import "../../shared/index";
+
+.form-level {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background: url("@{imgPath}/bars/statusbar-big.png") center no-repeat;
+    background-size: 100px 100px;
+  }
+
+  &__skill {
+    width: 39px;
+    height: 29px;
+    font-size: 38px;
+    font-style: normal;
+    line-height: 1;
+    text-align: center;
+    color: @dark-two;
+    border-bottom: 2px solid @cloudy-blue;
+    padding-bottom: 37px;
+  }
+
+  &__description {
+    width: 29px;
+    height: 14px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.22;
+    text-align: center;
+    color: @greyish-brown;
+  }
+}
