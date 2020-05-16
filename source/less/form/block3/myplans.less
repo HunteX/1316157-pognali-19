@@ -63,4 +63,58 @@
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
   }
+
+  @media (min-width: @tablet-width) {
+    &__item {
+      padding: 27px 29px 18px 36px;
+    }
+
+    &__header {
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    &__name {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 2.08;
+      letter-spacing: normal;
+    }
+
+    &__index {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__info::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 619px;
+      top: 0;
+      left: -24px;
+      background-color: @table-border;
+    }
+
+    &__info {
+      position: relative;
+    }
+
+    &__companions,
+    &__period {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__link-change {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+    }
+  }
 }

@@ -21,4 +21,21 @@
     line-height: 1;
     color: @dark-slate-blue;
   }
+
+  @media (min-width: @tablet-width) {
+    min-height: 587px;
+
+    &__wrapper {
+      min-height: 467px;
+      padding-left: 75px;
+      padding-right: 75px;
+      padding-top: 46px;
+    }
+
+    &__caption {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.39;
+    }
+  }
 }
