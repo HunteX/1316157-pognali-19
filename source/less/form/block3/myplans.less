@@ -1,0 +1,66 @@
+@import "../../shared/index";
+
+.myplans {
+  .list-reset();
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: @white;
+    min-height: 154px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 23px 24px 24px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__index {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1.6px;
+    color: @dark-slate-blue;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-slate-blue;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__companions,
+  &__period {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1.4px;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+  }
+
+  &__period {
+    margin-top: 4px;
+  }
+
+  &__link-change {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1.4px;
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+  }
+}
