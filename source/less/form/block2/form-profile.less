@@ -105,4 +105,42 @@
       text-align: center;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+
+    &__wrapper {
+      padding: 73px 60px 65px 124px;
+    }
+
+    &__level,
+    &__avatar,
+    &__controls {
+      position: absolute;
+    }
+
+    &__level {
+      top: -124px;
+      right: 390px;
+      color: @white;
+    }
+
+    &__avatar {
+      top: -190px;
+      right: 155px;
+    }
+
+    &__controls {
+      width: 190px;
+      top: 0;
+      right: 155px;
+      margin-top: 0;
+    }
+
+    &__button {
+      height: 47px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
 }
