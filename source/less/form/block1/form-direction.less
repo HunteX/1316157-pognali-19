@@ -1,0 +1,53 @@
+@import "../../shared/index";
+@import "../../shared/direction";
+
+.form-direction {
+  width: 33px;
+  height: 33px;
+  background-color: @white;
+  border-radius: 50%;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &--bg {
+    background-color: @pale-grey;
+  }
+
+  &--avia {
+    .direction-avia(14px, 16px);
+  }
+
+  &--bus {
+    .direction-bus(13px, 16px);
+  }
+
+  &--velo {
+    .direction-velo(19px, 17px);
+  }
+
+  &--run {
+    .direction-run(15px, 17px);
+  }
+
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+
+    &--avia {
+      .direction-avia(19px, 21px);
+    }
+
+    &--bus {
+      .direction-bus(17px, 21px);
+    }
+
+    &--velo {
+      .direction-velo(24px, 21px);
+    }
+
+    &--run {
+      .direction-run(20px, 21px);
+    }
+  }
+}
