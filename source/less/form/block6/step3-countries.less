@@ -91,9 +91,29 @@
   @media (min-width: @tablet-width) {
     padding-right: 31px;
 
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: unset;
+      right: 3px;
+      top: 94px;
+      width: 3px;
+      height: 253px;
+      background-color: @dark-slate-blue;
+    }
+
     &__header {
-      margin-top: 50px;
+      margin-top: 62px;
       margin-bottom: 31px;
+    }
+
+    &__header::before,
+    &__header::after {
+      display: none;
     }
 
     &__caption {
@@ -101,13 +121,25 @@
       font-weight: bold;
       line-height: 0.6;
       letter-spacing: normal;
-      overflow: initial;
+      overflow: visible;
       padding-left: 0;
     }
 
     &__flag {
+      position: relative;
       width: 70px;
       height: 47px;
+    }
+
+    &__flag::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: @dark-slate-blue;
+      border-radius: 50%;
+      top: 19px;
+      left: 89px;
     }
 
     &__flag--bh {
@@ -125,6 +157,12 @@
 
     &__header--cz {
       margin-top: 39px;
+    }
+
+    &__text {
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.2;
     }
   }
 }
