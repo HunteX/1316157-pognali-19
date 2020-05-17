@@ -175,22 +175,22 @@
 
       <section class="step add-plan__step1 step1">
         <div class="step__wrapper">
-          <header class="step1__header step1-header">
-            <div class="step__info step1-header__info">
-              <div class="step__caption step1-header__caption">Шаг 1.
-                <div class="step__caption-br"></div>
+          <header class="step1__header step-header">
+            <div class="step-header__info">
+              <div class="step-header__caption">Шаг 1.
+                <div class="step-header__caption-br"></div>
                 Даты пребывания
               </div>
-              <div class="step__hint step1-header__hint">
+              <div class="step-header__hint">
                 Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее
                 предполагаемую
                 длительность.
               </div>
             </div>
-            <ul class="step1-header__list">
-              <li class="step1-header__item step1-header__item--active">Даты</li>
-              <li class="step1-header__item">Маршрут</li>
-              <li class="step1-header__item">Развлечения</li>
+            <ul class="step-header__list">
+              <li class="step-header__item step-header__item--active">Даты</li>
+              <li class="step-header__item">Маршрут</li>
+              <li class="step-header__item">Развлечения</li>
             </ul>
           </header>
 
@@ -348,13 +348,15 @@
                   <div class="step1-calendar__letters-wrapper">25</div>
                 </div>
                 <div class="step1-calendar__cell step1-calendar__cell--selected">
-                  <div class="step1-calendar__letters-wrapper">26<p class="step1-calendar__additional"><br>Заезд</p></div>
+                  <div class="step1-calendar__letters-wrapper">26<p class="step1-calendar__additional"><br>Заезд</p>
+                  </div>
                 </div>
                 <div class="step1-calendar__cell step1-calendar__cell--selected">
                   <div class="step1-calendar__letters-wrapper">27</div>
                 </div>
                 <div class="step1-calendar__cell step1-calendar__cell--selected">
-                  <div class="step1-calendar__letters-wrapper">28<p class="step1-calendar__additional"><br>Выезд</p></div>
+                  <div class="step1-calendar__letters-wrapper">28<p class="step1-calendar__additional"><br>Выезд</p>
+                  </div>
                 </div>
                 <div class="step1-calendar__cell">
                   <div class="step1-calendar__letters-wrapper">29</div>
@@ -385,6 +387,29 @@
               </div>
             </div>
           </div>
+
+          <button type="button" class="button step__next">Следующий шаг</button>
+        </div>
+      </section>
+
+      <section class="step add-plan__step2 step2">
+        <div class="step__wrapper">
+          <header class="step2__header step-header">
+            <div class="step-header__info">
+              <div class="step-header__caption">Шаг 2.
+                <div class="step-header__caption-br"></div>
+                Маршрут
+              </div>
+              <div class="step-header__hint">
+                Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.
+              </div>
+            </div>
+            <ul class="step-header__list">
+              <li class="step-header__item">Даты</li>
+              <li class="step-header__item step-header__item--active">Маршрут</li>
+              <li class="step-header__item">Развлечения</li>
+            </ul>
+          </header>
 
           <button type="button" class="button step__next">Следующий шаг</button>
         </div>

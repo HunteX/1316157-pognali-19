@@ -1,6 +1,6 @@
 @import "../../shared/index";
 
-.step1-header {
+.step-header {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,9 +17,34 @@
     display: none;
   }
 
+  &__caption {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+    color: @dark-slate-blue;
+  }
+
+  &__hint {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    color: @greyish-brown;
+  }
+
   @media (min-width: @tablet-width) {
     &__info {
       min-height: 179px;
+    }
+
+    &__caption {
+      font-size: 36px;
+    }
+
+    &__hint {
+      width: 501px;
+      font-size: 20px;
+      line-height: 1.2;
     }
   }
 
@@ -34,6 +59,15 @@
 
     &__hint {
       width: 549px;
+    }
+
+    &__caption {
+      font-size: 36px;
+      line-height: 1.39;
+    }
+
+    &__caption-br {
+      display: inline;
     }
 
     &__list {
@@ -52,6 +86,7 @@
 
     &__item {
       position: relative;
+      color: @steel-grey;
     }
 
     &__item::before {
@@ -63,6 +98,10 @@
       border-radius: 50%;
       top: 4px;
       left: -43px;
+    }
+
+    &__item--active {
+      color: @dark-slate-blue;
     }
 
     &__item--active::before {
