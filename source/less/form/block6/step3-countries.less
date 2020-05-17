@@ -165,4 +165,23 @@
       line-height: 1.2;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 115px;
+    margin-top: 64px;
+
+    &::after {
+      right: 224px;
+    }
+
+    &__text {
+      width: 730px;
+      padding: 28px 22px 28px 27px;
+    }
+
+    &__flag::before {
+      top: 18px;
+      left: -48px;
+    }
+  }
 }
