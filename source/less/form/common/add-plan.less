@@ -9,12 +9,14 @@
 
   &__wrapper {
     padding-top: 28px;
+    padding-bottom: 31px;
+    padding-right: 43px;
   }
 
   &__header {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   &__caption {
@@ -24,27 +26,15 @@
     color: @dark-slate-blue;
   }
 
-  &__dots {
-    .list-reset();
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 48px;
-    margin-left: 36px;
-  }
+  @media (min-width: @tablet-width) {
+    &__wrapper {
+      padding: 43px 74px 53px 75px;
+    }
 
-  &__dot {
-    cursor: pointer;
-    width: 6px;
-    height: 5px;
-    background-color: @steel-grey;
-    border-radius: 50%;
-    opacity: 0.3;
-  }
-
-  &__dot--active {
-    background-color: @dark-slate-blue;
-    opacity: 1;
+    &__caption {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.39;
+    }
   }
 }
