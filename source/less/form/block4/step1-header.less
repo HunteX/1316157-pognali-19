@@ -24,8 +24,49 @@
   }
 
   @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding-right: 46px;
+
     &__info {
-      min-height: 115px;
+      width: 576px;
+      min-height: 126px;
+    }
+
+    &__hint {
+      width: 549px;
+    }
+
+    &__list {
+      .list-reset();
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 0.69;
+      letter-spacing: 2px;
+      color: @black;
+      text-transform: uppercase;
+      margin-top: 22px;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__item::before {
+      position: absolute;
+      content: "";
+      width: 6px;
+      height: 5px;
+      background-color: @steel-grey;
+      border-radius: 50%;
+      top: 4px;
+      left: -43px;
+    }
+
+    &__item--active::before {
+      background-color: @dark-slate-blue;
     }
   }
 }
