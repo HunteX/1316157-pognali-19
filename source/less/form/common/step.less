@@ -20,7 +20,7 @@
     line-height: 1;
     letter-spacing: normal;
     color: @dark-slate-blue;
-    margin: 0 0 14px;
+    margin: 0 0 35px;
   }
 
   &__hint {
@@ -32,8 +32,10 @@
   }
 
   @media (min-width: @tablet-width) {
+    border-radius: 30px;
+
     &__wrapper {
-      padding: 49px 43px 55px 43px;
+      padding: 44px 43px 55px 43px;
     }
 
     &__caption {
@@ -41,12 +43,16 @@
     }
 
     &__hint {
+      width: 501px;
       font-size: 20px;
       line-height: 1.2;
+      margin-bottom: 64px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    border-radius: 60px;
+
     &__wrapper {
       padding: 100px 160px 105px 162px;
     }

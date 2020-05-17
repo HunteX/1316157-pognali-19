@@ -71,4 +71,48 @@
     background-image: url("@{imgPath}/qty-plus-mobile.svg");
     right: 15px;
   }
+
+  @media (min-width: @tablet-width) {
+    &__label {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__suffix {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__input {
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 531px;
+      height: 70px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__minus,
+    &__plus {
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      background-size: 20px 20px;
+      top: 25px;
+    }
+
+    &__minus {
+      left: 15px;
+    }
+
+    &__plus {
+      right: 15px;
+    }
+  }
 }
