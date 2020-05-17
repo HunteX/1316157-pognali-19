@@ -73,5 +73,26 @@
     &__header-hint {
       width: 405px;
     }
+
+    &__list {
+      position: relative;
+      width: 529px;
+      border-top: 1px solid @light-blue-grey-two;
+      padding-top: 47px;
+    }
+
+    &__list::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 395px;
+      width: 1px;
+      height: 407px;
+      background-color: @light-blue-grey-two;
+    }
+
+    &__item:not(:last-child)::after {
+      display: none;
+    }
   }
 }
