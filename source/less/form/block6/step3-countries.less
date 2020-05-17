@@ -2,7 +2,20 @@
 @import "../../shared/flag";
 
 .step3-countries {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 278px;
+    background-color: @dark-slate-blue;
+    top: 29px;
+    left: -13px;
+  }
+
   &__header {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,8 +24,28 @@
     margin-bottom: 17px;
   }
 
+  &__header::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+    top: 10px;
+    left: -2px;
+  }
+
+  &__header::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    background-color: @dark-slate-blue;
+    top: 12px;
+    left: -13px;
+  }
+
   &__caption {
-    position: relative;
     width: 149px;
     font-size: 18px;
     font-weight: 500;
