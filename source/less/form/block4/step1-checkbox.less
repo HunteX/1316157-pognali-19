@@ -33,4 +33,27 @@
     background: @white url("@{imgPath}/tick.svg") center no-repeat;
     background-size: 9px 9px;
   }
+
+  @media (min-width: @tablet-width) {
+    &__label {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-left: 35px;
+      color: @dark-slate-blue;
+    }
+
+    &__label::before {
+      width: 36px;
+      height: 36px;
+      left: -25px;
+      top: -6px;
+    }
+
+    &__input:checked + &__label::before {
+      background-size: 12px 12px;
+    }
+  }
 }

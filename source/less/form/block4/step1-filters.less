@@ -14,8 +14,21 @@
   @media (min-width: @tablet-width) {
     &__companions,
     &__duration {
-      min-height: 138px;
+      min-height: 164px;
       margin-bottom: 10px;
+    }
+
+    &__companions {
+      order: 1;
+    }
+
+    &__children {
+      order: 2;
+      margin-bottom: 31px;
+    }
+
+    &__duration {
+      order: 3;
     }
   }
 }
