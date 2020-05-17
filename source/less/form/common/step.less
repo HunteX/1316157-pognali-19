@@ -9,15 +9,54 @@
     padding: 24px 22px 25px 24px;
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__caption {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+    color: @dark-slate-blue;
+    margin: 0;
+  }
+
+  &__hint {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    color: @greyish-brown;
+  }
+
   @media (min-width: @tablet-width) {
     &__wrapper {
       padding: 49px 43px 55px 43px;
+    }
+
+    &__caption {
+      font-size: 36px;
+    }
+
+    &__hint {
+      font-size: 20px;
+      line-height: 1.2;
     }
   }
 
   @media (min-width: @desktop-width) {
     &__wrapper {
       padding: 100px 160px 105px 162px;
+    }
+
+    &__caption {
+      font-size: 36px;
+      line-height: 1.39;
+    }
+
+    &__caption-br {
+      display: inline;
     }
   }
 }
