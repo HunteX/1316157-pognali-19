@@ -87,4 +87,44 @@
   &__text::placeholder {
     color: @greyish-brown-30;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 31px;
+
+    &__header {
+      margin-top: 50px;
+      margin-bottom: 31px;
+    }
+
+    &__caption {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 0.6;
+      letter-spacing: normal;
+      overflow: initial;
+      padding-left: 0;
+    }
+
+    &__flag {
+      width: 70px;
+      height: 47px;
+    }
+
+    &__flag--bh {
+      .flag("bh", 70px, 47px);
+    }
+
+    &__flag--cz {
+      .flag("czech", 70px, 47px);
+    }
+
+    &__text {
+      width: 100%;
+      height: 142px;
+    }
+
+    &__header--cz {
+      margin-top: 39px;
+    }
+  }
 }
