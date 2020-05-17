@@ -94,5 +94,31 @@
     &__item:not(:last-child)::after {
       display: none;
     }
+
+    &__button-add {
+      width: 369px;
+      height: 70px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+      padding-left: 24px;
+    }
+
+    &__button-add::before {
+      width: 15px;
+      height: 15px;
+      top: 27px;
+      right: -34px;
+      background-color: @pale-grey;
+    }
+
+    &__button-add::after {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      top: 26px;
+      right: 26px;
+    }
   }
 }
