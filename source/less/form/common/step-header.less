@@ -10,7 +10,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 161px;
   }
 
   &__list {
@@ -30,13 +29,10 @@
     font-weight: normal;
     line-height: 1.38;
     color: @greyish-brown;
+    margin-top: 11px;
   }
 
   @media (min-width: @tablet-width) {
-    &__info {
-      min-height: 179px;
-    }
-
     &__caption {
       font-size: 36px;
     }
@@ -45,6 +41,7 @@
       width: 501px;
       font-size: 20px;
       line-height: 1.2;
+      margin-top: 34px;
     }
   }
 
@@ -54,11 +51,11 @@
 
     &__info {
       width: 576px;
-      min-height: 126px;
     }
 
     &__hint {
       width: 549px;
+      margin-top: 28px;
     }
 
     &__caption {
