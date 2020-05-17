@@ -4,8 +4,28 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 161px;
+  }
 
   &__list {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__info {
+      min-height: 179px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__info {
+      min-height: 115px;
+    }
   }
 }

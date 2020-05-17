@@ -1,21 +1,30 @@
 @import "../../shared/index";
 
 .step1-filters {
-  min-height: 186px;
+  min-height: 193px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  margin-top: 24px;
+
+  &__children {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
   &__companions,
   &__duration {
     min-height: 80px;
-    margin-bottom: 10px;
   }
 
   @media (min-width: @tablet-width) {
+    min-height: 361px;
+    margin-top: 41px;
+
     &__companions,
     &__duration {
       min-height: 164px;
-      margin-bottom: 10px;
     }
 
     &__companions {
@@ -24,11 +33,15 @@
 
     &__children {
       order: 2;
-      margin-bottom: 31px;
+      min-height: 36px;
     }
 
     &__duration {
       order: 3;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 184px;
   }
 }

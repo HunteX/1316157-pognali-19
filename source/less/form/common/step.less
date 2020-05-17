@@ -7,6 +7,9 @@
 
   &__wrapper {
     padding: 24px 22px 25px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__info {
@@ -20,7 +23,6 @@
     line-height: 1;
     letter-spacing: normal;
     color: @dark-slate-blue;
-    margin: 0 0 14px;
   }
 
   &__hint {
@@ -28,7 +30,6 @@
     font-weight: normal;
     line-height: 1.38;
     color: @greyish-brown;
-    margin-bottom: 21px;
   }
 
   @media (min-width: @tablet-width) {
@@ -40,14 +41,12 @@
 
     &__caption {
       font-size: 36px;
-      margin: 0 0 35px;
     }
 
     &__hint {
       width: 501px;
       font-size: 20px;
       line-height: 1.2;
-      margin-bottom: 40px;
     }
   }
 
