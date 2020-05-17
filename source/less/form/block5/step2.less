@@ -128,4 +128,30 @@
       align-items: center;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &__list {
+      width: 997px;
+      margin-top: 55px;
+      padding-top: 62px;
+    }
+
+    &__list::before {
+      left: 772px;
+      height: 504px;
+    }
+
+    &__button-add::before {
+      top: 28px;
+      right: -50px;
+    }
+
+    &__button-add {
+      width: 730px;
+    }
+
+    &__controls {
+      margin-top: 56px;
+    }
+  }
 }
