@@ -7,16 +7,13 @@
   background-color: @light-blue-grey-five;
   .z-background-top(30px, @pale-grey-two);
 
-  &__wrapper {
-    padding-top: 28px;
-    padding-bottom: 31px;
-    padding-right: 43px;
-  }
-
   &__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 28px;
+    padding-bottom: 31px;
+    padding-right: 18px;
   }
 
   &__caption {
@@ -28,7 +25,14 @@
 
   @media (min-width: @tablet-width) {
     &__wrapper {
-      padding: 43px 74px 53px 75px;
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+
+    &__header {
+      padding-top: 44px;
+      padding-bottom: 53px;
+      padding-right: 0;
     }
 
     &__caption {
@@ -42,7 +46,11 @@
     .z-background-top(60px, @pale-grey-two);
 
     &__wrapper {
-      padding: 46px 60px 52px 130px;
+      padding: 46px 60px 30px 60px;
+    }
+
+    &__header {
+      padding: 0 70px 52px 70px;
     }
   }
 }
