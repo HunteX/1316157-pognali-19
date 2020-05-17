@@ -123,4 +123,30 @@
       right: 20px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    border-top: none;
+    justify-content: flex-start;
+
+    &__label {
+      order: 1;
+      width: 217px;
+    }
+
+    &__element {
+      order: 2;
+    }
+
+    &__suffix {
+      order: 3;
+      color: @dark-slate-blue;
+      margin-left: 35px;
+    }
+
+    &__input {
+      padding-left: 45px;
+      padding-right: 45px;
+      width: 181px;
+    }
+  }
 }

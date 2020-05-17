@@ -42,6 +42,21 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 184px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 191px;
+    justify-content: space-between;
+    border-top: 1px solid @light-blue-grey-two;
+    margin-top: 56px;
+    padding-top: 25px;
+
+    &__companions,
+    &__duration {
+      width: 479px;
+    }
+
+    &__children {
+      width: 243px;
+    }
   }
 }
