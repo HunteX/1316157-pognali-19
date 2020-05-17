@@ -411,8 +411,44 @@
             </ul>
           </header>
 
-          <button type="button" class="button step__next">Следующий шаг</button>
-          <button type="button" class="button step__prev">На шаг назад</button>
+          <ul class="step2__list">
+            <li class="step2__item">
+              <div class="super-select">
+                <label>
+                  <input type="text" class="super-select__element" disabled value="Босния и Герцеговина">
+                </label>
+                <div class="super-select__flag super-select__flag--bh"></div>
+                <div class="super-select__dotnext"></div>
+              </div>
+            </li>
+            <li class="step2__item">
+              <div class="super-select">
+                <label>
+                  <input type="text" class="super-select__element" disabled value="Чехия">
+                </label>
+                <div class="super-select__flag super-select__flag--czech"></div>
+                <div class="super-select__dotnext"></div>
+              </div>
+            </li>
+            <li class="step2__item">
+              <div class="super-select">
+                <label>
+                  <input type="text" class="super-select__element super-select__element--empty" disabled
+                    value="Выберите страну">
+                </label>
+                <div class="super-select__flag super-select__flag--empty"></div>
+                <div class="super-select__dotnext super-select__dotnext--empty"></div>
+              </div>
+            </li>
+            <li class="step2__item">
+              <button type="button" class="button step2__button-add">Добавить страну</button>
+            </li>
+          </ul>
+
+          <div class="step2__controls">
+            <button type="button" class="button step__next">Следующий шаг</button>
+            <button type="button" class="button step__prev">На шаг назад</button>
+          </div>
         </div>
       </section>
     </div>

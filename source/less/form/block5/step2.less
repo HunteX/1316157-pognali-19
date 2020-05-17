@@ -1,5 +1,71 @@
 @import "../../shared/index";
 
 .step2 {
+  &__list {
+    .list-reset();
+    margin-top: 24px;
+  }
 
+  &__item {
+    position: relative;
+  }
+
+  &__item:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 10px;
+    background: transparent url("@{imgPath}/small-arrow.svg") center no-repeat;
+    background-size: 5px 10px;
+    bottom: -15px;
+    right: 52px;
+    opacity: 0.3;
+  }
+
+  &__button-add {
+    position: relative;
+    width: 220px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: @pale-grey;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 0.4px;
+    color: @dark-slate-blue;
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  &__button-add::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: solid 1px @cloudy-blue;
+    border-radius: 50%;
+    top: 17px;
+    right: 49px;
+  }
+
+  &__button-add::after {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url("@{imgPath}/qty-plus-mobile.svg");
+    background-size: 14px 14px;
+    top: 14px;
+    right: 15px;
+    opacity: 0.3;
+  }
+
+  &__controls {
+    margin-top: 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 84px;
+  }
 }
