@@ -177,7 +177,10 @@
         <div class="step__wrapper">
           <header class="step1__header step1-header">
             <div class="step__info step1-header__info">
-              <h2 class="step__caption step1-header__caption">Шаг 1.<div class="step__caption-br"></div> Даты пребывания</h2>
+              <div class="step__caption step1-header__caption">Шаг 1.
+                <div class="step__caption-br"></div>
+                Даты пребывания
+              </div>
               <div class="step__hint step1-header__hint">
                 Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее
                 предполагаемую
@@ -190,6 +193,27 @@
               <li class="step1-header__item">Развлечения</li>
             </ul>
           </header>
+
+          <div class="step1__filters step1-filters">
+            <div class="step1-counter step1-filters__companions">
+              <label for="counter1" class="step1-counter__label">Ищу попутчиков:</label>
+              <input id="counter1" type="text" class="step1-counter__input">
+              <div class="step1-counter__suffix">чел.</div>
+            </div>
+            <div class="step1-counter step1-filters__duration">
+              <label for="counter2" class="step1-counter__label">Длительность:</label>
+              <input id="counter2" type="text" class="step1-counter__input">
+              <div class="step1-counter__suffix">дн.</div>
+            </div>
+            <div class="step1-checkbox step1-filters__children">
+              <input id="checkbox1" type="checkbox" class="step1-checkbox__input">
+              <label for="checkbox1" class="step1-checkbox__label">Можно с детьми</label>
+            </div>
+          </div>
+
+          <div class="step1__calendar calendar">
+            <!-- TODO -->
+          </div>
         </div>
       </section>
     </div>
