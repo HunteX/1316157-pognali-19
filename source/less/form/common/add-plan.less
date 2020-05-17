@@ -1,0 +1,50 @@
+@import "../../shared/index";
+
+.add-plan {
+  min-height: 2481px;
+  display: flex;
+  flex-direction: column;
+  background-color: @light-blue-grey-five;
+  .z-background-top(30px, @pale-grey-two);
+
+  &__wrapper {
+    padding-top: 28px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__caption {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-slate-blue;
+  }
+
+  &__dots {
+    .list-reset();
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 48px;
+    margin-left: 36px;
+  }
+
+  &__dot {
+    cursor: pointer;
+    width: 6px;
+    height: 5px;
+    background-color: @steel-grey;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  &__dot--active {
+    background-color: @dark-slate-blue;
+    opacity: 1;
+  }
+}
