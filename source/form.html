@@ -442,6 +442,7 @@
                 <div class="step2__popup step2-popup step2-popup--open">
                   <header class="step2-popup__header">
                     <div class="step2-popup__caption">Выберите страну</div>
+                    <button class="button step2-popup__close" onclick="toggleCountriesPopup()"></button>
                   </header>
                   <div class="step2-popup__container">
                     <div class="step2-popup__alphabet">
@@ -500,7 +501,8 @@
               </div>
             </li>
             <li class="step2__item">
-              <button type="button" class="button step2__button-add">Добавить страну</button>
+              <button type="button" class="button step2__button-add" onclick="toggleCountriesPopup()">Добавить страну
+              </button>
             </li>
           </ul>
 
@@ -606,5 +608,6 @@
 </footer>
 
 <script src="js/menu.js"></script>
+<script src="js/countries-popup.js"></script>
 </body>
 </html>
