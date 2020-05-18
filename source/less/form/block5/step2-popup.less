@@ -1,0 +1,227 @@
+@import "../../shared/index";
+
+.step2-popup {
+  display: none;
+  position: absolute;
+  width: 220px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: @white;
+  box-shadow: 0 20px 50px 0 @dark-slate-blue-10;
+
+  &--open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    position: relative;
+    width: 100%;
+    height: 42px;
+    background-color: @dark-slate-blue;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__caption {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: @white;
+  }
+
+  &__caption::after {
+    position: absolute;
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: url("@{imgPath}/small-cross.svg") center no-repeat;
+    background-size: 9px 9px;
+    cursor: pointer;
+    top: 17px;
+    right: 17px;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &__alphabet {
+    width: 100%;
+    height: 210px;
+    display: table;
+    border-collapse: collapse;
+  }
+
+  &__row {
+    display: table-row;
+  }
+
+  &__cell {
+    display: table-cell;
+    width: 44px;
+    height: 42px;
+    border: solid 1px @cloudy-blue;
+    text-transform: uppercase;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1.4px;
+    color: @dark-slate-blue;
+  }
+
+  &__cell:hover,
+  &__cell--selected {
+    cursor: pointer;
+    background-color: @pale-grey;
+  }
+
+  &__list {
+    .list-reset();
+    min-height: 270px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    color: @greyish-brown;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid @cloudy-blue;
+    border-top: none;
+    padding: 8px 20px 0 20px;
+  }
+
+  &__item {
+    cursor: pointer;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 369px;
+
+    &__header {
+      height: 70px;
+      padding-left: 26px;
+      padding-right: 26px;
+    }
+
+    &__header::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 418px;
+      background-color: @cloudy-blue;
+      top: 70px;
+      right: 0;
+      z-index: 1;
+    }
+
+    &__caption {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__caption::after {
+      width: 17px;
+      height: 17px;
+      background-size: 17px 17px;
+      top: 27px;
+      right: 27px;
+    }
+
+    &__container {
+      position: relative;
+      width: 575px;
+      min-height: 418px;
+      padding-top: 34px;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: @white;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    &__alphabet {
+      width: 270px;
+    }
+
+    &__cell {
+      width: 52px;
+      height: 70px;
+      background-color: @white;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__cell:hover,
+    &__cell--selected {
+      background-color: @dark-slate-blue;
+      color: @white;
+    }
+
+    &__list {
+      border: none;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      padding: 0;
+      margin-left: 45px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 730px;
+
+      &__header {
+        height: 70px;
+      }
+
+      &__header::after {
+        right: 242px;
+        height: 478px;
+      }
+
+      &__container {
+        width: 100%;
+        min-height: 478px;
+        padding-top: 21px;
+        padding-left: 10px;
+        justify-content: space-between;
+      }
+
+      &__alphabet {
+        width: 390px;
+        height: 440px;
+        border-spacing: 15px 15px;
+        border-collapse: separate;
+      }
+
+      &__cell {
+        width: 60px;
+        height: 70px;
+        border-radius: 4px;
+      }
+
+      &__list {
+        margin-left: 0;
+        margin-top: 11px;
+        width: 218px;
+      }
+    }
+  }
+}
