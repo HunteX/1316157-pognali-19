@@ -1,0 +1,33 @@
+@import "../../shared/index";
+
+.dots {
+  .list-reset();
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 48px;
+
+  &__dot {
+    cursor: pointer;
+    width: 6px;
+    height: 5px;
+    background-color: @steel-grey;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  &__dot--active {
+    background-color: @dark-slate-blue;
+    opacity: 1;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 75px;
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+@import "../../shared/index";
+
+.step1-checkbox {
+  &__input {
+    display: none;
+  }
+
+  &__label::before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: 1px solid @cloudy-blue;
+    background-color: @white;
+    left: -25px;
+    top: -6px;
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1;
+    text-align: left;
+    color: @greyish-brown;
+    margin-left: 25px;
+    padding-left: 15px;
+  }
+
+  &__input:checked + &__label::before {
+    background: @white url("@{imgPath}/tick.svg") center no-repeat;
+    background-size: 9px 9px;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__label {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding-left: 35px;
+      color: @dark-slate-blue;
+    }
+
+    &__label::before {
+      width: 36px;
+      height: 36px;
+      left: -25px;
+      top: -9px;
+    }
+
+    &__input:checked + &__label::before {
+      background-size: 12px 12px;
+    }
+  }
+}

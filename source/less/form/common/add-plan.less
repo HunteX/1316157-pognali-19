@@ -1,0 +1,59 @@
+@import "../../shared/index";
+
+.add-plan {
+  display: flex;
+  flex-direction: column;
+  background-color: @light-blue-grey-five;
+  .z-background-top(30px, @pale-grey-two);
+  padding-bottom: 26px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-bottom: 31px;
+    padding-right: 18px;
+  }
+
+  &__caption {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    color: @dark-slate-blue;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 72px;
+
+    &__wrapper {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+
+    &__header {
+      padding-top: 44px;
+      padding-bottom: 53px;
+      padding-right: 0;
+    }
+
+    &__caption {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 1.39;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 55px;
+    .z-background-top(60px, @pale-grey-two);
+
+    &__wrapper {
+      padding: 46px 60px 30px 60px;
+    }
+
+    &__header {
+      padding: 0 70px 52px 70px;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "../../shared/index";
+
+.form-profile {
+  min-height: 425px;
+  background-color: @pale-grey;
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 22px;
+    padding-bottom: 33px;
+  }
+
+  &__level,
+  &__avatar {
+    flex-grow: 1;
+  }
+
+  &__controls {
+    margin-top: 20px;
+  }
+
+  &__transport {
+    width: 100%;
+    height: 63px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 36px;
+  }
+
+  &__button {
+    width: 270px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: @pale-grey-two;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.76;
+    text-align: center;
+    color: @dark-two;
+    text-transform: uppercase;
+  }
+
+  &__tags {
+    margin-top: 33px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 475px;
+
+    &__wrapper {
+      padding: 64px 75px 60px 75px;
+    }
+
+    &__level {
+      order: 1;
+      flex-grow: 0;
+    }
+
+    &__avatar {
+      order: 3;
+      flex-grow: 0;
+    }
+
+    &__controls {
+      order: 4;
+      width: 100%;
+      margin-top: 52px;
+    }
+
+    &__tags {
+      order: 5;
+      margin-top: 51px;
+      height: 94px;
+    }
+
+    &__transport {
+      width: 308px;
+      height: 94px;
+      order: 2;
+      flex-grow: 1;
+      margin-top: 0;
+      margin-left: 54px;
+      margin-right: 62px;
+    }
+
+    &__button {
+      width: 100%;
+      height: 60px;
+      border-radius: 10px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 233px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+      padding: 73px 60px 65px 124px;
+      justify-content: space-between;
+    }
+
+    &__level,
+    &__avatar,
+    &__controls {
+      position: absolute;
+    }
+
+    &__level {
+      top: -124px;
+      right: 390px;
+      color: @white;
+    }
+
+    &__avatar {
+      top: -190px;
+      right: 155px;
+    }
+
+    &__controls {
+      width: 190px;
+      top: 0;
+      right: 155px;
+      margin-top: 0;
+    }
+
+    &__tags {
+      order: 1;
+      width: 730px;
+      margin-top: 0;
+      flex-grow: 0;
+      align-self: flex-start;
+    }
+
+    &__transport {
+      order: 2;
+      width: 384px;
+      margin-right: 0;
+      margin-left: 0;
+      flex-grow: 0;
+    }
+
+    &__button {
+      height: 47px;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}

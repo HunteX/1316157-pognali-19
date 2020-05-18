@@ -1,0 +1,73 @@
+@import "../../shared/index";
+
+.form-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__skill::before {
+    position: absolute;
+    content: "";
+    top: -23px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: url("@{imgPath}/bars/statusbar-big.png") center no-repeat;
+    background-size: 100px 100px;
+  }
+
+  &__skill {
+    position: relative;
+    width: 100px;
+    height: 29px;
+    font-size: 38px;
+    line-height: 1;
+    text-align: center;
+    color: @dark-two;
+    padding-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: normal;
+  }
+
+  &__description {
+    border-top: 2px solid @cloudy-blue;
+    width: 49px;
+    height: 14px;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.22;
+    text-align: center;
+    color: @greyish-brown;
+  }
+
+  @media (min-width: @tablet-width) {
+    &__skill::before {
+      width: 94px;
+      height: 94px;
+      background-size: 94px 94px;
+    }
+
+    &__skill {
+      width: 94px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &__skill::before {
+      width: 94px;
+      height: 94px;
+      background-size: 94px 94px;
+    }
+
+    &__skill {
+      width: 94px;
+      color: @white;
+    }
+
+    &__description {
+      border-top: 2px solid @placeholder;
+      color: @white;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-function toggleTariffsPopup(event) {
+function toggleTariffsPopup() {
   const element = document.querySelector(".tariffs-popup");
 
   const openedClass = 'tariffs-popup--opened';

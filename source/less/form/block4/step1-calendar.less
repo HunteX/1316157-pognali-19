@@ -1,10 +1,9 @@
-@import "../shared/colors";
-@import "../shared/vars";
+@import "../../shared/index";
 
-.calendar {
+.step1-calendar {
   display: flex;
   flex-direction: column;
-  padding-bottom: 23px;
+  margin-bottom: 28px;
 
   &__caption {
     position: relative;
@@ -43,6 +42,7 @@
 
   &__table {
     display: table;
+    width: 100%;
     height: 210px;
     border-collapse: collapse;
     margin-top: 17px;
@@ -82,22 +82,130 @@
     background-color: @dark-slate-blue;
     outline: 2px solid @orange-red;
     color: @white;
+    z-index: 1;
   }
 
   &__cell-header {
     background-color: transparent;
+    outline: none;
     border: none;
     cursor: default;
   }
 
   &__cell-header:hover {
     background-color: transparent;
-    border: none;
     outline: none;
     color: @greyish-brown;
   }
 
   &__cell-header--weekend {
     color: @orange-red;
+  }
+
+  &__letter {
+    display: none;
+  }
+
+  &__additional {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+
+    &__caption {
+      font-size: 36px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      padding-top: 21px;
+      padding-bottom: 22px;
+    }
+
+    &__caption::before,
+    &__caption::after {
+      cursor: pointer;
+      width: 30px;
+      height: 35px;
+      top: 25px;
+      background-size: 30px 35px;
+    }
+
+    &__caption::before {
+      left: 10px;
+    }
+
+    &__caption::after {
+      right: 10px;
+    }
+
+    &__table {
+      height: 460px;
+      margin-top: 20px;
+    }
+
+    &__cell {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 2px;
+    }
+
+    &__cell-header {
+      height: 10px;
+    }
+
+    &__cell:hover {
+      outline: 4px solid @orange-red;
+    }
+
+    &__cell-header:hover {
+      outline: none;
+    }
+
+    &__letter {
+      display: inline;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 28px;
+    margin-bottom: 65px;
+
+    &__caption::before {
+      left: -5px;
+    }
+
+    &__caption::after {
+      right: -5px;
+    }
+
+    &__table {
+      height: 470px;
+      margin-top: 0;
+    }
+
+    &__cell {
+      position: relative;
+    }
+
+    &__cell-header {
+      height: 20px;
+    }
+
+    &__letters-wrapper {
+      position: absolute;
+      top: 5px;
+      left: 12px;
+      text-align: left;
+      line-height: 1.67;
+      letter-spacing: 1.8px;
+    }
+
+    &__additional {
+      display: inline;
+    }
   }
 }

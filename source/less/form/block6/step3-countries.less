@@ -1,0 +1,184 @@
+@import "../../shared/index";
+@import "../../shared/flag";
+
+.step3-countries {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 278px;
+    background-color: @dark-slate-blue;
+    top: 29px;
+    left: -13px;
+  }
+
+  &__header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 17px;
+  }
+
+  &__header::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: @dark-slate-blue;
+    border-radius: 50%;
+    top: 10px;
+    left: -2px;
+  }
+
+  &__header::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    background-color: @dark-slate-blue;
+    top: 12px;
+    left: -13px;
+  }
+
+  &__caption {
+    width: 149px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: normal;
+    color: @dark-slate-blue;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 10px;
+  }
+
+  &__flag {
+    width: 35px;
+    height: 24px;
+  }
+
+  &__flag--bh {
+    .flag("bh", 35px, 24px);
+  }
+
+  &__flag--cz {
+    .flag("czech", 35px, 24px);
+  }
+
+  &__text {
+    width: 100%;
+    height: 220px;
+    border-radius: 4px;
+    border: solid 1px @cloudy-blue;
+    background-color: @white;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    padding: 13px 15px 13px 15px;
+  }
+
+  &__text::placeholder {
+    color: @greyish-brown-30;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 31px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: unset;
+      right: 3px;
+      top: 94px;
+      width: 3px;
+      height: 253px;
+      background-color: @dark-slate-blue;
+    }
+
+    &__header {
+      margin-top: 62px;
+      margin-bottom: 31px;
+    }
+
+    &__header::before,
+    &__header::after {
+      display: none;
+    }
+
+    &__caption {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 0.6;
+      letter-spacing: normal;
+      overflow: visible;
+      padding-left: 0;
+    }
+
+    &__flag {
+      position: relative;
+      width: 70px;
+      height: 47px;
+    }
+
+    &__flag::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: @dark-slate-blue;
+      border-radius: 50%;
+      top: 19px;
+      left: 89px;
+    }
+
+    &__flag--bh {
+      .flag("bh", 70px, 47px);
+    }
+
+    &__flag--cz {
+      .flag("czech", 70px, 47px);
+    }
+
+    &__header--cz {
+      margin-top: 39px;
+    }
+
+    &__text {
+      width: 100%;
+      height: 142px;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 1.2;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 115px;
+    margin-top: 64px;
+
+    &::after {
+      right: 224px;
+    }
+
+    &__text {
+      width: 730px;
+      padding: 28px 22px 28px 27px;
+    }
+
+    &__flag::before {
+      top: 18px;
+      left: -48px;
+    }
+  }
+}
