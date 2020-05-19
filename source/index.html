@@ -49,7 +49,7 @@
             </ul>
 
             <div class="nav-fixed__auth">
-              <button type="button" class="button nav-fixed__button-auth">Авторизация</button>
+              <button type="button" class="button nav-fixed__button-auth" onclick="goToAuthorize()">Авторизация</button>
             </div>
 
             <div class="nav-fixed__contacts">
@@ -83,7 +83,9 @@
       <div class="menu__buttons menu-buttons">
         <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--call" type="button"></button>
         <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--mail" type="button"></button>
-        <button class="button menu-buttons__button menu-buttons-medium" type="button">Авторизация</button>
+        <button class="button menu-buttons__button menu-buttons-medium" type="button" onclick="goToAuthorize()">
+          Авторизация
+        </button>
       </div>
     </div>
   </div>
@@ -407,8 +409,8 @@
       </header>
       <div class="register__description">
         <div class="register__agitate">Зарегистрируйтесь, это быстро и бесплатно!</div>
-        <div class="register__auth">Уже зарегистрированы? Тогда скорее <a href="authorize.html"
-          class="register__link">авторизуйтесь</a>.
+        <div class="register__auth">Уже зарегистрированы? Тогда скорее <a href="#"
+          class="register__link" onclick="goToAuthorize()">авторизуйтесь</a>.
         </div>
       </div>
       <form class="register__field email" method="post" action="https://echo.htmlacademy.ru">

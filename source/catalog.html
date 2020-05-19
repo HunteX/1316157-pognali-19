@@ -49,7 +49,7 @@
             </ul>
 
             <div class="nav-fixed__auth">
-              <button type="button" class="button nav-fixed__button-auth">Авторизация</button>
+              <button type="button" class="button nav-fixed__button-auth" onclick="goToAuthorize()">Авторизация</button>
             </div>
 
             <div class="nav-fixed__contacts">
@@ -83,7 +83,9 @@
       <div class="shared-header__buttons menu__buttons menu-buttons">
         <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--call" type="button"></button>
         <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--mail" type="button"></button>
-        <button class="button menu-buttons__button menu-buttons-medium" type="button">Авторизация</button>
+        <button class="button menu-buttons__button menu-buttons-medium" type="button" onclick="goToAuthorize()">
+          Авторизация
+        </button>
       </div>
     </div>
 
@@ -882,5 +884,6 @@
 
 <script src="js/menu.js"></script>
 <script src="js/filters.js"></script>
+<script src="js/navigation.js"></script>
 </body>
 </html>

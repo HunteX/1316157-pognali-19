@@ -9,3 +9,7 @@ function goToForm() {
 function goToCatalog() {
   document.location = '/catalog.html';
 }
+
+function goToAuthorize() {
+  document.location = '/authorize.html';
+}
