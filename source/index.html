@@ -144,7 +144,7 @@
           А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
         </p>
 
-        <button type="button" class="button about-service__button">Подробнее</button>
+        <button type="button" class="button about-service__button index-button-arrow">Подробнее</button>
       </div>
 
       <div class="about-service__caption-shadow"></div>
@@ -228,8 +228,9 @@
       </ul>
 
       <div class="directions__controls directions-controls">
-        <!-- TODO: href="catalog.html" -->
-        <button type="button" class="button button-big-arrow directions-controls__button">Показать все</button>
+        <button type="button" class="button index-button-arrow directions-controls__button" onclick="goToForm()">
+          Показать все
+        </button>
       </div>
     </div>
   </section>
@@ -317,8 +318,9 @@
       </ul>
 
       <div class="companions__controls">
-        <!-- TODO: href="form.html" -->
-        <button type="button" class="button button-big-arrow companions__button">Показать всех</button>
+        <button type="button" class="button index-button-arrow companions__button" onclick="goToCatalog()">Показать
+          всех
+        </button>
       </div>
     </div>
   </section>
@@ -486,5 +488,6 @@
 
 <script src="js/menu.js"></script>
 <script src="js/tariffs-popup.js"></script>
+<script src="js/navigation.js"></script>
 </body>
 </html>

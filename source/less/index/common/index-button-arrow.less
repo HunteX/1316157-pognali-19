@@ -1,0 +1,48 @@
+@import "../../shared/index";
+
+.index-button-arrow {
+  position: relative;
+  background-color: @light-gold;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: @dark-slate-blue;
+  padding-left: 24px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 14px;
+    background: url("@{imgPath}/custom/arrow-right-dark-slate-blue.svg") center no-repeat;
+    background-size: 10px 14px;
+    top: 25px;
+    right: 23px;
+  }
+
+  &:hover {
+    outline: none;
+    background-color: @mango-two;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 34px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 20px;
+
+    &::after {
+      top: 35px;
+      right: 33px;
+    }
+  }
+}
