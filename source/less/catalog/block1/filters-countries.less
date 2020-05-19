@@ -54,7 +54,7 @@
   &__button {
     width: 17px;
     height: 19px;
-    background: transparent url("@{imgPath}/dots.svg") center no-repeat;
+    background: url("@{imgPath}/custom/dots-dark-blue-grey.svg") center no-repeat;
   }
 
   &__label {
@@ -64,7 +64,7 @@
   &--open &__button {
     width: 12px;
     height: 14px;
-    background: url("@{imgPath}/filter-close.svg") 0 0 no-repeat;
+    background: url("@{imgPath}/custom/filter-close-dark-blue-grey.svg") center no-repeat;
   }
 
   &__container-wrapper {
@@ -80,7 +80,7 @@
     content: "";
     width: 12px;
     height: 12px;
-    background-image: url("@{imgPath}/filter-close.svg");
+    background-image: url("@{imgPath}/custom/filter-close-dark-blue-grey.svg");
     top: 14px;
     left: 85px;
   }
@@ -98,6 +98,18 @@
     color: @dark-two;
     text-transform: uppercase;
     padding-left: 30px;
+  }
+
+  &__toggle:hover {
+    background-color: @light-blue-grey-four;
+  }
+
+  &__toggle:active {
+    color: @dark-slate-blue-30;
+  }
+
+  &__toggle:active::before {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
@@ -184,7 +196,6 @@
     &__toggle::before {
       width: 19px;
       height: 19px;
-      background-image: url("@{imgPath}/filter-close.svg");
       top: 40px;
       left: 243px;
     }
