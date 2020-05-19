@@ -34,6 +34,14 @@
     border-top: 1px solid @table-border;
   }
 
+  &__copyright:hover {
+    opacity: 0.6;
+  }
+
+  &__copyright:active {
+    opacity: 0.3;
+  }
+
   &__copy-text {
     font-size: 16px;
     font-weight: normal;
@@ -47,14 +55,6 @@
     height: 34px;
     background-image: url("@{imgPath}/htmlacademy.svg");
     margin-top: -5px;
-  }
-
-  &__copy-link:hover {
-    opacity: 0.6;
-  }
-
-  &__copy-link:active {
-    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
