@@ -5,6 +5,7 @@
   .margin-fix();
   .z-background-bottom(30px, transparent);
   width: 100%;
+  z-index: 1;
 
   background-color: @light-gold;
 
@@ -24,9 +25,8 @@
   &__caption::before {
     position: absolute;
     content: "";
-    background: @dark-blue-grey-two url("@{imgPath}/contacts-location.svg") no-repeat;
+    background: @dark-blue-grey-two url("@{imgPath}/custom/contacts-location-light-gold.svg") 15px 12px no-repeat;
     background-size: 14px 22px;
-    background-position: 15px 12px;
     width: 45px;
     height: 45px;
     border-radius: 50%;

@@ -55,11 +55,19 @@
   &__button::after {
     position: absolute;
     content: "";
-    background-image: url("@{imgPath}/triangle-arrow-right.svg");
+    background-image: url("@{imgPath}/custom/arrow-right-dark-slate-blue.svg");
     width: 10px;
     height: 14px;
     top: 24px;
     right: 24px;
+  }
+
+  &__button:hover {
+    background-color: @mango-two;
+  }
+
+  &__button:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

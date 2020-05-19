@@ -2,12 +2,11 @@
 @import "../common/index";
 
 .profile-add {
-  position: relative;
   .margin-fix();
   .z-background-bottom(30px, @dark-blue-grey);
+  position: relative;
   width: 100%;
   min-height: 452px;
-
   background-color: @pale-grey;
 
   &__wrapper {
@@ -107,13 +106,6 @@
     background-color: @light-gold;
   }
 
-  &__button {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1;
-    color: @dark-blue-grey;
-  }
-
   @media (min-width: @tablet-width) {
     .z-background-bottom(60px, @dark-blue-grey);
     min-height: 557px;
@@ -187,33 +179,6 @@
       border-radius: 20px;
       background-color: @pale-grey-four;
       z-index: -1;
-    }
-
-    &__controls {
-      position: relative;
-    }
-
-    &__controls::before {
-      position: absolute;
-      content: "";
-      background-image: url("@{imgPath}/business.svg");
-      background-size: 17px 21px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: @pale-grey-four;
-      width: 67px;
-      height: 67px;
-      top: -24px;
-      left: 0;
-      border-radius: 50%;
-    }
-
-    &__button {
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 1;
-      color: @light-navy;
-      margin-left: 88px;
     }
 
     &__list {

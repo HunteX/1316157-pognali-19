@@ -23,13 +23,12 @@
   &__mailto::after {
     position: absolute;
     content: "";
-    background-color: @light-gold;
   }
 
   &__phone::after {
     width: 18px;
     height: 18px;
-    mask-image: url("@{imgPath}/contacts-phone.svg");
+    background-image: url("@{imgPath}/custom/contacts-phone-light-gold-two.svg");
     top: 1px;
     left: -46px;
   }
@@ -37,25 +36,44 @@
   &__mailto::after {
     width: 18px;
     height: 13px;
-    mask-image: url("@{imgPath}/contacts-mail.svg");
+    background-image: url("@{imgPath}/custom/contacts-mail-light-gold-two.svg");
     top: 4px;
     left: -46px;
   }
 
   &__phone,
   &__mailto {
+    cursor: pointer;
     position: relative;
     width: 119px;
     font-size: 16px;
     font-weight: bold;
     line-height: 1.38;
     text-align: left;
-    color: @light-gold;
+    color: @light-gold-two;
   }
 
   &__mailto {
     margin-top: 23px;
     text-transform: uppercase;
+  }
+
+  &__phone:hover,
+  &__mailto:hover {
+    color: @mango-two;
+  }
+
+  &__phone:hover::after {
+    background-image: url("@{imgPath}/custom/contacts-phone-mango-two.svg");
+  }
+
+  &__mailto:hover::after {
+    background-image: url("@{imgPath}/custom/contacts-mail-mango-two.svg");
+  }
+
+  &__phone:active,
+  &__mailto:active {
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {

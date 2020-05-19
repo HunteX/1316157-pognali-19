@@ -49,7 +49,7 @@
             </ul>
 
             <div class="nav-fixed__auth">
-              <button type="button" class="button nav-fixed__button-auth">Авторизация</button>
+              <button type="button" class="button nav-fixed__button-auth" onclick="goToAuthorize()">Авторизация</button>
             </div>
 
             <div class="nav-fixed__contacts">
@@ -83,7 +83,9 @@
       <div class="menu__buttons menu-buttons">
         <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--call" type="button"></button>
         <button class="button menu-buttons__button menu-buttons-small menu-buttons-small--mail" type="button"></button>
-        <button class="button menu-buttons__button menu-buttons-medium" type="button">Авторизация</button>
+        <button class="button menu-buttons__button menu-buttons-medium" type="button" onclick="goToAuthorize()">
+          Авторизация
+        </button>
       </div>
     </div>
   </div>
@@ -144,7 +146,7 @@
           А если найдете кого-то близкого по духу - скорее зовите в совместный трип!
         </p>
 
-        <button type="button" class="button about-service__button">Подробнее</button>
+        <button type="button" class="button about-service__button button-arrow">Подробнее</button>
       </div>
 
       <div class="about-service__caption-shadow"></div>
@@ -228,8 +230,9 @@
       </ul>
 
       <div class="directions__controls directions-controls">
-        <!-- TODO: href="catalog.html" -->
-        <button type="button" class="button button-big-arrow directions-controls__button">Показать все</button>
+        <button type="button" class="button button-arrow directions-controls__button" onclick="goToForm()">
+          Показать все
+        </button>
       </div>
     </div>
   </section>
@@ -317,8 +320,9 @@
       </ul>
 
       <div class="companions__controls">
-        <!-- TODO: href="form.html" -->
-        <button type="button" class="button button-big-arrow companions__button">Показать всех</button>
+        <button type="button" class="button button-arrow companions__button" onclick="goToCatalog()">Показать
+          всех
+        </button>
       </div>
     </div>
   </section>
@@ -360,8 +364,9 @@
       <div class="profile-add__shadow"></div>
       <div class="profile-add__logo"></div>
 
-      <div class="profile-add__controls">
-        <button class="button profile-add__button" onclick="toggleTariffsPopup()">Показать тарифы для бизнеса</button>
+      <div class="profile-add__controls profile-add-controls">
+        <button class="button profile-add-controls__button" onclick="toggleTariffsPopup()">Показать тарифы для бизнеса
+        </button>
       </div>
     </div>
 
@@ -405,15 +410,15 @@
       <div class="register__description">
         <div class="register__agitate">Зарегистрируйтесь, это быстро и бесплатно!</div>
         <div class="register__auth">Уже зарегистрированы? Тогда скорее <a href="#"
-          class="register__auth">авторизуйтесь</a>.
+          class="register__link" onclick="goToAuthorize()">авторизуйтесь</a>.
         </div>
       </div>
-      <div class="register__field email">
+      <form class="register__field email" method="post" action="https://echo.htmlacademy.ru">
         <label>
-          <input type="email" class="email__input register__email" placeholder="E-mail">
+          <input type="email" class="email__input register__email" name="email" placeholder="E-mail">
         </label>
-        <button type="button" class="button email__button"></button>
-      </div>
+        <button type="submit" class="button email__button"></button>
+      </form>
       <div class="register__questions">
         <div class="register__question">Остались вопросы?</div>
         <div class="register__answer">Мы с радостью на них ответим!</div>
@@ -437,7 +442,9 @@
   </section>
 
   <section class="map">
-    <div class="map__marker"></div>
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3A2d8e1e1080aae41c5b855cb62ab1a00d18dd24388b3f7e1310d53df8842672b9&amp;source=constructor"
+      width="100%" class="map__frame" frameborder="0"></iframe>
   </section>
 </main>
 
@@ -477,12 +484,13 @@
 
     <div class="footer__copyright">
       <div class="footer__copy-text">Разработано</div>
-      <a class="footer__copy-link" href="https://htmlacademy.ru"></a>
+      <a class="footer__copy-link" href="https://htmlacademy.ru/intensive/adaptive"></a>
     </div>
   </div>
 </footer>
 
 <script src="js/menu.js"></script>
 <script src="js/tariffs-popup.js"></script>
+<script src="js/navigation.js"></script>
 </body>
 </html>
