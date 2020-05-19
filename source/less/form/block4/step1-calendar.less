@@ -26,6 +26,7 @@
     height: 17px;
     top: 15px;
     cursor: pointer;
+    opacity: 0.3;
   }
 
   &__caption::before {
@@ -38,6 +39,16 @@
     background: @white url("@{imgPath}/month-arrow-right.svg") center no-repeat;
     background-size: 9px 17px;
     right: 0;
+  }
+
+  &__caption:hover::before,
+  &__caption:hover::after {
+    opacity: 0.5;
+  }
+
+  &__caption:active::before,
+  &__caption:active::after {
+    opacity: 0.1;
   }
 
   &__table {
