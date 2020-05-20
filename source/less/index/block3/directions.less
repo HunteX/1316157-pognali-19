@@ -18,7 +18,16 @@
 
     &__wrapper {
       padding-left: 76px;
-      background: url("@{imgPath}/flags-back@1x.png") no-repeat 439px 80px;
+      background-image: url("@{imgPath}/flags-back@1x.png");
+      background-size: 289px 575px;
+      background-repeat: no-repeat;
+      background-position: 439px 80px;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      &__wrapper {
+        background-image: url("@{imgPath}/flags-back@2x.png");
+      }
     }
   }
 

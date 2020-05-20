@@ -32,12 +32,6 @@
     z-index: 2;
   }
 
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    &__image {
-      background-image: url("@{imgPath}/about-mobile@2x.png");
-    }
-  }
-
   &__caption-shadow {
     position: absolute;
     width: 140px;
@@ -82,6 +76,12 @@
     display: none;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    &__image {
+      background-image: url("@{imgPath}/about-mobile@2x.png");
+    }
+  }
+
   @media (min-width: @tablet-width) {
     .z-background-bottom(60px, @pale-grey);
     min-height: 920px;
@@ -103,12 +103,6 @@
       background-size: 376px 548px;
       width: 376px;
       height: 548px;
-    }
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      &__image {
-        background-image: url("@{imgPath}/about-tablet@2x.png");
-      }
     }
 
     &__about {
@@ -160,6 +154,12 @@
       width: 274px;
       height: 81px;
     }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      &__image {
+        background-image: url("@{imgPath}/about-tablet@2x.png");
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -191,12 +191,6 @@
       height: 665px;
     }
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      &__image {
-        background-image: url("@{imgPath}/about-desktop@2x.png");
-      }
-    }
-
     &__about {
       margin-top: 91px;
       padding-left: 80px;
@@ -215,6 +209,12 @@
       height: 46px;
       margin-top: -31px;
       margin-bottom: 20px;
+    }
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    &__image {
+      background-image: url("@{imgPath}/about-desktop@2x.png");
     }
   }
 }

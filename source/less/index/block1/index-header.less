@@ -10,10 +10,6 @@
   background-repeat: no-repeat;
   background-color: @bg-default;
 
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("@{imgPath}/traveller-illustration-mobile@2x.png"), url("@{imgPath}/globe-back-mobile@2x.jpg");
-  }
-
   &__menu-wrapper {
     min-height: 70px;
     padding-top: 27px;
@@ -27,16 +23,16 @@
     bottom: -240px;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("@{imgPath}/traveller-illustration-mobile@2x.png"), url("@{imgPath}/globe-back-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 994px;
 
     background-image: url("@{imgPath}/traveller-illustration-tablet@1x.png"), url("@{imgPath}/globe-back-tablet@1x.jpg");
     background-position: 284px 403px, -355px 381px;
     background-size: 372px 451px, 1479px 612px;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("@{imgPath}/traveller-illustration-tablet@2x.png"), url("@{imgPath}/globe-back-tablet@2x.jpg");
-    }
 
     &__menu-wrapper {
       min-height: 90px;
@@ -48,6 +44,10 @@
     &__advantages {
       bottom: -140px;
     }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("@{imgPath}/traveller-illustration-tablet@2x.png"), url("@{imgPath}/globe-back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -57,10 +57,6 @@
     background-position: 604px 110px, -180px 0;
     background-size: 431px 640px, 1800px 750px;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("@{imgPath}/traveller-illustration-desktop@2x.png"), url("@{imgPath}/globe-back-desktop@2x.jpg");
-    }
-
     &__menu-wrapper {
       padding-top: 48px;
       padding-left: 60px;
@@ -69,6 +65,10 @@
 
     &__advantages {
       bottom: 123px;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("@{imgPath}/traveller-illustration-desktop@2x.png"), url("@{imgPath}/globe-back-desktop@2x.jpg");
     }
   }
 }
