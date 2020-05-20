@@ -271,15 +271,14 @@
       <ul class="companions__list companions-list">
         <li class="companions-list__item">
           <figure class="companions-list__companion">
-            <img class="companions-list__image companions-list__image--mobile" src="img/firsova-mobile@1x.jpg"
-              width="70" height="70"
-              alt="Попутчик Таня Фирсова">
-            <img class="companions-list__image companions-list__image--tablet" src="img/firsova-tablet@1x.jpg"
-              width="190" height="190"
-              alt="Попутчик Таня Фирсова">
-            <img class="companions-list__image companions-list__image--desktop" src="img/firsova-desktop@1x.jpg"
-              width="285" height="285"
-              alt="Попутчик Таня Фирсова">
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+              <img class="companions-list__image" src="img/firsova-mobile@1x.jpg"
+                srcset="img/firsova-mobile@2x.jpg 2x"
+                alt="Попутчик Таня Фирсова">
+            </picture>
             <figcaption class="companions-list__companion-details">
               <div class="companions-list__flags">
                 <div class="companions-list__flag index-flag index-flag--srilanka"></div>
@@ -302,15 +301,14 @@
         </li>
         <li class="companions-list__item">
           <figure class="companions-list__companion">
-            <img class="companions-list__image companions-list__image--mobile" src="img/demin-mobile@1x.jpg" width="70"
-              height="70"
-              alt="Попутчик Петя Демин">
-            <img class="companions-list__image companions-list__image--tablet" src="img/demin-tablet@1x.jpg" width="190"
-              height="190"
-              alt="Попутчик Петя Демин">
-            <img class="companions-list__image companions-list__image--desktop" src="img/demin-desktop@1x.jpg"
-              width="285" height="285"
-              alt="Попутчик Петя Демин">
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <img class="companions-list__image" src="img/demin-mobile@1x.jpg"
+                srcset="img/demin-mobile@2x.jpg 2x"
+                alt="Попутчик Таня Фирсова">
+            </picture>
             <figcaption class="companions-list__companion-details">
               <div class="companions-list__flags">
                 <div class="companions-list__flag index-flag index-flag--belgium"></div>
