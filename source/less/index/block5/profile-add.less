@@ -106,6 +106,12 @@
     background-color: @light-gold;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    &__logo {
+      background-image: url("@{imgPath}/rates@2x.png");
+    }
+  }
+
   @media (min-width: @tablet-width) {
     .z-background-bottom(60px, @dark-blue-grey);
     min-height: 557px;
@@ -184,6 +190,12 @@
     &__list {
       padding-bottom: 58px;
     }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      &__logo {
+        background-image: url("@{imgPath}/rates@2x.png");
+      }
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -217,6 +229,12 @@
       width: 198px;
       height: 198px;
       background-size: 198px 198px;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      &__logo {
+        background-image: url("@{imgPath}/rates@2x.png");
+      }
     }
   }
 }
