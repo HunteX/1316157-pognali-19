@@ -9,6 +9,7 @@
 
   background-color: @dark-blue-grey;
   background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-mobile@1x.png");
+  background-size: 143px 143px, 71px 71px;
   background-position: 152px 38px, -10px 310px;
   background-repeat: no-repeat;
 
@@ -28,11 +29,16 @@
     height: 62px;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("@{imgPath}/smolov-back-desktop@2x.png"), url("@{imgPath}/rogovaya-back-mobile@2x.png");
+  }
+
   @media (min-width: @tablet-width) {
     .z-background-bottom(60px, @pale-grey);
     min-height: 1253px;
 
     background-image: url("@{imgPath}/smolov-back-desktop@1x.png"), url("@{imgPath}/rogovaya-back-desktop@1x.png");
+    background-size: 143px 143px, 285px 285px;
     background-position: 40px 424px, 408px 78px;
 
     &__wrapper {
@@ -44,6 +50,10 @@
     &__button {
       width: 618px;
       height: 81px;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("@{imgPath}/smolov-back-desktop@2x.png"), url("@{imgPath}/rogovaya-back-mobile@2x.png");
     }
   }
 
@@ -67,6 +77,10 @@
 
     &__button {
       width: 280px;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("@{imgPath}/smolov-back-desktop@2x.png"), url("@{imgPath}/rogovaya-back-mobile@2x.png");
     }
   }
 }
