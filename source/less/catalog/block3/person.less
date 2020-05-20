@@ -15,16 +15,14 @@
   }
 
   &__avatar-image {
-    display: none;
+    display: block;
+    border-radius: 50%;
+    width: 70px;
+    height: auto;
   }
 
   &__avatar-image:hover {
     transform: scale(1.01);
-  }
-
-  &__avatar-image--mobile {
-    display: block;
-    border-radius: 50%;
   }
 
   &__private {
@@ -127,12 +125,8 @@
       flex-direction: row;
     }
 
-    &__avatar-image--mobile {
-      display: none;
-    }
-
-    &__avatar-image--tablet {
-      display: block;
+    &__avatar-image {
+      width: 190px;
       border-radius: 20px;
     }
 
@@ -208,15 +202,8 @@
       position: absolute;
       left: 0;
       top: 0;
-    }
-
-    &__avatar-image--tablet {
-      display: none;
-    }
-
-    &__avatar-image--desktop {
-      display: block;
       border-radius: 20px 0 0 20px;
+      width: 285px;
     }
 
     &__profile,

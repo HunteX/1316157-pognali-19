@@ -20,11 +20,8 @@
   }
 
   &__image {
+    display: block;
     border-radius: 10px 10px 0 0;
-  }
-
-  &__image--desktop {
-    display: none;
   }
 
   &__details {
@@ -44,10 +41,8 @@
     position: absolute;
     bottom: 80px;
     left: 25px;
-  }
-
-  &__flag--desktop {
-    display: none;
+    width: 35px;
+    height: auto;
   }
 
   &__country {
@@ -121,14 +116,8 @@
 
     &__image {
       border-radius: 0 20px 20px 0;
-    }
-
-    &__image--mobile {
-      display: none;
-    }
-
-    &__image--desktop {
-      display: block;
+      width: 186px;
+      height: 140px;
     }
 
     &__country {
@@ -155,12 +144,8 @@
       margin-left: 28px;
     }
 
-    &__flag--mobile {
-      display: none;
-    }
-
-    &__flag--desktop {
-      display: block;
+    &__flag {
+      width: 70px;
       left: auto;
       right: -37px;
       top: 16px;
