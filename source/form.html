@@ -115,10 +115,12 @@
         <div class="form-level__description">level</div>
       </div>
       <div class="form-profile__avatar form-avatar">
-        <img class="form-avatar__image form-avatar__image--mobile" src="img/photo-account-mobile@1x.jpg" width="70"
-          height="70" alt="Аватар">
-        <img class="form-avatar__image form-avatar__image--tablet" src="img/photo-account-tablet@1x.jpg" width="94"
-          height="94" alt="Аватар">
+        <picture>
+          <source media="(min-width: 768px)"
+            srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+          <img class="form-avatar__image" src="img/photo-account-mobile@1x.jpg"
+            srcset="img/photo-account-mobile@2x.jpg 2x" alt="Аватар">
+        </picture>
       </div>
       <div class="form-profile__controls">
         <button type="button" class="button form-profile__button">Сменить фото</button>
