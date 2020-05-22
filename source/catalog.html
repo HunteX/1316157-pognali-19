@@ -10,8 +10,16 @@
     document.createElement("picture");
   </script>
   <script src="js/picturefill.min.js" async></script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>
+    svg4everybody();
+  </script>
 </head>
 <body class="body-container">
+
+<div style="display: none;">
+  <include src="build/img/sprite.svg"></include>
+</div>
 
 <header class="shared-header">
   <div class="shared-header__menu-wrapper">
@@ -19,6 +27,12 @@
       <div class="menu__logo logo">
         <a class="logo__link">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+
             <source media="(min-width: 1440px)"
               srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
             <source media="(min-width: 768px)"
@@ -35,6 +49,12 @@
         <div class="navigation__container nav-fixed">
           <div class="nav-fixed__logo">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+              <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+
               <source media="(min-width: 1440px)"
                 srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source media="(min-width: 768px)"
@@ -553,6 +573,12 @@
             <div class="person__profile">
               <div class="person__avatar">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1440px)"
                     srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
@@ -623,6 +649,12 @@
             <div class="person__profile">
               <div class="person__avatar">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1440px)"
                     srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
@@ -690,6 +722,12 @@
             <div class="person__profile">
               <div class="person__avatar">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1440px)"
                     srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
@@ -760,6 +798,12 @@
             <div class="person__profile">
               <div class="person__avatar">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1440px)"
                     srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)"
@@ -852,6 +896,12 @@
   <div class="main-wrapper footer__wrapper">
     <div class="footer__logo footer-logo">
       <picture>
+        <source type="image/webp" media="(min-width: 1440px)"
+          srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 768px)"
+          srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+        <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
+
         <source media="(min-width: 1440px)"
           srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
         <source media="(min-width: 768px)"
