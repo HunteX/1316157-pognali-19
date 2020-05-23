@@ -252,7 +252,9 @@
             </div>
             <div class="step1-checkbox step1-filters__children">
               <input id="checkbox1" type="checkbox" class="step1-checkbox__input" checked>
-              <label for="checkbox1" class="step1-checkbox__label">Можно с детьми</label>
+              <label for="checkbox1" class="step1-checkbox__label">
+                Можно с детьми
+              </label>
             </div>
           </div>
 
@@ -479,7 +481,11 @@
                 <div class="step2__popup step2-popup step2-popup--open">
                   <header class="step2-popup__header">
                     <div class="step2-popup__caption">Выберите страну</div>
-                    <button class="button step2-popup__close" onclick="toggleCountriesPopup()"></button>
+                    <button class="button step2-popup__close" onclick="toggleCountriesPopup()">
+                      <svg class="step2-popup__close-icon" width="9" height="9">
+                        <use xlink:href="img/sprite.svg#small-cross"></use>
+                      </svg>
+                    </button>
                   </header>
                   <div class="step2-popup__container">
                     <div class="step2-popup__alphabet">

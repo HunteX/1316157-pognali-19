@@ -44,11 +44,17 @@
     content: "";
     width: 9px;
     height: 9px;
-    background: url("@{imgPath}/small-cross.svg") center no-repeat;
-    background-size: 9px 9px;
     cursor: pointer;
     top: 17px;
     right: 17px;
+    background-color: transparent;
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: @white;
   }
 
   &__container {
