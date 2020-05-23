@@ -131,7 +131,12 @@
   <section class="filters-countries filters-countries--open">
     <div class="main-wrapper filters-countries__wrapper">
       <div class="filters-countries__header filters-countries-header">
-        <div class="filters-countries-header__caption">Фильтрация по странам</div>
+        <div class="filters-countries-header__caption">
+          <svg class="filters-countries-header__caption-icon">
+            <use xlink:href="img/sprite.svg#filter"></use>
+          </svg>
+          Фильтрация по странам
+        </div>
         <div class="filters-countries__continents filters-countries-header__continents continent-list">
           <input id="europe" class="continent-list__radio" type="radio" name="continent">
           <label for="europe" class="continent-list__item">Европа</label>

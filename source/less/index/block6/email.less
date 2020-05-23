@@ -52,14 +52,13 @@
     right: 0;
   }
 
-  &__button::after {
+  &__button-icon {
     position: absolute;
-    content: "";
-    background-image: url("@{imgPath}/custom/arrow-right-dark-slate-blue.svg");
     width: 10px;
     height: 14px;
     top: 24px;
     right: 24px;
+    fill: @dark-slate-blue;
   }
 
   &__button:hover {
@@ -83,7 +82,7 @@
       border-radius: 0 20px 20px 0;
     }
 
-    &__button::after {
+    &__button-icon {
       top: 33px;
       right: 36px;
     }
@@ -109,6 +108,10 @@
       color: @dark-slate-blue;
       top: 28px;
       left: 36px;
+    }
+
+    &__button-icon {
+      top: 35px;
     }
   }
 }
