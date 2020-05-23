@@ -1,17 +1,5 @@
 @import "../../shared/index";
 
-.heart-bar() {
-  position: absolute;
-  content: "";
-  width: 31px;
-  height: 31px;
-  top: 0;
-  left: 0;
-  background-size: 13px 11px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .person-button-like {
   position: relative;
   width: 31px;
@@ -19,16 +7,26 @@
   border-radius: 15.5px;
   background-color: @pale-grey;
 
-  &::before {
-    .heart-bar();
-    background-image: url("@{imgPath}/custom/heart-dark-blue-grey.svg");
+  &__icon {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    fill: @dark-blue-grey;
     opacity: 0.3;
   }
 
-  &--liked::before {
-    .heart-bar();
-    background-image: url("@{imgPath}/custom/heart-active-tomato.svg");
+  &__icon--active {
+    display: none;
+    fill: @tomato;
     opacity: 1;
+  }
+
+  &--liked &__icon {
+    display: none;
+  }
+
+  &--liked &__icon--active {
+    display: block;
   }
 
   &:hover {
@@ -39,11 +37,11 @@
     background-color: @light-ten;
   }
 
-  &:hover::before {
+  &:hover &__icon {
     opacity: 1;
   }
 
-  &:active::before {
+  &:active &__icon {
     opacity: 0.3;
   }
 
@@ -56,10 +54,9 @@
     height: 50px;
     border-radius: 25px;
 
-    &::before {
-      width: 50px;
-      height: 50px;
-      background-size: 20px 17px;
+    &__icon {
+      width: 20px;
+      height: 17px;
     }
   }
 }
