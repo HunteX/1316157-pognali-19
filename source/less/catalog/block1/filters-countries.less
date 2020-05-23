@@ -52,19 +52,40 @@
   }
 
   &__button {
+    position: relative;
     width: 17px;
     height: 19px;
-    background: url("@{imgPath}/custom/dots-dark-blue-grey.svg") center no-repeat;
+    background-color: transparent;
+  }
+
+  &__icon-dots,
+  &__icon-close {
+    position: absolute;
+    fill: @dark-blue-grey;
   }
 
   &__label {
     display: none;
   }
 
-  &--open &__button {
-    width: 12px;
-    height: 14px;
-    background: url("@{imgPath}/custom/filter-close-dark-blue-grey.svg") center no-repeat;
+  &__icon-dots {
+    top: 0;
+    left: -3px;
+    display: block;
+  }
+
+  &__icon-close {
+    top: 2px;
+    left: 2px;
+    display: none;
+  }
+
+  &--open &__icon-dots {
+    display: none;
+  }
+
+  &--open &__icon-close {
+    display: block;
   }
 
   &__container-wrapper {
@@ -163,6 +184,16 @@
     &--open &__button {
       width: 19px;
       height: 19px;
+    }
+
+    &__icon-dots {
+      top: -8px;
+      left: 3px;
+    }
+
+    &__icon-close {
+      top: 2px;
+      left: 2px;
     }
 
     &--open &__container {

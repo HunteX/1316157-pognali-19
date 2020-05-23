@@ -151,7 +151,14 @@
           <label for="filter-button" class="filters-countries__label">Показать все</label>
           <label for="filter-button" class="filters-countries__label filters-countries__label--hide">Свернуть</label>
           <button id="filter-button" type="button" class="button filters-countries__button"
-            onclick="toggleCountryFilters()"></button>
+            onclick="toggleCountryFilters()">
+            <svg class="filters-countries__icon-dots" width="17" height="19">
+              <use xlink:href="img/sprite.svg#dots"></use>
+            </svg>
+            <svg class="filters-countries__icon-close" width="12" height="14">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
