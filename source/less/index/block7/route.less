@@ -22,11 +22,19 @@
     margin-left: 61px;
   }
 
+  &__caption-icon {
+    position: absolute;
+    fill: @light-gold;
+    border-radius: 50%;
+    left: -45px;
+    top: 12px;
+    z-index: 1;
+  }
+
   &__caption::before {
     position: absolute;
     content: "";
-    background: @dark-blue-grey-two url("@{imgPath}/custom/contacts-location-light-gold.svg") 15px 12px no-repeat;
-    background-size: 14px 22px;
+    background-color: @dark-blue-grey-two;
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -64,11 +72,16 @@
       margin-top: 40px;
     }
 
+    &__caption-icon {
+      width: 21px;
+      height: 31px;
+      left: -71px;
+      top: 0;
+    }
+
     &__caption::before {
       width: 67px;
       height: 67px;
-      background-size: 21px 31px;
-      background-position: 23px 18px;
       left: -94px;
       top: -20px;
     }
@@ -97,11 +110,16 @@
       font-size: 28px;
     }
 
+    &__caption-icon {
+      width: 28px;
+      height: 43px;
+      top: -3px;
+      left: -88px;
+    }
+
     &__caption::before {
       width: 90px;
       height: 90px;
-      background-size: 28px 43px;
-      background-position: 31px 27px;
       left: -121px;
       top: -31px;
     }

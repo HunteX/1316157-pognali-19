@@ -16,22 +16,33 @@
     opacity: 0.3;
   }
 
+  &__icon {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     position: relative;
 
-    &::before {
+    &__button::after {
       position: absolute;
       content: "";
-      background-image: url("@{imgPath}/custom/business-dark-slate-blue.svg");
-      background-size: 17px 21px;
-      background-repeat: no-repeat;
-      background-position: center;
       background-color: @pale-grey-four;
       width: 67px;
       height: 67px;
       top: -24px;
       left: 0;
       border-radius: 50%;
+    }
+
+    &__icon {
+      display: block;
+      position: absolute;
+      fill: @dark-slate-blue;
+      width: 17px;
+      height: 21px;
+      top: 0;
+      left: 25px;
+      z-index: 1;
     }
 
     &__button {

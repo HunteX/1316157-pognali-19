@@ -61,12 +61,8 @@
     color: rgba(68, 68, 68, 0.3);
   }
 
-  &__count::before {
+  &__count-icon {
     position: absolute;
-    content: "";
-    background-image: url("@{imgPath}/user.svg");
-    width: 11px;
-    height: 11px;
     opacity: 0.1;
     top: 9px;
     left: -17px;
@@ -130,8 +126,7 @@
       margin-top: 6px;
     }
 
-    &__count::before {
-      background-image: url("@{imgPath}/user.svg");
+    &__count-icon {
       width: 21px;
       height: 20px;
       top: 3px;
