@@ -25,18 +25,20 @@
     content: "";
   }
 
-  &__phone::after {
+  &__phone-icon {
+    position: absolute;
     width: 18px;
     height: 18px;
-    background-image: url("@{imgPath}/custom/contacts-phone-light-gold-two.svg");
+    fill: @light-gold-two;
     top: 1px;
     left: -46px;
   }
 
-  &__mailto::after {
+  &__mailto-icon {
+    position: absolute;
     width: 18px;
     height: 13px;
-    background-image: url("@{imgPath}/custom/contacts-mail-light-gold-two.svg");
+    fill: @light-gold-two;
     top: 4px;
     left: -46px;
   }
@@ -63,12 +65,9 @@
     color: @mango-two;
   }
 
-  &__phone:hover::after {
-    background-image: url("@{imgPath}/custom/contacts-phone-mango-two.svg");
-  }
-
-  &__mailto:hover::after {
-    background-image: url("@{imgPath}/custom/contacts-mail-mango-two.svg");
+  &__phone:hover &__phone-icon,
+  &__mailto:hover &__mailto-icon {
+    fill: @mango-two;
   }
 
   &__phone:active,
@@ -96,14 +95,14 @@
       line-height: 1;
     }
 
-    &__phone::after {
+    &__phone-icon {
       width: 27px;
       height: 27px;
       top: -1px;
       left: -68px;
     }
 
-    &__mailto::after {
+    &__mailto-icon {
       width: 27px;
       height: 19px;
       top: 3px;
@@ -143,14 +142,14 @@
       margin-left: 185px;
     }
 
-    &__phone::after {
+    &__phone-icon {
       width: 36px;
       height: 36px;
       top: -4px;
       left: -94px;
     }
 
-    &__mailto::after {
+    &__mailto-icon {
       width: 36px;
       height: 26px;
       top: 0;

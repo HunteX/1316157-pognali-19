@@ -23,17 +23,6 @@
   @media (min-width: @tablet-width) {
     position: relative;
 
-    &__button::after {
-      position: absolute;
-      content: "";
-      background-color: @pale-grey-four;
-      width: 67px;
-      height: 67px;
-      top: -24px;
-      left: 0;
-      border-radius: 50%;
-    }
-
     &__icon {
       display: block;
       position: absolute;
@@ -51,6 +40,17 @@
       line-height: 1;
       color: @light-navy;
       margin-left: 88px;
+    }
+
+    &__button::after {
+      position: absolute;
+      content: "";
+      background-color: @pale-grey-four;
+      width: 67px;
+      height: 67px;
+      top: -24px;
+      left: 0;
+      border-radius: 50%;
     }
   }
 }
